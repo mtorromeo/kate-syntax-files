@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language name="IPW Firewall rules" version="1.0" kateversion="2.4" section="Configuration" extensions="rc.firewall.local" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
+
+	<highlighting>
+		<list name="rule_actions">
+			<item>add</item>
+		</list>
+
+		<list name="actions">
+			<item>allow</item>
+			<item>pass</item>
+			<item>drop</item>
+			<item>check-state</item>
+		</list>
+
+		<list name="protocols">
+			<item>tcp</item>
+			<item>udp</item>
+			<item>ip</item>
+			<item>icmp</item>
+		</list>
+
+		<list name="modifiers">
+			<item>setup</item>
+			<item>keep-state</item>
+		</list>
+
+		<contexts>
+			<context name="rule_action" attribute="Normal Text" lineEndContext="#stay">
+				<DetectChar context="comment"  char="#" firstNonSpace="1" />
+				<keyword context="#stay" attribute="Keyword Name" String="rule_actions" />
+				<RegExpr context="action" String="[\s]*" />
+			</context>
+
+			<context name="action" attribute="Normal Text" lineEndContext="rule_action" >
+				<DetectChar context="comment"  char="#" firstNonSpace="1" />
+				<keyword context="#stay" attribute="Keyword Name" String="actions" />
+				<RegExpr context="protocol" String="[\s]*" />
+			</context>
+
+			<context name="protocol" attribute="Normal Text" lineEndContext="rule_action" >
+				<DetectChar context="comment"  char="#" firstNonSpace="1" />
+				<keyword context="#stay" attribute="Protocol" String="protocols" />
+				<RegExpr context="filter" String="[\s]*" />
+			</context>
+
+			<context name="filter" attribute="Normal Text" lineEndContext="rule_action" >
+				<DetectChar context="comment"  char="#" firstNonSpace="1" />
+				<RegExpr context="interface" attribute="Address Identifiers" String="in[\s]+via[\s]+"/>
+				<RegExpr context="address" attribute="Address Identifiers" String="(from|to)[\s]+"/>
+				<keyword context="#stay" attribute="Keyword Name" String="modifiers" />
+			</context>
+
+			<context name="address" attribute="Address" lineEndContext="rule_action" >
+				<DetectChar context="comment"  char="#" firstNonSpace="1" />
+				<RegExpr context="#pop" attribute="Port" String="([\s]+[0-9]+)?[\s]+"/>
+			</context>
+
+			<context name="interface" attribute="Interface" lineEndContext="rule_action" >
+				<DetectChar context="comment"  char="#" firstNonSpace="1" />
+				<RegExpr context="#pop" String="[\s]*"/>
+			</context>
+
+			<context name="comment" attribute="Comment" lineEndContext="rule_action" >
+			</context>
+		</contexts>
+
+		<itemDatas>
+			<itemData name="Normal Text" defStyleNum="dsNormal" />
+			<itemData name="Comment" defStyleNum="dsComment" />
+			<itemData name="Keyword Name" defStyleNum="dsKeyword" bold="false" />
+			<itemData name="Protocol" defStyleNum="dsOthers" bold="false" />
+			<itemData name="Address Identifiers" defStyleNum="dsDecVal" bold="false" />
+			<itemData name="Address" defStyleNum="dsString" bold="false" />
+			<itemData name="Port" defStyleNum="dsString" bold="true" />
+			<itemData name="Interface" defStyleNum="dsOthers" bold="false" />
+		</itemDatas>
+
+	</highlighting>
+
+	<general>
+		<comments>
+			<comment name="singleLine" start="#" />
+		</comments>
+	</general>
+</language>
