@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+
+
+<language name="Mako/Mako" version="0.01" kateversion="2.4" section="Markup" extensions="" priority="11" mimetype="" hidden="true" author="Alexander Darovsky (adarovsky@users.sf.net)">
+  <highlighting>
+    <contexts>
+      <context name="start" lineEndContext="#stay" attribute="Normal Text">
+          <RegExpr context="pythonLine" attribute="Keyword" String="^\s*%\s*el(?:se|if)" beginRegion="pythonLine" endRegion="pythonLine"/>
+          <RegExpr context="pythonLine" attribute="Keyword" String="^\s*%\s*(?:if|for|while)" beginRegion="pythonLine"/>
+          <RegExpr context="pythonLine" attribute="Keyword" String="^\s*%\s*end(?:for|if|while)" endRegion="pythonLine"/>
+          <RegExpr context="pythonLine" attribute="Normal Text" String="^\s*%\s*\w+"/>
+          <RegExpr context="Def Open" attribute="Keyword" String="&lt;%def\b" beginRegion="defBlock" />
+          <RegExpr context="Def Open" attribute="Keyword" String="&lt;%text\b" beginRegion="textBlock" />
+          <RegExpr context="Def Open" attribute="Keyword" String="&lt;%call\b" beginRegion="callBlock" />
+          <RegExpr context="Def Open" attribute="Keyword" String="&lt;%namespace\b" />
+          <RegExpr context="Def Open" attribute="Keyword" String="&lt;%inherit\b"/>
+          <RegExpr context="Def Open" attribute="Keyword" String="&lt;%include\b"/>
+          <RegExpr context="Def Open" attribute="Keyword" String="&lt;%page\b"/>
+          <RegExpr context="pythonBlock" attribute="Keyword" String="&lt;%" beginRegion="pythonBlock" />
+          <StringDetect context="pythonExpr" attribute="Keyword" String="${"/>
+          <RegExpr attribute="Comment" String="^#.*$" context="#pop"/>
+      </context>
+
+	<context name="Def Open" attribute="Normal Text" lineEndContext="#stay">
+		<Detect2Chars attribute="Keyword" context="#pop" char1="/" char2="&gt;" />
+		<DetectChar attribute="Keyword" context="MakoHTML" char="&gt;" />
+		<IncludeRules context="FindAttributes" />
+		<RegExpr attribute="Error" context="#stay" String="\S" />
+	</context>
+
+    <context name="FindAttributes" attribute="Normal Text" lineEndContext="#stay">
+        <RegExpr attribute="Element" context="#stay" String="\w+"/>
+        <DetectChar attribute="Element" context="Value" char="=" />
+    </context>
+
+    <context name="Value" attribute="Normal Text" lineEndContext="#stay" fallthrough="true" fallthroughContext="#pop#pop">
+        <DetectChar attribute="Value" context="ValueDQ" char="&quot;" />
+        <DetectChar attribute="Value" context="ValueSQ" char="&apos;" />
+        <DetectSpaces />
+    </context>
+
+    <context name="ValueDQ" attribute="Value" lineEndContext="#stay">
+        <DetectChar attribute="Value" context="#pop#pop" char="&quot;" />
+        <IncludeRules context="FindEntityRefs" />
+    </context>
+
+    <context name="ValueSQ" attribute="Value" lineEndContext="#stay">
+        <DetectChar attribute="Value" context="#pop#pop" char="&apos;" />
+        <IncludeRules context="FindEntityRefs" />
+    </context>
+
+    <context name="FindEntityRefs" attribute="Normal Text" lineEndContext="#stay">
+        <RegExpr attribute="EntityRef" context="#stay" String="&entref;" />
+        <AnyChar attribute="Error" context="#stay" String="&amp;&lt;" />
+    </context>
+
+
+	  <context name="pythonExpr" attribute="Normal Text" lineEndContext="#stay">
+        <StringDetect attribute="Keyword" context="#pop#pop" String="}"/>
+        <IncludeRules context="##Python" />
+      </context>
+
+      <context name="pythonLine" attribute="Normal Text" lineEndContext="#pop#pop">
+        <IncludeRules context="##Python" />
+      </context>
+
+      <context name="pythonBlock" attribute="Normal Text" lineEndContext="#stay">
+        <DetectSpaces />
+        <StringDetect attribute="Keyword" context="#pop#pop" String="%&gt;" endRegion="pythonBlock" />
+        <IncludeRules context="##Python" />
+      </context>
+
+      <context name="MakoHTML" attribute="Normal Text" lineEndContext="#stay">
+        <DetectSpaces />
+        <StringDetect attribute="Keyword" context="#pop#pop" String="&lt;/%def&gt;" endRegion="defBlock" />
+        <StringDetect attribute="Keyword" context="#pop#pop" String="&lt;/%call&gt;" endRegion="callBlock" />
+        <StringDetect attribute="Keyword" context="#pop#pop" String="&lt;/%text&gt;" endRegion="textBlock" />
+        <RegExpr attribute="Error" context="#stay" String="&lt;/%&name;" />
+        <IncludeRules context="##Mako (HTML)" />
+      </context>
+
+    </contexts>
+    <itemDatas>
+      <itemData name="Normal Text" defStyleNum="dsNormal" />
+      <itemData name="Keyword" defStyleNum="dsKeyword" />
+      <itemData name="Comment" defStyleNum="dsComment" />
+	  <itemData name="Value" defStyleNum="dsString" color="#a00" />
+      <itemData name="Element" defStyleNum="dsKeyword" bold="false" color="#080" />
+      <itemData name="Error" defStyleNum="dsError" />
+    </itemDatas>
+
+  </highlighting>
+   <general>
+<!--     <folding indentationsensitive="1" /> -->
+     <comments>
+       <comment name="singleLine" start="#" />
+     </comments>
+     <keywords casesensitive="1" />
+   </general>
+
+</language>
