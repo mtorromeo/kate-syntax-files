@@ -14,29 +14,34 @@
 	</context>
 
 	<context name="FindMako" attribute="Normal Text" lineEndContext="#stay">
-		<RegExpr attribute="Element" context="NoMakoHTML" String="&lt;%text(?:\s+[^&gt;]*)?&gt;" beginRegion="nomako" />
-		<Detect2Chars attribute="Element" context="Mako" char="&lt;" char1="%" />
-		<RegExpr attribute="Element" context="Mako" String="&lt;/?%" />
-		<Detect2Chars attribute="Element" context="MakoPrint" char="$" char1="{" />
+		<RegExpr attribute="MakoKeyword" context="NoMakoHTML" String="&lt;%text(?:\s+[^&gt;]*)?&gt;" beginRegion="nomako" />
+		<Detect2Chars attribute="MakoKeyword" context="Mako" char="&lt;" char1="%" />
+		<RegExpr attribute="MakoKeyword" context="Mako" String="&lt;/?%" />
+		<RegExpr attribute="MakoKeyword" context="MakoOneLiner" String="^\s*% " />
+		<Detect2Chars attribute="MakoKeyword" context="MakoPrint" char="$" char1="{" />
 	</context>
 
 	<context name="Mako" attribute="Mako" lineEndContext="#stay">
-		<Detect2Char attribute="Element" context="#pop" char="/" char1="&gt;" />
-		<DetectChar attribute="Element" context="#pop" char="&gt;" />
+		<Detect2Char attribute="MakoKeyword" context="#pop" char="/" char1="&gt;" />
+		<DetectChar attribute="MakoKeyword" context="#pop" char="&gt;" />
+	</context>
+
+	<context name="MakoOneLiner" attribute="MakoKeyword" lineEndContext="#pop">
+		<IncludeRules context="##Python" includeAttrib="true"/>
 	</context>
 
 	<context name="MakoPrint" attribute="Mako" lineEndContext="#stay">
-		<DetectChar attribute="Element" context="#pop" char="}" />
+		<DetectChar attribute="MakoKeyword" context="#pop" char="}" />
 		<IncludeRules context="##Python" includeAttrib="true"/>
 	</context>
 
 	<context name="NoMakoHTML" attribute="Normal Text" lineEndContext="#stay">
-		<StringDetect attribute="Element" context="#pop" String="&lt;/%text&gt;" endRegion="nomako" />
+		<StringDetect attribute="MakoKeyword" context="#pop" String="&lt;/%text&gt;" endRegion="nomako" />
 		<IncludeRules context="##HTML" includeAttrib="true"/>
 	</context>
 
 	<context name="NoMakoJS" attribute="Normal Text" lineEndContext="#stay">
-		<StringDetect attribute="Element" context="#pop" String="&lt;/%text&gt;" endRegion="nomako" />
+		<StringDetect attribute="MakoKeyword" context="#pop" String="&lt;/%text&gt;" endRegion="nomako" />
 		<IncludeRules context="##JavaScript" includeAttrib="true"/>
 	</context>
 
@@ -173,14 +178,14 @@
 	<context name="JS" attribute="Normal Text" lineEndContext="#stay">
 		<Detect2Chars attribute="Element" context="#pop" char="/" char1="&gt;" endRegion="script" />
 		<DetectChar attribute="Element" context="JS content" char="&gt;" />
+		<IncludeRules context="FindAttributes" />
 		<RegExpr attribute="Error" context="#stay" String="\S" />
 	</context>
 
 	<context name="JS content" attribute="Normal Text" lineEndContext="#stay">
-		<RegExpr attribute="Element" context="JS" String="&lt;%text(?:\s+[^&gt;]*)?&gt;" beginRegion="nomako" />
 		<RegExpr attribute="Element" context="El Close 2" String="&lt;/script\b" insensitive="TRUE" endRegion="script" />
 		<RegExpr attribute="Comment" context="JS comment close" String="//(?=.*&lt;/script\b)" insensitive="TRUE" />
-		<RegExpr attribute="Element" context="NoMakoJS" String="&lt;%text(?:\s+[^&gt;]*)?&gt;" beginRegion="nomako" />
+		<RegExpr attribute="MakoKeyword" context="NoMakoJS" String="&lt;%text(?:\s+[^&gt;]*)?&gt;" beginRegion="nomako" />
 		<IncludeRules context="FindMako" />
 		<IncludeRules context="##JavaScript" includeAttrib="true"/>
 	</context>
