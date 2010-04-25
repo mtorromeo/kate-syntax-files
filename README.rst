@@ -10,6 +10,10 @@ Mako
 ''''
 Syntax highlighting for the `Mako templating engine <http://www.makotemplates.org>`_ for python
 
+CleanCSS
+''''''''
+Syntax highlighting for the `CleanCSS <http://github.com/mtorromeo/py-cleancss/>`_ syntax files.
+
 Smarty
 ''''''
 Syntax highlighting for the `Smarty templating engine <http://www.smarty.net>`_ for PHP.
