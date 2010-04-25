@@ -20,7 +20,7 @@ Syntax highlighting for the `Smarty templating engine <http://www.smarty.net>`_ 
 Already supports Smarty 3.
 
 Installation
------------
+------------
 Copy the xml files in ~/.kde4/share/apps/katepart/syntax
 
 LICENSE
