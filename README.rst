@@ -1,6 +1,6 @@
 Kate Syntax Files
 -----------------
-A set of new or modified syntax highlight definitions for the Kate text editor.
+A set of new or modified syntax highlight definitions for the `Kate text editor <http://www.kde.org/applications/utilities/kate/>`_.
 
 Python
 ''''''
