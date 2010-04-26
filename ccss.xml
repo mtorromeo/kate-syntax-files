@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
 
-<language name="CleanCSS" version="1.0" kateversion="2.4" section="Markup" extensions="*.ccss" mimetype="text/ccss" author="Massimiliano Torromeo" license="BSD">
+<language name="CleanCSS" version="1.0" kateversion="2.4" section="Markup" extensions="*.ccss" author="Massimiliano Torromeo" license="BSD">
 
 <highlighting>
 	<list name="properties">
