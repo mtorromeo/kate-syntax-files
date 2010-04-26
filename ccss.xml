@@ -398,6 +398,10 @@
 		<!-- Gecko rendering engine CSS value extensions -->
 		<item> -moz-box </item>
 
+		<!-- Webkit rendering engine CSS value extensions -->
+		<item> linear </item>
+		<item> radial </item>
+
 	</list>
 
 
@@ -465,6 +469,7 @@
 		
 		<!-- Webkit rendering engine CSS value extensions -->
 		<item> -webkit-gradient </item>
+		<item> color-stop </item>
 		
 		<!-- Gecko rendering engine CSS value extensions -->
 		<item> -moz-linear-gradient </item>
