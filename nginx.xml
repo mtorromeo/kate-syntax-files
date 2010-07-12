@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language name="NGINX Configuration" version="1.0" kateversion="2.4" section="Configuration" extensions="nginx.conf" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
+
+	<highlighting>
+		<list name="blocks">
+			<item>http</item>
+			<item>mail</item>
+			<item>events</item>
+			<item>server</item>
+			<item>types</item>
+			<item>location</item>
+			<item>upstream</item>
+			<item>charset_map</item>
+			<item>limit_except</item>
+			<item>if</item>
+			<item>geo</item>
+			<item>map</item>
+		</list>
+		
+		<list name="values">
+			<item>on</item>
+			<item>off</item>
+		</list>
+
+		<contexts>
+			<context name="main" attribute="Normal Text" lineEndContext="#stay">
+				<IncludeRules context="FindBlocksDirectives" />
+				<RegExpr attribute="Error" context="#stay" String="\S" />
+			</context>
+			
+			<context name="FindBlocksDirectives" attribute="Normal Text" lineEndContext="#stay">
+				<DetectChar context="comment"  char="#" />
+				<RegExpr context="block_decl" String="^.*\S.*\{" lookAhead="true" />
+				<RegExpr context="directive" attribute="Directive" String="[a-z_]+" insensitive="true" />
+			</context>
+			
+			<context name="block_decl" attribute="Normal Text" lineEndContext="#pop">
+				<DetectChar context="comment"  char="#" />
+				<keyword context="#stay" attribute="Keyword Name" String="blocks" />
+				<DetectChar context="block" attribute="Symbol" char="{" />
+			</context>
+
+			<context name="block" attribute="Normal Text" lineEndContext="#stay" >
+				<IncludeRules context="FindBlocksDirectives" />
+				<DetectChar context="#pop" attribute="Symbol" char="}" />
+			</context>
+			
+			<context name="directive" attribute="Normal Text" lineEndContext="#stay">
+				<DetectChar context="comment"  char="#" />
+				<keyword context="#stay" attribute="Keyword Name" String="values" />
+				<RegExpr attribute="Variable" context="#stay" String="((2[0-5]|1[0-9]|[0-9])?[0-9]\.){3}(2[0-5]|1[0-9]|[0-9])?[0-9]" />
+				<DetectChar attribute="String" context="doublequotestring" char="&quot;" />
+				<DetectChar attribute="String" context="singlequotestring" char="'" />
+				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*" />
+				<Float attribute="Float" context="#stay" />
+				<Int attribute="Decimal" context="#stay" />
+				<DetectChar context="#pop" attribute="Symbol" char=";" />
+			</context>
+			
+			<context name="doublequotestring" attribute="String" lineEndContext="#stay">
+				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*" />
+				<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="&quot;" />
+				<DetectChar attribute="String" context="#pop" char="&quot;" />
+			</context>
+			
+			<context name="singlequotestring" attribute="String" lineEndContext="#stay">
+				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*" />
+				<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="'" />
+				<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="\" />
+				<DetectChar attribute="String" context="#pop" char="'" />
+			</context>
+
+
+			<context name="comment" attribute="Comment" lineEndContext="#pop" ></context>
+		</contexts>
+
+		<itemDatas>
+			<itemData name="Normal Text" defStyleNum="dsNormal" />
+			<itemData name="Comment" defStyleNum="dsComment" />
+			<itemData name="Keyword Name" defStyleNum="dsKeyword" bold="false" />
+			<itemData name="Decimal" defStyleNum="dsDecVal" spellChecking="false" />
+			<itemData name="Float" defStyleNum="dsFloat" spellChecking="false" />
+			<itemData name="String" defStyleNum="dsString" />
+			<itemData name="Variable" defStyleNum="dsKeyword" color="#5555FF" selColor="#ffffff" bold="0" italic="0" spellChecking="false" />
+			<itemData name="Symbol" defStyleNum="dsSymbol" />
+			<itemData name="Directive" defStyleNum="dsOthers" />
+			<itemData name="Error" defStyleNum="dsError" spellChecking="false"/>
+		</itemDatas>
+
+	</highlighting>
+
+	<general>
+		<comments>
+			<comment name="singleLine" start="#" />
+		</comments>
+	</general>
+</language>
