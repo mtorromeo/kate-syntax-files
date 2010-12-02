@@ -15,12 +15,17 @@
 	<item>in</item>
 	<item>foreach</item>
 	<item>foreachelse</item>
+	<item>while</item>
 	<item>ldelim</item>
 	<item>rdelim</item>
 	<item>cycle</item>
+	<item>section</item>
+	<item>sectionelse</item>
+	<item>insert</item>
 	<item>include</item>
 	<item>counter</item>
 	<item>assign</item>
+	<item>strip</item>
 
 	<item>default</item>
 	<item>date_format</item>
@@ -33,7 +38,16 @@
 	<item>item</item>
 	<item>key</item>
 	<item>values</item>
-	
+	<item>scope</item>
+	<item>script</item>
+
+	<item>append</item>
+	<item>prepend</item>
+	<item>call</item>
+	<item>debug</item>
+	<item>config_load</item>
+
+	<item>capture</item>
 	<item>block</item>
 	<item>extends</item>
 </list>
@@ -54,7 +68,7 @@
 	<context name="Smarty" attribute="Smarty" lineEndContext="#stay">
 		<DetectChar attribute="SmartyKeyword" context="#pop" char="}" endRegion="smarty" />
 		<keyword attribute="SmartyKeyword" context="#stay" String="keywords" />
-		<RegExpr attribute="SmartyVar" context="#stay" String="\$[\w\.\[\]]*" />
+		<RegExpr attribute="SmartyVar" context="#stay" String="\$\w(?:[\w\.\[\]]|\->)*(?:\(\))?" />
 		<RegExpr attribute="SmartyString" context="#stay" String='"[^"]*"' />
 		<RegExpr attribute="SmartyString" context="#stay" String="'[^']*'" />
 	</context>
