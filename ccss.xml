@@ -146,8 +146,11 @@
 		<item> border-top-left-radius </item>
 		<item> border-top-right-image </item>
 		<item> border-top-right-radius </item>
+		<item> box-align </item>
 		<item> box-shadow </item>
 		<item> box-sizing </item>
+		<item> box-orient </item>
+		<item> box-pack </item>
 		<item> opacity </item>
 		<item> outline-offset </item>
 		<item> overflow-x </item>
@@ -394,6 +397,7 @@
 		<item> monospace </item>
 		<item> border-box </item>
 		<item> content-box </item>
+		<item> horizontal </item>
 
 		<!-- Gecko rendering engine CSS value extensions -->
 		<item> -moz-box </item>
@@ -466,11 +470,11 @@
 		<!-- in @font-face -->
 		<item> local </item>
 		<item> format </item>
-		
+
 		<!-- Webkit rendering engine CSS value extensions -->
 		<item> -webkit-gradient </item>
 		<item> color-stop </item>
-		
+
 		<!-- Gecko rendering engine CSS value extensions -->
 		<item> -moz-linear-gradient </item>
 		<item> -moz-radial-gradient </item>
@@ -527,6 +531,7 @@
 
 	<contexts>
 		<context name="Normal" attribute="Normal Text" lineEndContext="#stay">
+			<Detect2Chars attribute="Comment" char="/" char1="/" context="Comment" />
 			<RegExpr attribute="Normal Text" String=".*\S.*:\s*$" context="Selector" lookAhead="true" />
 			<RegExpr attribute="Normal Text" String=".*\S.*:.*\S.*$" context="RuleSet" lookAhead="true" />
 			<RegExpr attribute="Property" String="[a-z\-]+-&gt;\s*$" context="#stay" />
@@ -537,7 +542,9 @@
 			<keyword attribute="Value" context="#stay" String="colors" />-->
 			<!--<keyword attribute="Value" context="PropParen" String="paren" />-->
 		</context>
-		
+
+		<context name="Comment" attribute="Comment" lineEndContext="#pop" />
+
 		<context name="Selector" attribute="Normal Text" lineEndContext="#pop">
 			<DetectChar attribute="Selector Attr" context="SelAttr" char="[" />
 			<RegExpr attribute="Selector Id" context="#stay" String="#([a-zA-Z0-9\-_]|[\x80-\xFF]|\\[0-9A-Fa-f]{1,6})*" />
@@ -549,12 +556,12 @@
 		<context name="SelAttr" attribute="Selector Attr" lineEndContext="#pop">
 			<DetectChar attribute="Selector Attr" context="#pop" char="]" />
 			<IncludeRules context="FindStrings" />
-      </context>
+		</context>
 
 		<context name="SelPseudo" attribute="Selector Pseudo" lineEndContext="#pop" fallthrough="true" fallthroughContext="#pop">
 			<keyword attribute="Selector Pseudo" context="#pop" String="pseudoclasses" />
-      </context>
-		
+		</context>
+
 		<context name="RuleSet" attribute="Normal Text" lineEndContext="#pop">
 			<keyword attribute="Property" context="Rule" String="properties" />
 			<RegExpr attribute="Unknown Property" context="Rule" String="-?[A-Za-z_-]+(?=\s*:)" />
@@ -587,13 +594,13 @@
 			<IncludeRules context="FindValues" />
 			<IncludeRules context="FindStrings" />
 		</context>
-		
+
 	<context attribute="Normal Text" lineEndContext="#stay" name="FindValues">
 		<RegExpr attribute="Value" context="#stay" String="[-+]?[0-9.]+(em|ex|px|in|cm|mm|pt|pc|deg|rad|grad|ms|s|Hz|kHz)\b" />
 		<RegExpr attribute="Value" context="#stay" String="[-+]?[0-9.]+[%]?" />
 		<RegExpr attribute="Normal Text" context="#stay" String="[\w\-]+" />
 	</context>
-      
+
 		<context name="FindStrings" attribute="Normal Text" lineEndContext="#pop">
 			<DetectChar attribute="String" context="StringDQ" char="&quot;" />
 			<DetectChar attribute="String" context="StringSQ" char="'" />
@@ -615,7 +622,7 @@
 			<DetectIdentifier/>
 		</context>
 	</contexts>
-	
+
 	<itemDatas>
 		<itemData name="Normal Text" defStyleNum="dsNormal" spellChecking="false"/>
 		<itemData name="Property"  defStyleNum="dsKeyword" spellChecking="false"/>
