@@ -17,7 +17,7 @@
 			<item>geo</item>
 			<item>map</item>
 		</list>
-		
+
 		<list name="values">
 			<item>on</item>
 			<item>off</item>
@@ -25,29 +25,30 @@
 
 		<contexts>
 			<context name="main" attribute="Normal Text" lineEndContext="#stay">
-				<IncludeRules context="FindBlocksDirectives" />
+				<IncludeRules context="FindBlockDirectives" />
 				<RegExpr attribute="Error" context="#stay" String="\S" />
 			</context>
-			
-			<context name="FindBlocksDirectives" attribute="Normal Text" lineEndContext="#stay">
+
+			<context name="FindBlockDirectives" attribute="Normal Text" lineEndContext="#stay">
 				<DetectChar context="comment"  char="#" />
-				<RegExpr context="block_decl" String="^.*\S.*\{" lookAhead="true" />
-				<RegExpr context="directive" attribute="Directive" String="[a-z_]+" insensitive="true" />
+				<RegExpr context="directive" attribute="Normal Text" String="[a-z_]+\s.*;" firstNonSpace="1" lookAhead="true" insensitive="true" />
+				<RegExpr context="block_decl" String="^\s*\w+.*\s\{" lookAhead="true" />
 			</context>
-			
+
 			<context name="block_decl" attribute="Normal Text" lineEndContext="#pop">
 				<DetectChar context="comment"  char="#" />
 				<keyword context="#stay" attribute="Keyword Name" String="blocks" />
-				<DetectChar context="block" attribute="Symbol" char="{" />
+				<DetectChar context="block" attribute="Symbol" char="{" beginRegion="block" />
 			</context>
 
 			<context name="block" attribute="Normal Text" lineEndContext="#stay" >
-				<IncludeRules context="FindBlocksDirectives" />
-				<DetectChar context="#pop" attribute="Symbol" char="}" />
+				<IncludeRules context="FindBlockDirectives" />
+				<DetectChar context="#pop" attribute="Symbol" char="}" endRegion="block" />
 			</context>
-			
+
 			<context name="directive" attribute="Normal Text" lineEndContext="#stay">
 				<DetectChar context="comment"  char="#" />
+				<RegExpr context="#stay" attribute="Directive" String="[a-z_]+"  firstNonSpace="1" insensitive="true" />
 				<keyword context="#stay" attribute="Keyword Name" String="values" />
 				<RegExpr attribute="Variable" context="#stay" String="((2[0-5]|1[0-9]|[0-9])?[0-9]\.){3}(2[0-5]|1[0-9]|[0-9])?[0-9]" />
 				<DetectChar attribute="String" context="doublequotestring" char="&quot;" />
@@ -57,13 +58,13 @@
 				<Int attribute="Decimal" context="#stay" />
 				<DetectChar context="#pop" attribute="Symbol" char=";" />
 			</context>
-			
+
 			<context name="doublequotestring" attribute="String" lineEndContext="#stay">
 				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*" />
 				<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="&quot;" />
 				<DetectChar attribute="String" context="#pop" char="&quot;" />
 			</context>
-			
+
 			<context name="singlequotestring" attribute="String" lineEndContext="#stay">
 				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*" />
 				<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="'" />
