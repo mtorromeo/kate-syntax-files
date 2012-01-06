@@ -16,7 +16,7 @@ Syntax highlighting for the `CleanCSS <http://github.com/mtorromeo/py-cleancss/>
 
 LESS
 ''''
-Syntax highlight for `LESS CSS <http://lesscss.org/>` files
+Syntax highlight for `LESS CSS <http://lesscss.org/>`_ files
 
 Smarty
 ''''''
