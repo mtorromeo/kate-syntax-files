@@ -12,7 +12,11 @@ Syntax highlighting for the `Mako templating engine <http://www.makotemplates.or
 
 CleanCSS
 ''''''''
-Syntax highlighting for the `CleanCSS <http://github.com/mtorromeo/py-cleancss/>`_ syntax files.
+Syntax highlighting for the `CleanCSS <http://github.com/mtorromeo/py-cleancss/>`_ files.
+
+LESS
+''''
+Syntax highlight for `LESS CSS <http://lesscss.org/>` files
 
 Smarty
 ''''''
