@@ -33,7 +33,7 @@ Copy the xml files in ~/.kde4/share/apps/katepart/syntax
 
 LICENSE
 -------
-Copyright (c) 2010 Massimiliano Torromeo
+Copyright (c) 2010-2012 Massimiliano Torromeo
 
 Free software released under the terms of the BSD license.
 
