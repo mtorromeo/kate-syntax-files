@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language name="Restructured Text" version="1.0" kateversion="2.4" section="Markup" extensions=".rst" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
+<language name="Restructured Text" version="1.0" kateversion="2.4" section="Markup" extensions="*.rst" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
 
 	<highlighting>
 		<contexts>
