@@ -31,8 +31,8 @@
 
 			<context name="FindBlockDirectives" attribute="Normal Text" lineEndContext="#stay">
 				<DetectChar context="comment"  char="#" />
-				<RegExpr context="directive" attribute="Normal Text" String="[a-z_]+\s.*;" firstNonSpace="1" lookAhead="true" insensitive="true" />
-				<RegExpr context="block_decl" String="^\s*\w+.*\s\{" lookAhead="true" />
+				<RegExpr context="directive" attribute="Normal Text" String="[a-z_]+[^;]*;" lookAhead="true" insensitive="true" />
+				<RegExpr context="block_decl" String="\w+[^;\{]*\{" lookAhead="true" />
 			</context>
 
 			<context name="block_decl" attribute="Normal Text" lineEndContext="#pop">
@@ -48,15 +48,21 @@
 
 			<context name="directive" attribute="Normal Text" lineEndContext="#stay">
 				<DetectChar context="comment"  char="#" />
-				<RegExpr context="#stay" attribute="Directive" String="[a-z_]+"  firstNonSpace="1" insensitive="true" />
+				<StringDetect attribute="Directive" context="rewrite" String="rewrite "/>
+				<RegExpr context="directive_params" attribute="Directive" String="[a-z_]+" insensitive="true" />
+				<DetectChar context="#pop" attribute="Symbol" char=";" />
+			</context>
+
+			<context name="directive_params" arrtibute="Normal Text" lineEndContext="#stay">
 				<keyword context="#stay" attribute="Keyword Name" String="values" />
 				<RegExpr attribute="Variable" context="#stay" String="((2[0-5]|1[0-9]|[0-9])?[0-9]\.){3}(2[0-5]|1[0-9]|[0-9])?[0-9]" />
 				<DetectChar attribute="String" context="doublequotestring" char="&quot;" />
 				<DetectChar attribute="String" context="singlequotestring" char="'" />
 				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*" />
+				<RegExpr attribute="Size" context="#stay" String="\d+[smhdk]" />
 				<Float attribute="Float" context="#stay" />
 				<Int attribute="Decimal" context="#stay" />
-				<DetectChar context="#pop" attribute="Symbol" char=";" />
+				<DetectChar context="#pop#pop" attribute="Symbol" char=";" />
 			</context>
 
 			<context name="doublequotestring" attribute="String" lineEndContext="#stay">
@@ -64,12 +70,48 @@
 				<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="&quot;" />
 				<DetectChar attribute="String" context="#pop" char="&quot;" />
 			</context>
-
 			<context name="singlequotestring" attribute="String" lineEndContext="#stay">
 				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*" />
 				<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="'" />
 				<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="\" />
 				<DetectChar attribute="String" context="#pop" char="'" />
+			</context>
+
+
+			<context name="rewrite" attribute="RegExpr" lineEndContext="#stay">
+				<IncludeRules context="RegExpr" />
+				<RegExpr attribute="Symbol" context="directive_params" String="\s" />
+				<DetectChar context="#pop" attribute="Symbol" char=";" />
+			</context>
+
+
+			<context name="RegExpr (" attribute="RegExpr" lineEndContext="#stay">
+				<IncludeRules context="RegExpr" />
+				<DetectChar attribute="RegExpr Special" context="#pop" char=")" />
+			</context>
+			<context name="RegExpr [" attribute="RegExpr" lineEndContext="#stay">
+				<DetectChar attribute="RegExpr Special" context="#pop" char="]" />
+			</context>
+			<context name="RegExpr {" attribute="RegExpr" lineEndContext="#stay">
+				<DetectChar attribute="RegExpr Special" context="#pop" char="}" />
+			</context>
+			<context name="RegExpr Q" attribute="RegExpr" lineEndContext="#stay">
+				<DetectChar attribute="RegExpr" context="#pop" char="&quot;" />
+			</context>
+			<context name="RegExpr" attribute="RegExpr" lineEndContext="#stay">
+				<RegExpr attribute="Backslash Code" context="#stay" String="\\." />
+				<DetectChar context="#pop#pop" attribute="Symbol" char=";" />
+				<RegExpr attribute="Symbol" context="#pop" String="\s" />
+				<DetectChar attribute="RegExpr Special" context="#stay" char="^" />
+				<DetectChar attribute="RegExpr Special" context="#stay" char="$" />
+				<DetectChar attribute="RegExpr Special" context="#stay" char="." />
+				<DetectChar attribute="RegExpr Special" context="#stay" char="*" />
+				<DetectChar attribute="RegExpr Special" context="#stay" char="?" />
+				<DetectChar attribute="RegExpr Special" context="#stay" char="+" />
+				<DetectChar attribute="RegExpr Special" context="RegExpr (" char="(" />
+				<DetectChar attribute="RegExpr Special" context="RegExpr [" char="[" />
+				<DetectChar attribute="RegExpr Special" context="RegExpr {" char="{" />
+				<DetectChar attribute="RegExpr" context="RegExpr Q" char="&quot;" />
 			</context>
 
 
@@ -82,11 +124,15 @@
 			<itemData name="Keyword Name" defStyleNum="dsKeyword" bold="false" />
 			<itemData name="Decimal" defStyleNum="dsDecVal" spellChecking="false" />
 			<itemData name="Float" defStyleNum="dsFloat" spellChecking="false" />
+			<itemData name="Size" defStyleNum="dsFloat" spellChecking="false" />
 			<itemData name="String" defStyleNum="dsString" />
 			<itemData name="Variable" defStyleNum="dsKeyword" color="#5555FF" selColor="#ffffff" bold="0" italic="0" spellChecking="false" />
 			<itemData name="Symbol" defStyleNum="dsSymbol" />
 			<itemData name="Directive" defStyleNum="dsOthers" />
 			<itemData name="Error" defStyleNum="dsError" spellChecking="false"/>
+			<itemData name="RegExpr" defStyleNum="dsString" spellChecking="false"/>
+			<itemData name="RegExpr Special" defStyleNum="dsKeyword" spellChecking="false"/>
+			<itemData name="Backslash Code" defStyleNum="dsString" spellChecking="false" bold="true"/>
 		</itemDatas>
 
 	</highlighting>
