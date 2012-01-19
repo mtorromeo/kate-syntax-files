@@ -61,7 +61,7 @@
 	<context name="FindSmarty" attribute="Normal Text" lineEndContext="#stay">
 		<StringDetect attribute="SmartyKeyword" context="NoSmartyHTML" String="{literal}" beginRegion="nosmarty" />
 		<Detect2Chars attribute="Comment" context="SmartyComment" char="{" char1="*" startRegion="smartycomment" />
-		<RegExpr attribute="SmartyKeyword" context="Smarty" String="\{(?=[a-zA-Z/$&apos;&quot;])" />
+		<RegExpr attribute="SmartyKeyword" context="Smarty" String="\{(?=[a-zA-Z/$&apos;&quot;\(])" />
 		<!--<DetectChar attribute="SmartyKeyword" context="Smarty" char="{" startRegion="smarty" />-->
 	</context>
 
