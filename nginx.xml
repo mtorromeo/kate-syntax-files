@@ -108,8 +108,9 @@
 				<DetectChar attribute="RegExpr Special" context="#stay" char="*" />
 				<DetectChar attribute="RegExpr Special" context="#stay" char="?" />
 				<DetectChar attribute="RegExpr Special" context="#stay" char="+" />
+				<DetectChar attribute="RegExpr Special" context="#stay" char="|" />
+				<RegExpr attribute="RegExpr Special" context="RegExpr [" String="\[\^?" />
 				<DetectChar attribute="RegExpr Special" context="RegExpr (" char="(" />
-				<DetectChar attribute="RegExpr Special" context="RegExpr [" char="[" />
 				<DetectChar attribute="RegExpr Special" context="RegExpr {" char="{" />
 				<DetectChar attribute="RegExpr" context="RegExpr Q" char="&quot;" />
 			</context>
