@@ -23,6 +23,13 @@
 			<item>off</item>
 		</list>
 
+		<list name="rewrite_flags">
+			<item>last</item>
+			<item>break</item>
+			<item>redirect</item>
+			<item>permanent</item>
+		</list>
+
 		<contexts>
 			<context name="main" attribute="Normal Text" lineEndContext="#stay">
 				<IncludeRules context="FindBlockDirectives" />
@@ -58,11 +65,11 @@
 				<RegExpr attribute="Variable" context="#stay" String="((2[0-5]|1[0-9]|[0-9])?[0-9]\.){3}(2[0-5]|1[0-9]|[0-9])?[0-9]" />
 				<DetectChar attribute="String" context="doublequotestring" char="&quot;" />
 				<DetectChar attribute="String" context="singlequotestring" char="'" />
-				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*" />
-				<RegExpr attribute="Size" context="#stay" String="\d+[smhdk]" />
+				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z0-9_\x7f-\xff]+" />
+				<RegExpr attribute="Size" context="#stay" String="\d+[smhdk](?=\W|$)" />
 				<Float attribute="Float" context="#stay" />
 				<Int attribute="Decimal" context="#stay" />
-				<DetectChar context="#pop#pop" attribute="Symbol" char=";" />
+				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
 			</context>
 
 			<context name="doublequotestring" attribute="String" lineEndContext="#stay">
@@ -77,13 +84,24 @@
 				<DetectChar attribute="String" context="#pop" char="'" />
 			</context>
 
-
-			<context name="rewrite" attribute="RegExpr" lineEndContext="#stay">
-				<IncludeRules context="RegExpr" />
-				<RegExpr attribute="Symbol" context="directive_params" String="\s" />
-				<DetectChar context="#pop" attribute="Symbol" char=";" />
+			<!-- REWRITE -->
+			<context name="rewrite" attribute="Normal Text" lineEndContext="#stay">
+				<RegExpr context="RegExpr" attribute="RegExpr" String="[^\s&quot;;]" lookAhead="true" />
+				<RegExpr attribute="Symbol" context="rewrite_replacement" String="\s" />
+				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
 			</context>
 
+			<context name="rewrite_replacement" attribute="Normal Text" lineEndContext="#stay">
+				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z0-9_\x7f-\xff]+" />
+				<RegExpr attribute="Symbol" context="rewrite_flag" String="\s" />
+				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
+			</context>
+
+			<context name="rewrite_flag" attribute="Normal Text" lineEndContext="#stay">
+				<keyword context="#pop#pop" attribute="Keyword Name" String="rewrite_flags" />
+				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
+			</context>
+			<!-- END REWRITE -->
 
 			<context name="RegExpr (" attribute="RegExpr" lineEndContext="#stay">
 				<IncludeRules context="RegExpr" />
@@ -100,8 +118,8 @@
 			</context>
 			<context name="RegExpr" attribute="RegExpr" lineEndContext="#stay">
 				<RegExpr attribute="Backslash Code" context="#stay" String="\\." />
-				<DetectChar context="#pop#pop" attribute="Symbol" char=";" />
-				<RegExpr attribute="Symbol" context="#pop" String="\s" />
+				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
+				<RegExpr attribute="Symbol" context="#pop" String="\s" lookAhead="true" />
 				<DetectChar attribute="RegExpr Special" context="#stay" char="^" />
 				<DetectChar attribute="RegExpr Special" context="#stay" char="$" />
 				<DetectChar attribute="RegExpr Special" context="#stay" char="." />

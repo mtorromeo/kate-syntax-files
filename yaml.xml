@@ -23,9 +23,9 @@
         <RegExpr attribute="Alias" firstNonSpace="true" context="#stay" String="&amp;\S+" />
         <RegExpr attribute="Reference" firstNonSpace="true" context="#stay" String="\*\S+" />
 
-        <RegExpr attribute="Key" context="attribute-pre" String="\??\s*[^&quot;'#-][^:#]*:"/>
-        <RegExpr attribute="Key" context="attribute-pre" String="\??\s*&quot;[^&quot;#]+&quot;\s*:"/>
-        <RegExpr attribute="Key" context="attribute-pre" String="\??\s*'[^'#]+'\s*:"/>
+        <RegExpr attribute="Key" context="attribute-pre" String="\??\s*[^&quot;'#-][^#]*:(\s|$)"/>
+        <RegExpr attribute="Key" context="attribute-pre" String="\??\s*&quot;[^&quot;#]+&quot;\s*:(\s|$)"/>
+        <RegExpr attribute="Key" context="attribute-pre" String="\??\s*'[^'#]+'\s*:(\s|$)"/>
 
         <DetectChar attribute="String" context="string" char="'" beginRegion="String" />
         <DetectChar attribute="String" context="stringx" char="&quot;" beginRegion="String" />
@@ -99,9 +99,9 @@
 
         <DetectChar attribute="Operator" context="#pop" char="]" endRegion="List" />
 
-        <RegExpr attribute="Key" context="attribute-pre" String="\??\s*[^&quot;'#-][^:#]*:"/>
-        <RegExpr attribute="Key" context="attribute-pre" String="\??\s*&quot;[^&quot;#]+&quot;\s*:"/>
-        <RegExpr attribute="Key" context="attribute-pre" String="\??\s*'[^'#]+'\s*:"/>
+        <RegExpr attribute="Key" context="attribute-pre" String="\??\s*[^&quot;'#-][^#]*:(\s|$)"/>
+        <RegExpr attribute="Key" context="attribute-pre" String="\??\s*&quot;[^&quot;#]+&quot;\s*:(\s|$)"/>
+        <RegExpr attribute="Key" context="attribute-pre" String="\??\s*'[^'#]+'\s*:(\s|$)"/>
 
         <StringDetect attribute="Data Types" context="#stay" String="null" />
         <RegExpr attribute="Data Types" context="#stay" String="!!\S+" />
@@ -119,9 +119,9 @@
         <DetectSpaces/>
         <DetectChar attribute="Comment" context="comment" char="#" />
 
-        <RegExpr attribute="Key" context="attribute-pre-inline" String="\??\s*[^&quot;'#-][^:#]*:"/>
-        <RegExpr attribute="Key" context="attribute-pre-inline" String="\??\s*&quot;[^&quot;#]+&quot;\s*:"/>
-        <RegExpr attribute="Key" context="attribute-pre-inline" String="\??\s*'[^'#]+'\s*:"/>
+        <RegExpr attribute="Key" context="attribute-pre-inline" String="\??\s*[^&quot;'#-][^#]*:(\s|$)"/>
+        <RegExpr attribute="Key" context="attribute-pre-inline" String="\??\s*&quot;[^&quot;#]+&quot;\s*:(\s|$)"/>
+        <RegExpr attribute="Key" context="attribute-pre-inline" String="\??\s*'[^'#]+'\s*:(\s|$)"/>
 
         <DetectChar attribute="Operator" context="#pop" char="}" endRegion="Hash" />
       </context>
@@ -140,13 +140,13 @@
           <DetectIdentifier />
           <DetectChar attribute="String" context="attribute-end-inline" char="'" endRegion="String" />
       </context>
-      
+
       <context attribute="String" lineEndContext="#stay" name="attribute-stringx-inline">
           <DetectIdentifier />
           <DetectChar attribute="String" context="attribute-end-inline" char="&quot;" endRegion="String" />
       </context>
 
-      
+
       <context attribute="Error" lineEndContext="#pop#pop#pop" name="attribute-end">
       </context>
 
@@ -156,8 +156,8 @@
           <RegExpr attribute="Operator" context="#pop#pop#pop"  String=",\s"/>
       </context>
 
-      
-      
+
+
       <context attribute="String" lineEndContext="#stay" name="string">
         <DetectIdentifier />
         <DetectChar attribute="String" context="#pop" char="'" endRegion="String" />
