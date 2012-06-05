@@ -86,6 +86,7 @@
 
 			<!-- REWRITE -->
 			<context name="rewrite" attribute="Normal Text" lineEndContext="#stay">
+				<DetectChar context="Quoted RegExpr" attribute="Symbol" char="&quot;" />
 				<RegExpr context="RegExpr" attribute="RegExpr" String="[^\s&quot;;]" lookAhead="true" />
 				<RegExpr attribute="Symbol" context="rewrite_replacement" String="\s" />
 				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
@@ -103,23 +104,25 @@
 			</context>
 			<!-- END REWRITE -->
 
+			<!-- REGULAR EXPRESSIONS -->
 			<context name="RegExpr (" attribute="RegExpr" lineEndContext="#stay">
-				<IncludeRules context="RegExpr" />
+				<IncludeRules context="RegExpr Common" />
 				<DetectChar attribute="RegExpr Special" context="#pop" char=")" />
 			</context>
+
 			<context name="RegExpr [" attribute="RegExpr" lineEndContext="#stay">
 				<DetectChar attribute="RegExpr Special" context="#pop" char="]" />
 			</context>
+
 			<context name="RegExpr {" attribute="RegExpr" lineEndContext="#stay">
 				<DetectChar attribute="RegExpr Special" context="#pop" char="}" />
 			</context>
+
 			<context name="RegExpr Q" attribute="RegExpr" lineEndContext="#stay">
 				<DetectChar attribute="RegExpr" context="#pop" char="&quot;" />
 			</context>
-			<context name="RegExpr" attribute="RegExpr" lineEndContext="#stay">
-				<RegExpr attribute="Backslash Code" context="#stay" String="\\." />
-				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
-				<RegExpr attribute="Symbol" context="#pop" String="\s" lookAhead="true" />
+
+			<context name="RegExpr Common" attribute="RegExpr" lineEndContext="#stay">
 				<DetectChar attribute="RegExpr Special" context="#stay" char="^" />
 				<DetectChar attribute="RegExpr Special" context="#stay" char="$" />
 				<DetectChar attribute="RegExpr Special" context="#stay" char="." />
@@ -133,6 +136,19 @@
 				<DetectChar attribute="RegExpr" context="RegExpr Q" char="&quot;" />
 			</context>
 
+			<context name="RegExpr" attribute="RegExpr" lineEndContext="#stay">
+				<RegExpr attribute="Backslash Code" context="#stay" String="\\." />
+				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
+				<RegExpr attribute="Symbol" context="#pop" String="\s" lookAhead="true" />
+				<IncludeRules context="RegExpr Common" />
+			</context>
+
+			<context name="Quoted RegExpr" attribute="RegExpr" lineEndContext="#stay">
+				<RegExpr attribute="Backslash Code" context="#stay" String="\\." />
+				<DetectChar context="#pop" attribute="Symbol" char="&quot;" />
+				<IncludeRules context="RegExpr Common" />
+			</context>
+			<!-- END REGULAR EXPRESSIONS -->
 
 			<context name="comment" attribute="Comment" lineEndContext="#pop" ></context>
 		</contexts>
