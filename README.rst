@@ -27,6 +27,10 @@ RestruturedText
 '''''''''''''''
 Syntax highlighting for the `RestructuredText <http://docutils.sourceforge.net/rst.html>`_, used mostly in python documentations.
 
+Template Toolkit
+''''''''''''''''
+Syntax highlighting for perl's `Template Toolkit <http://template-toolkit.org/>`_, originally written by Krassimir Berov.
+
 Installation
 ------------
 Copy the xml files in ~/.kde4/share/apps/katepart/syntax
