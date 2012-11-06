@@ -35,6 +35,10 @@ YAML
 ''''
 Modified YAML syntax that adds indentation based folding in the editor.
 
+Nginx
+'''''
+Syntax highlighting for the configuration files of the `Nginx <http://nginx.com/>`_ web server.
+
 Installation
 ------------
 Copy the xml files in ~/.kde4/share/apps/katepart/syntax
