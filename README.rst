@@ -23,7 +23,7 @@ Smarty
 Syntax highlighting for the `Smarty templating engine <http://www.smarty.net>`_ for PHP.
 Already supports Smarty 3.
 
-RestruturedText
+RestructuredText
 '''''''''''''''
 Syntax highlighting for the `RestructuredText <http://docutils.sourceforge.net/rst.html>`_, used mostly in python documentations.
 
