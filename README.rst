@@ -31,6 +31,10 @@ Template Toolkit
 ''''''''''''''''
 Syntax highlighting for perl's `Template Toolkit <http://template-toolkit.org/>`_, originally written by Krassimir Berov.
 
+YAML
+''''
+Modified YAML syntax that adds indentation based folding in the editor.
+
 Installation
 ------------
 Copy the xml files in ~/.kde4/share/apps/katepart/syntax
