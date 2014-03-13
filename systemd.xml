@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language name="SystemD Unit Files" section="Configuration" extensions="*.service;*.socket;*.device;*.mount;*.automount;*.swap;*.target;*.path;*.timer;*.snapshot;*.slice;*.scope" mimetype="" version="1.1" kateversion="2.0" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
+
+<highlighting>
+	<list name="sections">
+		<item>Address</item>
+		<item>Automount</item>
+		<item>Device</item>
+		<item>DHCPv4</item>
+		<item>Install</item>
+		<item>Match</item>
+		<item>Mount</item>
+		<item>Network</item>
+		<item>Path</item>
+		<item>Route</item>
+		<item>Service</item>
+		<item>Slice</item>
+		<item>Socket</item>
+		<item>Swap</item>
+		<item>Target</item>
+		<item>Timer</item>
+		<item>Unit</item>
+	</list>
+
+	<list name="keywords">
+		<!-- [UNIT] -->
+		<item>Description</item>
+		<item>Documentation</item>
+		<item>Requires</item>
+		<item>RequiresOverridable</item>
+		<item>Requisite</item>
+		<item>RequisiteOverridable</item>
+		<item>Wants</item>
+		<item>BindsTo</item>
+		<item>PartOf</item>
+		<item>Conflicts</item>
+		<item>Before</item>
+		<item>After</item>
+		<item>OnFailure</item>
+		<item>PropagatesReloadTo</item>
+		<item>ReloadPropagatedFrom</item>
+		<item>JoinsNamespaceOf</item>
+		<item>RequiresMountsFor</item>
+		<item>OnFailureJobMode</item>
+		<item>IgnoreOnIsolate</item>
+		<item>IgnoreOnSnapshot</item>
+		<item>StopWhenUnneeded</item>
+		<item>RefuseManualStart</item>
+		<item>RefuseManualStop</item>
+		<item>AllowIsolate</item>
+		<item>DefaultDependencies</item>
+		<item>JobTimeoutSec</item>
+		<item>ConditionArchitecture</item>
+		<item>ConditionVirtualization</item>
+		<item>ConditionHost</item>
+		<item>ConditionKernelCommandLine</item>
+		<item>ConditionSecurity</item>
+		<item>ConditionCapability</item>
+		<item>ConditionACPower</item>
+		<item>ConditionPathExists</item>
+		<item>ConditionPathExistsGlob</item>
+		<item>ConditionPathIsDirectory</item>
+		<item>ConditionPathIsSymbolicLink</item>
+		<item>ConditionPathIsMountPoint</item>
+		<item>ConditionPathIsReadWrite</item>
+		<item>ConditionDirectoryNotEmpty</item>
+		<item>ConditionFileNotEmpty</item>
+		<item>ConditionFileIsExecutable</item>
+		<item>ConditionNull</item>
+		<item>SourcePath</item>
+
+		<!-- [INSTALL] -->
+		<item>Alias</item>
+		<item>WantedBy</item>
+		<item>RequiredBy</item>
+		<item>Also</item>
+
+		<!-- EXEC -->
+		<item>WorkingDirectory</item>
+		<item>RootDirectory</item>
+		<item>User</item>
+		<item>Group</item>
+		<item>SupplementaryGroups</item>
+		<item>Nice</item>
+		<item>OOMScoreAdjust</item>
+		<item>IOSchedulingClass</item>
+		<item>IOSchedulingPriority</item>
+		<item>CPUSchedulingPolicy</item>
+		<item>CPUSchedulingPriority</item>
+		<item>CPUAffinity</item>
+		<item>UMask</item>
+		<item>Environment</item>
+		<item>EnvironmentFile</item>
+		<item>StandardInput</item>
+		<item>StandardOutput</item>
+		<item>StandardError</item>
+		<item>TTYPath</item>
+		<item>TTYReset</item>
+		<item>TTYVHangup</item>
+		<item>TTYVTDisallocate</item>
+		<item>SyslogIdentifier</item>
+		<item>SyslogFacility</item>
+		<item>SyslogLevel</item>
+		<item>SyslogLevelPrefix</item>
+		<item>TimerSlackNSec</item>
+		<item>LimitCPU</item>
+		<item>LimitFSIZE</item>
+		<item>LimitDATA</item>
+		<item>LimitSTACK</item>
+		<item>LimitCORE</item>
+		<item>LimitRSS</item>
+		<item>LimitNOFILE</item>
+		<item>LimitAS</item>
+		<item>LimitNPROC</item>
+		<item>LimitMEMLOCK</item>
+		<item>LimitLOCKS</item>
+		<item>LimitSIGPENDING</item>
+		<item>LimitMSGQUEUE</item>
+		<item>LimitNICE</item>
+		<item>LimitRTPRIO</item>
+		<item>LimitRTTIME</item>
+		<item>PAMName</item>
+		<item>TCPWrapName</item>
+		<item>CapabilityBoundingSet</item>
+		<item>SecureBits</item>
+		<item>Capabilities</item>
+		<item>ReadWriteDirectories</item>
+		<item>ReadOnlyDirectories</item>
+		<item>InaccessibleDirectories</item>
+		<item>PrivateTmp</item>
+		<item>PrivateNetwork</item>
+		<item>PrivateDevices</item>
+		<item>MountFlags</item>
+		<item>UtmpIdentifier</item>
+		<item>SELinuxContext</item>
+		<item>AppArmorProfile</item>
+		<item>IgnoreSIGPIPE</item>
+		<item>NoNewPrivileges</item>
+		<item>SystemCallFilter</item>
+		<item>SystemCallErrorNumber</item>
+		<item>SystemCallArchitectures</item>
+		<item>Personality</item>
+
+		<!-- SERVICE -->
+		<item>Type</item>
+		<item>RemainAfterExit</item>
+		<item>GuessMainPID</item>
+		<item>PIDFile</item>
+		<item>BusName</item>
+		<item>ExecStart</item>
+		<item>ExecStartPre</item>
+		<item>ExecStartPost</item>
+		<item>ExecReload</item>
+		<item>ExecStop</item>
+		<item>ExecStopPost</item>
+		<item>RestartSec</item>
+		<item>TimeoutStartSec</item>
+		<item>TimeoutStopSec</item>
+		<item>TimeoutSec</item>
+		<item>WatchdogSec</item>
+		<item>Restart</item>
+		<item>SuccessExitStatus</item>
+		<item>RestartPreventExitStatus</item>
+		<item>PermissionsStartOnly</item>
+		<item>RootDirectoryStartOnly</item>
+		<item>NonBlocking</item>
+		<item>NotifyAccess</item>
+		<item>Sockets</item>
+		<item>StartLimitInterval</item>
+		<item>StartLimitBurst</item>
+		<item>StartLimitAction</item>
+		<item>SysVStartPriority</item>
+	</list>
+
+	<list name="values">
+		<!-- generic -->
+		<item>main</item>
+		<item>all</item>
+		<item>none</item>
+		<item>other</item>
+		<item>null</item>
+		<item>inherit</item>
+
+		<!-- booleans -->
+		<item>true</item>
+		<item>false</item>
+		<item>yes</item>
+		<item>no</item>
+
+		<!-- service types -->
+		<item>simple</item>
+		<item>forking</item>
+		<item>oneshot</item>
+		<item>dbus</item>
+		<item>notify</item>
+		<item>idle</item>
+
+		<!-- restart -->
+		<item>always</item>
+		<item>on-failure</item>
+		<item>on-success</item>
+		<item>on-watchdog</item>
+		<item>on-abort</item>
+
+		<!-- reboot types -->
+		<item>reboot</item>
+		<item>reboot-force</item>
+		<item>reboot-immediate</item>
+
+		<!-- cpu policy -->
+		<item>batch</item>
+		<item>fifo</item>
+		<item>rr</item>
+
+		<!-- stdin -->
+		<item>tty</item>
+		<item>tty-force</item>
+		<item>tty-fail</item>
+		<item>socket</item>
+
+		<!-- stdout -->
+		<item>syslog</item>
+		<item>kmsg</item>
+		<item>journal</item>
+		<item>console</item>
+	</list>
+
+	<contexts>
+		<context name="main" attribute="Normal Text" lineEndContext="#stay">
+			<DetectChar attribute="Symbol" context="section" char="[" />
+
+			<DetectChar char=";" attribute="Comment" context="Comment" firstNonSpace="true" />
+			<DetectChar char="#" attribute="Comment" context="Comment" firstNonSpace="true" />
+
+			<RegExpr context="directive" attribute="Normal Text" String="^\s*[a-z]+=" lookAhead="true" insensitive="true" />
+		</context>
+
+		<context name="section" attribute="Normal Text" lineEndContext="#stay">
+			<LineContinue />
+			<keyword attribute="Section" String="sections" />
+			<DetectChar attribute="Symbol" context="#pop" char="]" />
+		</context>
+
+		<context name="directive" attribute="Normal Text" lineEndContext="#pop">
+			<LineContinue />
+			<keyword attribute="Keyword" String="keywords" />
+			<DetectChar attribute="Symbol" context="Value" char="=" />
+		</context>
+
+		<context name="Value" attribute="Value" lineEndContext="#pop" >
+			<Float attribute="Float" />
+			<Int attribute="Int" />
+			<keyword attribute="Values" String="values" />
+			<RegExpr attribute="Comment" context="#pop" String=";.*$" />
+			<RegExpr attribute="Comment" context="#pop" String="#.*$" />
+		</context>
+
+		<context name="Comment" attribute="Comment" lineEndContext="#pop">
+			<DetectSpaces />
+			<IncludeRules context="##Alerts" />
+			<DetectIdentifier />
+		</context>
+	</contexts>
+
+
+	<itemDatas>
+		<itemData name="Normal Text" defStyleNum="dsDataType" />
+		<itemData name="Section" defStyleNum="dsFunction" />
+		<itemData name="Comment" defStyleNum="dsComment" />
+		<itemData name="Symbol" defStyleNum="dsOthers" />
+		<itemData name="Value" defStyleNum="dsString" />
+		<itemData name="Float" defStyleNum="dsFloat" />
+		<itemData name="Int" defStyleNum="dsDecVal" />
+		<itemData name="Values" defStyleNum="dsDecVal" />
+		<itemData name="Keyword" defStyleNum="dsKeyword" />
+	</itemDatas>
+</highlighting>
+
+
+<general>
+	<comments>
+		<comment name="singleLine" start="#" />
+		<comment name="singleLine" start=";" />
+	</comments>
+	<keywords casesensitive="0" />
+</general>
+
+</language>
