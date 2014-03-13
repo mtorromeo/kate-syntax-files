@@ -171,6 +171,12 @@
 		<item>StartLimitBurst</item>
 		<item>StartLimitAction</item>
 		<item>SysVStartPriority</item>
+
+		<!-- KILL -->
+		<item>KillMode</item>
+		<item>KillSignal</item>
+		<item>SendSIGHUP</item>
+		<item>SendSIGKILL</item>
 	</list>
 
 	<list name="values">
@@ -224,6 +230,11 @@
 		<item>kmsg</item>
 		<item>journal</item>
 		<item>console</item>
+
+		<!-- kill-mode -->
+		<item>control-group</item>
+		<item>process</item>
+		<item>mixed</item>
 	</list>
 
 	<contexts>
