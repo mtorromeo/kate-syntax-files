@@ -248,7 +248,8 @@
 			<DetectChar attribute="Symbol" context="Value" char="=" />
 		</context>
 
-		<context name="Value" attribute="Value" lineEndContext="#pop" >
+		<context name="Value" attribute="Normal Text" lineEndContext="#pop" >
+			<RegExpr attribute="Unit" context="#stay" String="[a-z0-9_-]+\.(service|socket|device|mount|automount|swap|target|path|timer|snapshot|slice|scope)(\W|$)" />
 			<Float attribute="Float" />
 			<Int attribute="Int" />
 			<keyword attribute="Values" String="values" />
@@ -269,7 +270,7 @@
 		<itemData name="Section" defStyleNum="dsFunction" />
 		<itemData name="Comment" defStyleNum="dsComment" />
 		<itemData name="Symbol" defStyleNum="dsOthers" />
-		<itemData name="Value" defStyleNum="dsString" />
+		<itemData name="Unit" defStyleNum="dsString" />
 		<itemData name="Float" defStyleNum="dsFloat" />
 		<itemData name="Int" defStyleNum="dsDecVal" />
 		<itemData name="Values" defStyleNum="dsDecVal" />
