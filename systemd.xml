@@ -295,7 +295,6 @@
 		<comment name="singleLine" start="#" />
 		<comment name="singleLine" start=";" />
 	</comments>
-	<keywords casesensitive="0" />
 </general>
 
 </language>
