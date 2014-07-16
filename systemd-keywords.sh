@@ -11,5 +11,5 @@ replacelist() {
 items=$($GREP '(?<=\\fI)[A-Z][A-Za-z0-9]+(?==\\fR)' $MANPAGES)
 replacelist keywords "$items"
 
-items=$($GREP '(?<="\[)[A-Za-z]+(?=\]")' $MANPAGES; $GREP -i '(?<=\[)[A-Za-z]+(?=\]"? section)' $MANPAGES)
+items=$($GREP '(?<="\[)[A-Za-z0-9]+(?=\]")' $MANPAGES; $GREP -i '(?<=\[)[a-z0-9]+(?=\]"? section)' $MANPAGES)
 replacelist sections "$items"
