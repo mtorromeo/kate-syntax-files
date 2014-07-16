@@ -33,7 +33,6 @@
 		<item>Also</item>
 		<item>AppArmorProfile</item>
 		<item>Architecture</item>
-		<item>AS</item>
 		<item>Backlog</item>
 		<item>Before</item>
 		<item>BindIPv6Only</item>
@@ -90,8 +89,6 @@
 		<item>Description</item>
 		<item>Destination</item>
 		<item>DeviceAllow</item>
-		<item>DevicePolicy</item>
-		<item>DFile</item>
 		<item>DHCP</item>
 		<item>DHCPServer</item>
 		<item>DirectoryMode</item>
@@ -179,7 +176,6 @@
 		<item>NonBlocking</item>
 		<item>NoNewPrivileges</item>
 		<item>NotifyAccess</item>
-		<item>OAccounting</item>
 		<item>OnActiveSec</item>
 		<item>OnBootSec</item>
 		<item>OnCalendar</item>
