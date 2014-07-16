@@ -7,20 +7,29 @@
 		<item>Address</item>
 		<item>Automount</item>
 		<item>Device</item>
-		<item>DHCPv4</item>
+		<item>DHCP</item>
 		<item>Install</item>
+		<item>Link</item>
+		<item>MACVLAN</item>
 		<item>Match</item>
 		<item>Mount</item>
+		<item>NetDev</item>
 		<item>Network</item>
 		<item>Path</item>
+		<item>Peer</item>
 		<item>Route</item>
 		<item>Service</item>
 		<item>Slice</item>
 		<item>Socket</item>
 		<item>Swap</item>
+		<item>Tap</item>
 		<item>Target</item>
 		<item>Timer</item>
+		<item>Tun</item>
+		<item>Tunnel</item>
 		<item>Unit</item>
+		<item>VLAN</item>
+		<item>VXLAN</item>
 	</list>
 
 	<list name="keywords">
