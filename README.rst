@@ -6,10 +6,6 @@ Python
 ''''''
 This is a modified version of the original python syntax distributed with KDE that adds highlighting for identifiers that resemble a class name (IE: MyClass)
 
-Mako
-''''
-Syntax highlighting for the `Mako templating engine <http://www.makotemplates.org>`_ for python
-
 CleanCSS
 ''''''''
 Syntax highlighting for the `CleanCSS <http://github.com/mtorromeo/py-cleancss/>`_ files.
