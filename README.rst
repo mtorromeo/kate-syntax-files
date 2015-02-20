@@ -14,10 +14,6 @@ CleanCSS
 ''''''''
 Syntax highlighting for the `CleanCSS <http://github.com/mtorromeo/py-cleancss/>`_ files.
 
-LESS
-''''
-Syntax highlight for `LESS CSS <http://lesscss.org/>`_ files
-
 Smarty
 ''''''
 Syntax highlighting for the `Smarty templating engine <http://www.smarty.net>`_ for PHP.
