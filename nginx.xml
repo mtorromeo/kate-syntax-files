@@ -2,179 +2,180 @@
 <!DOCTYPE language SYSTEM "language.dtd">
 <language name="NGINX Configuration" version="1.0" kateversion="2.4" section="Configuration" extensions="nginx.conf" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
 
-	<highlighting>
-		<list name="blocks">
-			<item>http</item>
-			<item>mail</item>
-			<item>events</item>
-			<item>server</item>
-			<item>types</item>
-			<item>location</item>
-			<item>upstream</item>
-			<item>charset_map</item>
-			<item>limit_except</item>
-			<item>if</item>
-			<item>geo</item>
-			<item>map</item>
-		</list>
+<highlighting>
+	<list name="blocks">
+		<item>http</item>
+		<item>mail</item>
+		<item>events</item>
+		<item>server</item>
+		<item>types</item>
+		<item>location</item>
+		<item>upstream</item>
+		<item>charset_map</item>
+		<item>limit_except</item>
+		<item>if</item>
+		<item>geo</item>
+		<item>map</item>
+	</list>
 
-		<list name="values">
-			<item>on</item>
-			<item>off</item>
-		</list>
+	<list name="values">
+		<item>on</item>
+		<item>off</item>
+	</list>
 
-		<list name="rewrite_flags">
-			<item>last</item>
-			<item>break</item>
-			<item>redirect</item>
-			<item>permanent</item>
-		</list>
+	<list name="rewrite_flags">
+		<item>last</item>
+		<item>break</item>
+		<item>redirect</item>
+		<item>permanent</item>
+	</list>
 
-		<contexts>
-			<context name="main" attribute="Normal Text" lineEndContext="#stay">
-				<IncludeRules context="FindBlockDirectives" />
-				<RegExpr attribute="Error" context="#stay" String="\S" />
-			</context>
+	<contexts>
+		<context name="main" attribute="Normal Text" lineEndContext="#stay">
+			<IncludeRules context="FindBlockDirectives" />
+			<RegExpr attribute="Error" context="#stay" String="\S" />
+		</context>
 
-			<context name="FindBlockDirectives" attribute="Normal Text" lineEndContext="#stay">
-				<DetectChar context="comment"  char="#" />
-				<RegExpr context="directive" attribute="Normal Text" String="[a-z_]+[^;]*;" lookAhead="true" insensitive="true" />
-				<RegExpr context="block_decl" String="\w+[^;\{]*\{" lookAhead="true" />
-			</context>
+		<context name="FindBlockDirectives" attribute="Normal Text" lineEndContext="#stay">
+			<DetectChar context="comment"  char="#" />
+			<RegExpr context="directive" attribute="Normal Text" String="[a-z_]+[^;]*;" lookAhead="true" insensitive="true" />
+			<RegExpr context="block_decl" String="\w+[^;\{]*\{" lookAhead="true" />
+		</context>
 
-			<context name="block_decl" attribute="Normal Text" lineEndContext="#pop">
-				<DetectChar context="comment"  char="#" />
-				<keyword context="#stay" attribute="Keyword Name" String="blocks" />
-				<DetectChar context="block" attribute="Symbol" char="{" beginRegion="block" />
-			</context>
+		<context name="block_decl" attribute="Normal Text" lineEndContext="#pop">
+			<DetectChar context="comment"  char="#" />
+			<keyword context="#stay" attribute="Keyword Name" String="blocks" />
+			<DetectChar context="block" attribute="Symbol" char="{" beginRegion="block" />
+		</context>
 
-			<context name="block" attribute="Normal Text" lineEndContext="#stay" >
-				<IncludeRules context="FindBlockDirectives" />
-				<DetectChar context="#pop" attribute="Symbol" char="}" endRegion="block" />
-			</context>
+		<context name="block" attribute="Normal Text" lineEndContext="#stay" >
+			<IncludeRules context="FindBlockDirectives" />
+			<DetectChar context="#pop" attribute="Symbol" char="}" endRegion="block" />
+		</context>
 
-			<context name="directive" attribute="Normal Text" lineEndContext="#stay">
-				<DetectChar context="comment"  char="#" />
-				<StringDetect attribute="Directive" context="rewrite" String="rewrite "/>
-				<RegExpr context="directive_params" attribute="Directive" String="[a-z_]+" insensitive="true" />
-				<DetectChar context="#pop" attribute="Symbol" char=";" />
-			</context>
+		<context name="directive" attribute="Normal Text" lineEndContext="#stay">
+			<DetectChar context="comment"  char="#" />
+			<StringDetect attribute="Directive" context="rewrite" String="rewrite "/>
+			<RegExpr context="directive_params" attribute="Directive" String="[a-z_]+" insensitive="true" />
+			<DetectChar context="#pop" attribute="Symbol" char=";" />
+		</context>
 
-			<context name="directive_params" arrtibute="Normal Text" lineEndContext="#stay">
-				<keyword context="#stay" attribute="Keyword Name" String="values" />
-				<RegExpr attribute="Variable" context="#stay" String="((2[0-5]|1[0-9]|[0-9])?[0-9]\.){3}(2[0-5]|1[0-9]|[0-9])?[0-9]" />
-				<DetectChar attribute="String" context="doublequotestring" char="&quot;" />
-				<DetectChar attribute="String" context="singlequotestring" char="'" />
-				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z0-9_\x7f-\xff]+" />
-				<RegExpr attribute="Size" context="#stay" String="\d+[smhdk](?=\W|$)" />
-				<Float attribute="Float" context="#stay" />
-				<Int attribute="Decimal" context="#stay" />
-				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
-			</context>
+		<context name="directive_params" arrtibute="Normal Text" lineEndContext="#stay">
+			<keyword context="#stay" attribute="Keyword Name" String="values" />
+			<RegExpr attribute="Variable" context="#stay" String="((2[0-5]|1[0-9]|[0-9])?[0-9]\.){3}(2[0-5]|1[0-9]|[0-9])?[0-9]" />
+			<DetectChar attribute="String" context="doublequotestring" char="&quot;" />
+			<DetectChar attribute="String" context="singlequotestring" char="'" />
+			<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z0-9_\x7f-\xff]+" />
+			<RegExpr attribute="Size" context="#stay" String="\d+[smhdk](?=\W|$)" />
+			<Float attribute="Float" context="#stay" />
+			<Int attribute="Decimal" context="#stay" />
+			<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
+		</context>
 
-			<context name="doublequotestring" attribute="String" lineEndContext="#stay">
-				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*" />
-				<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="&quot;" />
-				<DetectChar attribute="String" context="#pop" char="&quot;" />
-			</context>
-			<context name="singlequotestring" attribute="String" lineEndContext="#stay">
-				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*" />
-				<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="'" />
-				<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="\" />
-				<DetectChar attribute="String" context="#pop" char="'" />
-			</context>
+		<context name="doublequotestring" attribute="String" lineEndContext="#stay">
+			<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*" />
+			<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="&quot;" />
+			<DetectChar attribute="String" context="#pop" char="&quot;" />
+		</context>
+		<context name="singlequotestring" attribute="String" lineEndContext="#stay">
+			<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*" />
+			<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="'" />
+			<Detect2Chars attribute="Backslash Code" context="#stay" char="\" char1="\" />
+			<DetectChar attribute="String" context="#pop" char="'" />
+		</context>
 
-			<!-- REWRITE -->
-			<context name="rewrite" attribute="Normal Text" lineEndContext="#stay">
-				<DetectChar context="Quoted RegExpr" attribute="Symbol" char="&quot;" />
-				<RegExpr context="RegExpr" attribute="RegExpr" String="[^\s&quot;;]" lookAhead="true" />
-				<RegExpr attribute="Symbol" context="rewrite_replacement" String="\s" />
-				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
-			</context>
+		<!-- REWRITE -->
+		<context name="rewrite" attribute="Normal Text" lineEndContext="#stay">
+			<DetectChar context="Quoted RegExpr" attribute="Symbol" char="&quot;" />
+			<RegExpr context="RegExpr" attribute="RegExpr" String="[^\s&quot;;]" lookAhead="true" />
+			<RegExpr attribute="Symbol" context="rewrite_replacement" String="\s" />
+			<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
+		</context>
 
-			<context name="rewrite_replacement" attribute="Normal Text" lineEndContext="#stay">
-				<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z0-9_\x7f-\xff]+" />
-				<RegExpr attribute="Symbol" context="rewrite_flag" String="\s" />
-				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
-			</context>
+		<context name="rewrite_replacement" attribute="Normal Text" lineEndContext="#stay">
+			<RegExpr attribute="Variable" context="#stay" String="\$+[a-zA-Z0-9_\x7f-\xff]+" />
+			<RegExpr attribute="Symbol" context="rewrite_flag" String="\s" />
+			<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
+		</context>
 
-			<context name="rewrite_flag" attribute="Normal Text" lineEndContext="#stay">
-				<keyword context="#pop#pop" attribute="Keyword Name" String="rewrite_flags" />
-				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
-			</context>
-			<!-- END REWRITE -->
+		<context name="rewrite_flag" attribute="Normal Text" lineEndContext="#stay">
+			<keyword context="#pop#pop" attribute="Keyword Name" String="rewrite_flags" />
+			<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
+		</context>
+		<!-- END REWRITE -->
 
-			<!-- REGULAR EXPRESSIONS -->
-			<context name="RegExpr (" attribute="RegExpr" lineEndContext="#stay">
-				<IncludeRules context="RegExpr Common" />
-				<DetectChar attribute="RegExpr Special" context="#pop" char=")" />
-			</context>
+		<!-- REGULAR EXPRESSIONS -->
+		<context name="RegExpr (" attribute="RegExpr" lineEndContext="#stay">
+			<IncludeRules context="RegExpr Common" />
+			<DetectChar attribute="RegExpr Special" context="#pop" char=")" />
+		</context>
 
-			<context name="RegExpr [" attribute="RegExpr" lineEndContext="#stay">
-				<DetectChar attribute="RegExpr Special" context="#pop" char="]" />
-			</context>
+		<context name="RegExpr [" attribute="RegExpr" lineEndContext="#stay">
+			<DetectChar attribute="RegExpr Special" context="#pop" char="]" />
+		</context>
 
-			<context name="RegExpr {" attribute="RegExpr" lineEndContext="#stay">
-				<DetectChar attribute="RegExpr Special" context="#pop" char="}" />
-			</context>
+		<context name="RegExpr {" attribute="RegExpr" lineEndContext="#stay">
+			<DetectChar attribute="RegExpr Special" context="#pop" char="}" />
+		</context>
 
-			<context name="RegExpr Q" attribute="RegExpr" lineEndContext="#stay">
-				<DetectChar attribute="RegExpr" context="#pop" char="&quot;" />
-			</context>
+		<context name="RegExpr Q" attribute="RegExpr" lineEndContext="#stay">
+			<DetectChar attribute="RegExpr" context="#pop" char="&quot;" />
+		</context>
 
-			<context name="RegExpr Common" attribute="RegExpr" lineEndContext="#stay">
-				<DetectChar attribute="RegExpr Special" context="#stay" char="^" />
-				<DetectChar attribute="RegExpr Special" context="#stay" char="$" />
-				<DetectChar attribute="RegExpr Special" context="#stay" char="." />
-				<DetectChar attribute="RegExpr Special" context="#stay" char="*" />
-				<DetectChar attribute="RegExpr Special" context="#stay" char="?" />
-				<DetectChar attribute="RegExpr Special" context="#stay" char="+" />
-				<DetectChar attribute="RegExpr Special" context="#stay" char="|" />
-				<RegExpr attribute="RegExpr Special" context="RegExpr [" String="\[\^?" />
-				<DetectChar attribute="RegExpr Special" context="RegExpr (" char="(" />
-				<DetectChar attribute="RegExpr Special" context="RegExpr {" char="{" />
-				<DetectChar attribute="RegExpr" context="RegExpr Q" char="&quot;" />
-			</context>
+		<context name="RegExpr Common" attribute="RegExpr" lineEndContext="#stay">
+			<DetectChar attribute="RegExpr Special" context="#stay" char="^" />
+			<DetectChar attribute="RegExpr Special" context="#stay" char="$" />
+			<DetectChar attribute="RegExpr Special" context="#stay" char="." />
+			<DetectChar attribute="RegExpr Special" context="#stay" char="*" />
+			<DetectChar attribute="RegExpr Special" context="#stay" char="?" />
+			<DetectChar attribute="RegExpr Special" context="#stay" char="+" />
+			<DetectChar attribute="RegExpr Special" context="#stay" char="|" />
+			<RegExpr attribute="RegExpr Special" context="RegExpr [" String="\[\^?" />
+			<DetectChar attribute="RegExpr Special" context="RegExpr (" char="(" />
+			<DetectChar attribute="RegExpr Special" context="RegExpr {" char="{" />
+			<DetectChar attribute="RegExpr" context="RegExpr Q" char="&quot;" />
+		</context>
 
-			<context name="RegExpr" attribute="RegExpr" lineEndContext="#stay">
-				<RegExpr attribute="Backslash Code" context="#stay" String="\\." />
-				<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
-				<RegExpr attribute="Symbol" context="#pop" String="\s" lookAhead="true" />
-				<IncludeRules context="RegExpr Common" />
-			</context>
+		<context name="RegExpr" attribute="RegExpr" lineEndContext="#stay">
+			<RegExpr attribute="Backslash Code" context="#stay" String="\\." />
+			<DetectChar context="#pop" attribute="Symbol" char=";" lookAhead="true" />
+			<RegExpr attribute="Symbol" context="#pop" String="\s" lookAhead="true" />
+			<IncludeRules context="RegExpr Common" />
+		</context>
 
-			<context name="Quoted RegExpr" attribute="RegExpr" lineEndContext="#stay">
-				<RegExpr attribute="Backslash Code" context="#stay" String="\\." />
-				<DetectChar context="#pop" attribute="Symbol" char="&quot;" />
-				<IncludeRules context="RegExpr Common" />
-			</context>
-			<!-- END REGULAR EXPRESSIONS -->
+		<context name="Quoted RegExpr" attribute="RegExpr" lineEndContext="#stay">
+			<RegExpr attribute="Backslash Code" context="#stay" String="\\." />
+			<DetectChar context="#pop" attribute="Symbol" char="&quot;" />
+			<IncludeRules context="RegExpr Common" />
+		</context>
+		<!-- END REGULAR EXPRESSIONS -->
 
-			<context name="comment" attribute="Comment" lineEndContext="#pop" ></context>
-		</contexts>
+		<context name="comment" attribute="Comment" lineEndContext="#pop" ></context>
+	</contexts>
 
-		<itemDatas>
-			<itemData name="Normal Text" defStyleNum="dsNormal" />
-			<itemData name="Comment" defStyleNum="dsComment" />
-			<itemData name="Keyword Name" defStyleNum="dsKeyword" bold="false" />
-			<itemData name="Decimal" defStyleNum="dsDecVal" spellChecking="false" />
-			<itemData name="Float" defStyleNum="dsFloat" spellChecking="false" />
-			<itemData name="Size" defStyleNum="dsFloat" spellChecking="false" />
-			<itemData name="String" defStyleNum="dsString" />
-			<itemData name="Variable" defStyleNum="dsKeyword" color="#5555FF" selColor="#ffffff" bold="0" italic="0" spellChecking="false" />
-			<itemData name="Symbol" defStyleNum="dsSymbol" />
-			<itemData name="Directive" defStyleNum="dsOthers" />
-			<itemData name="Error" defStyleNum="dsError" spellChecking="false"/>
-			<itemData name="RegExpr" defStyleNum="dsString" spellChecking="false"/>
-			<itemData name="RegExpr Special" defStyleNum="dsKeyword" spellChecking="false"/>
-			<itemData name="Backslash Code" defStyleNum="dsString" spellChecking="false" bold="true"/>
-		</itemDatas>
+	<itemDatas>
+		<itemData name="Normal Text" defStyleNum="dsNormal" />
+		<itemData name="Comment" defStyleNum="dsComment" />
+		<itemData name="Keyword Name" defStyleNum="dsKeyword" bold="false" />
+		<itemData name="Decimal" defStyleNum="dsDecVal" spellChecking="false" />
+		<itemData name="Float" defStyleNum="dsFloat" spellChecking="false" />
+		<itemData name="Size" defStyleNum="dsFloat" spellChecking="false" />
+		<itemData name="String" defStyleNum="dsString" />
+		<itemData name="Variable" defStyleNum="dsKeyword" color="#5555FF" selColor="#ffffff" bold="0" italic="0" spellChecking="false" />
+		<itemData name="Symbol" defStyleNum="dsSymbol" />
+		<itemData name="Directive" defStyleNum="dsOthers" />
+		<itemData name="Error" defStyleNum="dsError" spellChecking="false"/>
+		<itemData name="RegExpr" defStyleNum="dsString" spellChecking="false"/>
+		<itemData name="RegExpr Special" defStyleNum="dsKeyword" spellChecking="false"/>
+		<itemData name="Backslash Code" defStyleNum="dsString" spellChecking="false" bold="true"/>
+	</itemDatas>
 
-	</highlighting>
+</highlighting>
 
-	<general>
-		<comments>
-			<comment name="singleLine" start="#" />
-		</comments>
-	</general>
+<general>
+	<comments>
+		<comment name="singleLine" start="#" />
+	</comments>
+</general>
+
 </language>
