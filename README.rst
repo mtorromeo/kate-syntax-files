@@ -27,10 +27,6 @@ RestructuredText
 '''''''''''''''
 Syntax highlighting for the `RestructuredText <http://docutils.sourceforge.net/rst.html>`_, used mostly in python documentations.
 
-Template Toolkit
-''''''''''''''''
-Syntax highlighting for perl's `Template Toolkit <http://template-toolkit.org/>`_, originally written by Krassimir Berov.
-
 YAML
 ''''
 Modified YAML syntax that adds indentation based folding in the editor.
