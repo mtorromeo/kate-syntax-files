@@ -4,18 +4,18 @@
 
 <highlighting>
 	<list name="blocks">
-		<item>http</item>
-		<item>mail</item>
+		<item>charset_map</item>
 		<item>events</item>
+		<item>geo</item>
+		<item>http</item>
+		<item>if</item>
+		<item>limit_except</item>
+		<item>location</item>
+		<item>mail</item>
+		<item>map</item>
 		<item>server</item>
 		<item>types</item>
-		<item>location</item>
 		<item>upstream</item>
-		<item>charset_map</item>
-		<item>limit_except</item>
-		<item>if</item>
-		<item>geo</item>
-		<item>map</item>
 	</list>
 
 	<list name="values">
@@ -23,11 +23,573 @@
 		<item>off</item>
 	</list>
 
+	<list name="important">
+		<item>fastcgi_pass</item>
+		<item>include</item>
+		<item>internal</item>
+		<item>listen</item>
+		<item>memcached_pass</item>
+		<item>proxy_pass</item>
+		<item>root</item>
+		<item>server</item>
+		<item>server_name</item>
+		<item>try_files</item>
+	</list>
+
+	<list name="control">
+		<item>break</item>
+		<item>return</item>
+		<item>rewrite</item>
+		<item>set</item>
+	</list>
+
+	<list name="errors">
+		<item>error_page</item>
+		<item>post_action</item>
+	</list>
+
+	<list name="deprecated">
+		<item>connections</item>
+		<item>imap</item>
+		<item>open_file_cache_retest</item>
+		<item>optimize_server_names</item>
+		<item>satisfy_any</item>
+	</list>
+
 	<list name="rewrite_flags">
 		<item>last</item>
 		<item>break</item>
 		<item>redirect</item>
 		<item>permanent</item>
+	</list>
+
+	<list name="directives">
+		<item>accept_mutex</item>
+		<item>accept_mutex_delay</item>
+		<item>access_log</item>
+		<item>add_after_body</item>
+		<item>add_before_body</item>
+		<item>add_header</item>
+		<item>addition_types</item>
+		<item>aio</item>
+		<item>alias</item>
+		<item>allow</item>
+		<item>ancient_browser</item>
+		<item>ancient_browser_value</item>
+		<item>auth_basic</item>
+		<item>auth_basic_user_file</item>
+		<item>auth_http</item>
+		<item>auth_http_header</item>
+		<item>auth_http_timeout</item>
+		<item>autoindex</item>
+		<item>autoindex_exact_size</item>
+		<item>autoindex_localtime</item>
+		<item>charset</item>
+		<item>charset_types</item>
+		<item>client_body_buffer_size</item>
+		<item>client_body_in_file_only</item>
+		<item>client_body_in_single_buffer</item>
+		<item>client_body_temp_path</item>
+		<item>client_body_timeout</item>
+		<item>client_header_buffer_size</item>
+		<item>client_header_timeout</item>
+		<item>client_max_body_size</item>
+		<item>connection_pool_size</item>
+		<item>create_full_put_path</item>
+		<item>daemon</item>
+		<item>dav_access</item>
+		<item>dav_methods</item>
+		<item>debug_connection</item>
+		<item>debug_points</item>
+		<item>default_type</item>
+		<item>degradation</item>
+		<item>degrade</item>
+		<item>deny</item>
+		<item>devpoll_changes</item>
+		<item>devpoll_events</item>
+		<item>directio</item>
+		<item>directio_alignment</item>
+		<item>empty_gif</item>
+		<item>env</item>
+		<item>epoll_events</item>
+		<item>error_log</item>
+		<item>eventport_events</item>
+		<item>expires</item>
+		<item>fastcgi_bind</item>
+		<item>fastcgi_buffers</item>
+		<item>fastcgi_buffer_size</item>
+		<item>fastcgi_busy_buffers_size</item>
+		<item>fastcgi_cache</item>
+		<item>fastcgi_cache_key</item>
+		<item>fastcgi_cache_methods</item>
+		<item>fastcgi_cache_min_uses</item>
+		<item>fastcgi_cache_path</item>
+		<item>fastcgi_cache_use_stale</item>
+		<item>fastcgi_cache_valid</item>
+		<item>fastcgi_catch_stderr</item>
+		<item>fastcgi_connect_timeout</item>
+		<item>fastcgi_hide_header</item>
+		<item>fastcgi_ignore_client_abort</item>
+		<item>fastcgi_ignore_headers</item>
+		<item>fastcgi_index</item>
+		<item>fastcgi_intercept_errors</item>
+		<item>fastcgi_max_temp_file_size</item>
+		<item>fastcgi_next_upstream</item>
+		<item>fastcgi_param</item>
+		<item>fastcgi_pass_header</item>
+		<item>fastcgi_pass_request_body</item>
+		<item>fastcgi_pass_request_headers</item>
+		<item>fastcgi_read_timeout</item>
+		<item>fastcgi_send_lowat</item>
+		<item>fastcgi_send_timeout</item>
+		<item>fastcgi_split_path_info</item>
+		<item>fastcgi_store</item>
+		<item>fastcgi_store_access</item>
+		<item>fastcgi_temp_file_write_size</item>
+		<item>fastcgi_temp_path</item>
+		<item>fastcgi_upstream_fail_timeout</item>
+		<item>fastcgi_upstream_max_fails</item>
+		<item>flv</item>
+		<item>geoip_city</item>
+		<item>geoip_country</item>
+		<item>google_perftools_profiles</item>
+		<item>gzip</item>
+		<item>gzip_buffers</item>
+		<item>gzip_comp_level</item>
+		<item>gzip_disable</item>
+		<item>gzip_hash</item>
+		<item>gzip_http_version</item>
+		<item>gzip_min_length</item>
+		<item>gzip_no_buffer</item>
+		<item>gzip_proxied</item>
+		<item>gzip_static</item>
+		<item>gzip_types</item>
+		<item>gzip_vary</item>
+		<item>gzip_window</item>
+		<item>if_modified_since</item>
+		<item>ignore_invalid_headers</item>
+		<item>image_filter</item>
+		<item>image_filter_buffer</item>
+		<item>image_filter_jpeg_quality</item>
+		<item>image_filter_transparency</item>
+		<item>imap_auth</item>
+		<item>imap_capabilities</item>
+		<item>imap_client_buffer</item>
+		<item>index</item>
+		<item>ip_hash</item>
+		<item>keepalive_requests</item>
+		<item>keepalive_timeout</item>
+		<item>kqueue_changes</item>
+		<item>kqueue_events</item>
+		<item>large_client_header_buffers</item>
+		<item>limit_conn</item>
+		<item>limit_conn_log_level</item>
+		<item>limit_rate</item>
+		<item>limit_rate_after</item>
+		<item>limit_req</item>
+		<item>limit_req_log_level</item>
+		<item>limit_req_zone</item>
+		<item>limit_zone</item>
+		<item>lingering_time</item>
+		<item>lingering_timeout</item>
+		<item>lock_file</item>
+		<item>log_format</item>
+		<item>log_not_found</item>
+		<item>log_subrequest</item>
+		<item>map_hash_bucket_size</item>
+		<item>map_hash_max_size</item>
+		<item>master_process</item>
+		<item>memcached_bind</item>
+		<item>memcached_buffer_size</item>
+		<item>memcached_connect_timeout</item>
+		<item>memcached_next_upstream</item>
+		<item>memcached_read_timeout</item>
+		<item>memcached_send_timeout</item>
+		<item>memcached_upstream_fail_timeout</item>
+		<item>memcached_upstream_max_fails</item>
+		<item>merge_slashes</item>
+		<item>min_delete_depth</item>
+		<item>modern_browser</item>
+		<item>modern_browser_value</item>
+		<item>msie_padding</item>
+		<item>msie_refresh</item>
+		<item>multi_accept</item>
+		<item>open_file_cache</item>
+		<item>open_file_cache_errors</item>
+		<item>open_file_cache_events</item>
+		<item>open_file_cache_min_uses</item>
+		<item>open_file_cache_valid</item>
+		<item>open_log_file_cache</item>
+		<item>output_buffers</item>
+		<item>override_charset</item>
+		<item>perl</item>
+		<item>perl_modules</item>
+		<item>perl_require</item>
+		<item>perl_set</item>
+		<item>pid</item>
+		<item>pop3_auth</item>
+		<item>pop3_capabilities</item>
+		<item>port_in_redirect</item>
+		<item>postpone_gzipping</item>
+		<item>postpone_output</item>
+		<item>protocol</item>
+		<item>proxy</item>
+		<item>proxy_bind</item>
+		<item>proxy_buffer</item>
+		<item>proxy_buffering</item>
+		<item>proxy_buffers</item>
+		<item>proxy_buffer_size</item>
+		<item>proxy_busy_buffers_size</item>
+		<item>proxy_cache</item>
+		<item>proxy_cache_key</item>
+		<item>proxy_cache_methods</item>
+		<item>proxy_cache_min_uses</item>
+		<item>proxy_cache_path</item>
+		<item>proxy_cache_use_stale</item>
+		<item>proxy_cache_valid</item>
+		<item>proxy_connect_timeout</item>
+		<item>proxy_headers_hash_bucket_size</item>
+		<item>proxy_headers_hash_max_size</item>
+		<item>proxy_hide_header</item>
+		<item>proxy_ignore_client_abort</item>
+		<item>proxy_ignore_headers</item>
+		<item>proxy_intercept_errors</item>
+		<item>proxy_max_temp_file_size</item>
+		<item>proxy_method</item>
+		<item>proxy_next_upstream</item>
+		<item>proxy_pass_error_message</item>
+		<item>proxy_pass_header</item>
+		<item>proxy_pass_request_body</item>
+		<item>proxy_pass_request_headers</item>
+		<item>proxy_read_timeout</item>
+		<item>proxy_redirect</item>
+		<item>proxy_send_lowat</item>
+		<item>proxy_send_timeout</item>
+		<item>proxy_set_body</item>
+		<item>proxy_set_header</item>
+		<item>proxy_ssl_session_reuse</item>
+		<item>proxy_store</item>
+		<item>proxy_store_access</item>
+		<item>proxy_temp_file_write_size</item>
+		<item>proxy_temp_path</item>
+		<item>proxy_timeout</item>
+		<item>proxy_upstream_fail_timeout</item>
+		<item>proxy_upstream_max_fails</item>
+		<item>random_index</item>
+		<item>read_ahead</item>
+		<item>real_ip_header</item>
+		<item>recursive_error_pages</item>
+		<item>request_pool_size</item>
+		<item>reset_timedout_connection</item>
+		<item>resolver</item>
+		<item>resolver_timeout</item>
+		<item>rewrite_log</item>
+		<item>rtsig_overflow_events</item>
+		<item>rtsig_overflow_test</item>
+		<item>rtsig_overflow_threshold</item>
+		<item>rtsig_signo</item>
+		<item>satisfy</item>
+		<item>secure_link_secret</item>
+		<item>sendfile</item>
+		<item>sendfile_max_chunk</item>
+		<item>send_lowat</item>
+		<item>send_timeout</item>
+		<item>server_name_in_redirect</item>
+		<item>server_names_hash_bucket_size</item>
+		<item>server_names_hash_max_size</item>
+		<item>server_tokens</item>
+		<item>set_real_ip_from</item>
+		<item>smtp_auth</item>
+		<item>smtp_capabilities</item>
+		<item>smtp_client_buffer</item>
+		<item>smtp_greeting_delay</item>
+		<item>so_keepalive</item>
+		<item>source_charset</item>
+		<item>ssi</item>
+		<item>ssi_ignore_recycled_buffers</item>
+		<item>ssi_min_file_chunk</item>
+		<item>ssi_silent_errors</item>
+		<item>ssi_types</item>
+		<item>ssi_value_length</item>
+		<item>ssl</item>
+		<item>ssl_certificate</item>
+		<item>ssl_certificate_key</item>
+		<item>ssl_ciphers</item>
+		<item>ssl_client_certificate</item>
+		<item>ssl_crl</item>
+		<item>ssl_dhparam</item>
+		<item>ssl_engine</item>
+		<item>ssl_prefer_server_ciphers</item>
+		<item>ssl_protocols</item>
+		<item>ssl_session_cache</item>
+		<item>ssl_session_timeout</item>
+		<item>ssl_verify_client</item>
+		<item>ssl_verify_depth</item>
+		<item>starttls</item>
+		<item>stub_status</item>
+		<item>sub_filter</item>
+		<item>sub_filter_once</item>
+		<item>sub_filter_types</item>
+		<item>tcp_nodelay</item>
+		<item>tcp_nopush</item>
+		<item>thread_stack_size</item>
+		<item>timeout</item>
+		<item>timer_resolution</item>
+		<item>types_hash_bucket_size</item>
+		<item>types_hash_max_size</item>
+		<item>underscores_in_headers</item>
+		<item>uninitialized_variable_warn</item>
+		<item>use</item>
+		<item>user</item>
+		<item>userid</item>
+		<item>userid_domain</item>
+		<item>userid_expires</item>
+		<item>userid_mark</item>
+		<item>userid_name</item>
+		<item>userid_p3p</item>
+		<item>userid_path</item>
+		<item>userid_service</item>
+		<item>valid_referers</item>
+		<item>variables_hash_bucket_size</item>
+		<item>variables_hash_max_size</item>
+		<item>worker_connections</item>
+		<item>worker_cpu_affinity</item>
+		<item>worker_priority</item>
+		<item>worker_processes</item>
+		<item>worker_rlimit_core</item>
+		<item>worker_rlimit_nofile</item>
+		<item>worker_rlimit_sigpending</item>
+		<item>worker_threads</item>
+		<item>working_directory</item>
+		<item>xclient</item>
+		<item>xml_entities</item>
+		<item>xslt_stylesheet</item>
+		<item>xslt_types</item>
+	</list>
+
+	<list name="directives_more">
+		<item>default</item>
+		<item>fastcgi_cache_bypass</item>
+		<item>fastcgi_cache_lock</item>
+		<item>fastcgi_cache_lock_age</item>
+		<item>fastcgi_cache_lock_timeout</item>
+		<item>fastcgi_cache_revalidate</item>
+		<item>fastcgi_no_cache</item>
+	</list>
+
+	<list name="third_party">
+		<item>accesskey</item>
+		<item>accesskey_arg</item>
+		<item>accesskey_hashmethod</item>
+		<item>accesskey_signature</item>
+		<item>auth_pam</item>
+		<item>auth_pam_service_name</item>
+		<item>chunkin</item>
+		<item>chunkin_keepalive</item>
+		<item>chunkin_max_chunks_per_buf</item>
+		<item>chunkin_resume</item>
+		<item>circle_gif</item>
+		<item>circle_gif_max_radius</item>
+		<item>circle_gif_min_radius</item>
+		<item>circle_gif_step_radius</item>
+		<item>consistent_hash</item>
+		<item>drizzle_connect_timeout</item>
+		<item>drizzle_dbname</item>
+		<item>drizzle_keepalive</item>
+		<item>drizzle_module_header</item>
+		<item>drizzle_pass</item>
+		<item>drizzle_query</item>
+		<item>drizzle_recv_cols_timeout</item>
+		<item>drizzle_recv_rows_timeout</item>
+		<item>drizzle_send_query_timeout</item>
+		<item>drizzle_server</item>
+		<item>echo</item>
+		<item>echo_after_body</item>
+		<item>echo_before_body</item>
+		<item>echo_blocking_sleep</item>
+		<item>echo_duplicate</item>
+		<item>echo_end</item>
+		<item>echo_exec</item>
+		<item>echo_flush</item>
+		<item>echo_foreach_split</item>
+		<item>echo_location</item>
+		<item>echo_location_async</item>
+		<item>echo_read_request_body</item>
+		<item>echo_request_body</item>
+		<item>echo_reset_timer</item>
+		<item>echo_sleep</item>
+		<item>echo_subrequest</item>
+		<item>echo_subrequest_async</item>
+		<item>fair</item>
+		<item>fancyindex</item>
+		<item>fancyindex_exact_size</item>
+		<item>fancyindex_footer</item>
+		<item>fancyindex_header</item>
+		<item>fancyindex_localtime</item>
+		<item>fancyindex_readme</item>
+		<item>fancyindex_readme_mode</item>
+		<item>fastcgi_cache_purge</item>
+		<item>geoip_country_file</item>
+		<item>hash</item>
+		<item>hash_again</item>
+		<item>js</item>
+		<item>js_filter</item>
+		<item>js_filter_types</item>
+		<item>js_load</item>
+		<item>js_maxmem</item>
+		<item>js_require</item>
+		<item>js_set</item>
+		<item>js_utf8</item>
+		<item>log_request_speed_filter</item>
+		<item>log_request_speed_filter_timeout</item>
+		<item>max_connections</item>
+		<item>max_connections_max_queue_length</item>
+		<item>max_connections_queue_timeout</item>
+		<item>memc_buffer_size</item>
+		<item>memc_cmds_allowed</item>
+		<item>memc_connect_timeout</item>
+		<item>memc_flags_to_last_modified</item>
+		<item>memc_next_upstream</item>
+		<item>memc_pass</item>
+		<item>memc_read_timeout</item>
+		<item>memc_send_timeout</item>
+		<item>memc_upstream_fail_timeout</item>
+		<item>memc_upstream_max_fails</item>
+		<item>mogilefs_connect_timeout</item>
+		<item>mogilefs_domain</item>
+		<item>mogilefs_methods</item>
+		<item>mogilefs_noverify</item>
+		<item>mogilefs_pass</item>
+		<item>mogilefs_read_timeout</item>
+		<item>mogilefs_send_timeout</item>
+		<item>mogilefs_tracker</item>
+		<item>more_clear_headers</item>
+		<item>more_clear_input_headers</item>
+		<item>more_set_headers</item>
+		<item>more_set_input_headers</item>
+		<item>mp4</item>
+		<item>notice</item>
+		<item>notice_type</item>
+		<item>on_start</item>
+		<item>on_stop</item>
+		<item>passenger_base_uri</item>
+		<item>passenger_default_user</item>
+		<item>passenger_enabled</item>
+		<item>passenger_log_level</item>
+		<item>passenger_max_instances_per_app</item>
+		<item>passenger_max_pool_size</item>
+		<item>passenger_pool_idle_time</item>
+		<item>passenger_root</item>
+		<item>passenger_ruby</item>
+		<item>passenger_use_global_queue</item>
+		<item>passenger_user_switching</item>
+		<item>proxy_cache_purge</item>
+		<item>push_buffer_size</item>
+		<item>push_listener</item>
+		<item>push_message_timeout</item>
+		<item>push_queue_messages</item>
+		<item>push_sender</item>
+		<item>rack_env</item>
+		<item>rails_app_spawner_idle_time</item>
+		<item>rails_env</item>
+		<item>rails_framework_spawner_idle_time</item>
+		<item>rails_spawn_method</item>
+		<item>rds_json</item>
+		<item>rds_json_content_type</item>
+		<item>rds_json_format</item>
+		<item>rds_json_ret</item>
+		<item>redis_bind</item>
+		<item>redis_buffer_size</item>
+		<item>redis_connect_timeout</item>
+		<item>redis_next_upstream</item>
+		<item>redis_pass</item>
+		<item>redis_read_timeout</item>
+		<item>redis_send_timeout</item>
+		<item>report_uploads</item>
+		<item>rrd_graph</item>
+		<item>rrd_graph_root</item>
+		<item>secure_download</item>
+		<item>secure_download_fail_location</item>
+		<item>secure_download_path_mode</item>
+		<item>secure_download_secret</item>
+		<item>set_from_accept_language</item>
+		<item>slowfs_big_file_size</item>
+		<item>slowfs_cache</item>
+		<item>slowfs_cache_key</item>
+		<item>slowfs_cache_min_uses</item>
+		<item>slowfs_cache_path</item>
+		<item>slowfs_cache_purge</item>
+		<item>slowfs_cache_valid</item>
+		<item>slowfs_temp_path</item>
+		<item>strip</item>
+		<item>subs_filter</item>
+		<item>subs_filter_types</item>
+		<item>supervisord</item>
+		<item>supervisord_inherit_backend_status</item>
+		<item>supervisord_name</item>
+		<item>supervisord_start</item>
+		<item>supervisord_stop</item>
+		<item>track_uploads</item>
+		<item>upload_aggregate_form_field</item>
+		<item>upload_buffer_size</item>
+		<item>upload_cleanup</item>
+		<item>upload_limit_rate</item>
+		<item>upload_max_file_size</item>
+		<item>upload_max_output_body_len</item>
+		<item>upload_max_part_header_len</item>
+		<item>upload_pass</item>
+		<item>upload_pass_args</item>
+		<item>upload_pass_form_field</item>
+		<item>upload_progress</item>
+		<item>upload_progress_content_type</item>
+		<item>upload_progress_header</item>
+		<item>upload_progress_json_output</item>
+		<item>upload_progress_template</item>
+		<item>upload_set_form_field</item>
+		<item>upload_store</item>
+		<item>upload_store_access</item>
+		<item>upstream_fair_shm_size</item>
+		<item>uwsgi_bind</item>
+		<item>uwsgi_buffering</item>
+		<item>uwsgi_buffers</item>
+		<item>uwsgi_buffer_size</item>
+		<item>uwsgi_busy_buffers_size</item>
+		<item>uwsgi_cache</item>
+		<item>uwsgi_cache_bypass</item>
+		<item>uwsgi_cache_key</item>
+		<item>uwsgi_cache_lock</item>
+		<item>uwsgi_cache_lock_timeout</item>
+		<item>uwsgi_cache_methods</item>
+		<item>uwsgi_cache_min_uses</item>
+		<item>uwsgi_cache_path</item>
+		<item>uwsgi_cache_use_stale</item>
+		<item>uwsgi_cache_valid</item>
+		<item>uwsgi_connect_timeout</item>
+		<item>uwsgi_hide_header</item>
+		<item>uwsgi_ignore_client_abort</item>
+		<item>uwsgi_ignore_headers</item>
+		<item>uwsgi_intercept_errors</item>
+		<item>uwsgi_max_temp_file_size</item>
+		<item>uwsgi_modifier1</item>
+		<item>uwsgi_modifier2</item>
+		<item>uwsgi_next_upstream</item>
+		<item>uwsgi_no_cache</item>
+		<item>uwsgi_param</item>
+		<item>uwsgi_pass</item>
+		<item>uwsgi_pass_header</item>
+		<item>uwsgi_pass_request_body</item>
+		<item>uwsgi_pass_request_headers</item>
+		<item>uwsgi_read_timeout</item>
+		<item>uwsgi_send_timeout</item>
+		<item>uwsgi_store</item>
+		<item>uwsgi_store_access</item>
+		<item>uwsgi_string</item>
+		<item>uwsgi_temp_file_write_size</item>
+		<item>uwsgi_temp_path</item>
+		<item>xss_callback_arg</item>
+		<item>xss_get</item>
+		<item>xss_input_types</item>
+		<item>xss_output_type</item>
 	</list>
 
 	<contexts>
@@ -54,9 +616,16 @@
 		</context>
 
 		<context name="directive" attribute="Normal Text" lineEndContext="#stay">
-			<DetectChar context="comment"  char="#" />
+			<DetectChar context="comment" char="#" />
 			<StringDetect attribute="Directive" context="rewrite" String="rewrite "/>
-			<RegExpr context="directive_params" attribute="Directive" String="[a-z_]+" insensitive="true" />
+			<keyword context="directive_params" attribute="Directive" String="directives" />
+			<keyword context="directive_params" attribute="Directive" String="directives_more" />
+			<keyword context="directive_params" attribute="Important Directive" String="important" />
+			<keyword context="directive_params" attribute="Control Directive" String="control" />
+			<keyword context="directive_params" attribute="Error Directive" String="errors" />
+			<keyword context="directive_params" attribute="Deprecated Directive" String="deprecated" />
+			<keyword context="directive_params" attribute="Third Party Directive" String="third_party" />
+			<RegExpr context="directive_params" attribute="Error" String="[a-z_]+" insensitive="true" />
 			<DetectChar context="#pop" attribute="Symbol" char=";" />
 		</context>
 
@@ -164,6 +733,11 @@
 		<itemData name="Variable" defStyleNum="dsKeyword" color="#5555FF" selColor="#ffffff" bold="0" italic="0" spellChecking="false" />
 		<itemData name="Symbol" defStyleNum="dsSymbol" />
 		<itemData name="Directive" defStyleNum="dsOthers" />
+		<itemData name="Important Directive" defStyleNum="dsOthers" bold="true" />
+		<itemData name="Control Directive" defStyleNum="dsOthers" />
+		<itemData name="Error Directive" defStyleNum="dsOthers" />
+		<itemData name="Deprecated Directive" defStyleNum="dsError" />
+		<itemData name="Third Party Directive" defStyleNum="dsKeyword" bold="false" />
 		<itemData name="Error" defStyleNum="dsError" spellChecking="false"/>
 		<itemData name="RegExpr" defStyleNum="dsString" spellChecking="false"/>
 		<itemData name="RegExpr Special" defStyleNum="dsKeyword" spellChecking="false"/>
