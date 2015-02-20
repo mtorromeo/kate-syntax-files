@@ -6,6 +6,8 @@
 	<list name="sections">
 		<item>Address</item>
 		<item>Automount</item>
+		<item>Bond</item>
+		<item>Bridge</item>
 		<item>Device</item>
 		<item>DHCP</item>
 		<item>Install</item>
@@ -42,6 +44,25 @@
 		<item>Also</item>
 		<item>AppArmorProfile</item>
 		<item>Architecture</item>
+		<item>ARPProxy</item>
+		<item>AssertACPower</item>
+		<item>AssertArchitecture</item>
+		<item>AssertCapability</item>
+		<item>AssertDirectoryNotEmpty</item>
+		<item>AssertFileIsExecutable</item>
+		<item>AssertFileNotEmpty</item>
+		<item>AssertFirstBoot</item>
+		<item>AssertHost</item>
+		<item>AssertKernelCommandLine</item>
+		<item>AssertNeedsUpdate</item>
+		<item>AssertPathExists</item>
+		<item>AssertPathExistsGlob</item>
+		<item>AssertPathIsDirectory</item>
+		<item>AssertPathIsMountPoint</item>
+		<item>AssertPathIsReadWrite</item>
+		<item>AssertPathIsSymbolicLink</item>
+		<item>AssertSecurity</item>
+		<item>AssertVirtualization</item>
 		<item>Backlog</item>
 		<item>Before</item>
 		<item>BindIPv6Only</item>
@@ -57,6 +78,7 @@
 		<item>Bridge</item>
 		<item>Broadcast</item>
 		<item>BusName</item>
+		<item>BusPolicy</item>
 		<item>Capabilities</item>
 		<item>CapabilityBoundingSet</item>
 		<item>ConditionACPower</item>
@@ -65,10 +87,10 @@
 		<item>ConditionDirectoryNotEmpty</item>
 		<item>ConditionFileIsExecutable</item>
 		<item>ConditionFileNotEmpty</item>
+		<item>ConditionFirstBoot</item>
 		<item>ConditionHost</item>
 		<item>ConditionKernelCommandLine</item>
 		<item>ConditionNeedsUpdate</item>
-		<item>ConditionNull</item>
 		<item>ConditionPathExists</item>
 		<item>ConditionPathExistsGlob</item>
 		<item>ConditionPathIsDirectory</item>
@@ -78,6 +100,7 @@
 		<item>ConditionSecurity</item>
 		<item>ConditionVirtualization</item>
 		<item>Conflicts</item>
+		<item>Cost</item>
 		<item>CPUAccounting</item>
 		<item>CPUAffinity</item>
 		<item>CPUQuota</item>
@@ -95,6 +118,10 @@
 		<item>DefaultStartLimitBurst</item>
 		<item>DefaultStartLimitInterval</item>
 		<item>DefaultTimeoutStart</item>
+		<item>DefaultTimeoutStartSec</item>
+		<item>DefaultTimeoutStopSec</item>
+		<item>DeferAcceptSec</item>
+		<item>Delegate</item>
 		<item>Description</item>
 		<item>Destination</item>
 		<item>DeviceAllow</item>
@@ -105,6 +132,8 @@
 		<item>DiscoverPathMTU</item>
 		<item>DNS</item>
 		<item>Documentation</item>
+		<item>Domains</item>
+		<item>DownDelaySec</item>
 		<item>Driver</item>
 		<item>Duplex</item>
 		<item>Environment</item>
@@ -117,6 +146,7 @@
 		<item>ExecStopPost</item>
 		<item>ExecStopPre</item>
 		<item>FailureAction</item>
+		<item>FDBAgeingSec</item>
 		<item>FreeBind</item>
 		<item>Gateway</item>
 		<item>Group</item>
@@ -132,14 +162,23 @@
 		<item>IPTOS</item>
 		<item>IPTTL</item>
 		<item>IPv4LL</item>
+		<item>IPv4LLRoute</item>
+		<item>JobTimeoutAction</item>
+		<item>JobTimeoutRebootArgument</item>
 		<item>JobTimeoutSec</item>
 		<item>JoinsNamespaceOf</item>
 		<item>KeepAlive</item>
+		<item>KeepAliveIntervalSec</item>
+		<item>KeepAliveProbes</item>
+		<item>KeepAliveTimeSec</item>
 		<item>KernelCommandLine</item>
 		<item>KillMode</item>
 		<item>KillSignal</item>
 		<item>Kind</item>
+		<item>L2MissNotification</item>
+		<item>L3MissNotification</item>
 		<item>Label</item>
+		<item>LACPTransmitRate</item>
 		<item>LimitAS</item>
 		<item>LimitCORE</item>
 		<item>LimitCPU</item>
@@ -163,6 +202,7 @@
 		<item>ListenSequentialPacket</item>
 		<item>ListenSpecial</item>
 		<item>ListenStream</item>
+		<item>LLMNR</item>
 		<item>Local</item>
 		<item>MACAddress</item>
 		<item>MACAddressPolicy</item>
@@ -175,6 +215,8 @@
 		<item>MemoryLimit</item>
 		<item>MessageQueueMaxMessages</item>
 		<item>MessageQueueMessageSize</item>
+		<item>Metric</item>
+		<item>MIIMonitorSec</item>
 		<item>Mode</item>
 		<item>MountFlags</item>
 		<item>MTUBytes</item>
@@ -182,9 +224,11 @@
 		<item>Name</item>
 		<item>NamePolicy</item>
 		<item>Nice</item>
+		<item>NoDelay</item>
 		<item>NonBlocking</item>
 		<item>NoNewPrivileges</item>
 		<item>NotifyAccess</item>
+		<item>NTP</item>
 		<item>OnActiveSec</item>
 		<item>OnBootSec</item>
 		<item>OnCalendar</item>
@@ -196,6 +240,7 @@
 		<item>OnUnitInactiveSec</item>
 		<item>OOMScoreAdjust</item>
 		<item>Options</item>
+		<item>OriginalName</item>
 		<item>PacketInfo</item>
 		<item>PAMName</item>
 		<item>PartOf</item>
@@ -206,6 +251,7 @@
 		<item>PathExists</item>
 		<item>PathExistsGlob</item>
 		<item>PathModified</item>
+		<item>Peer</item>
 		<item>PermissionsStartOnly</item>
 		<item>Persistent</item>
 		<item>Personality</item>
@@ -216,11 +262,9 @@
 		<item>PrivateNetwork</item>
 		<item>PrivateTmp</item>
 		<item>PropagatesReloadTo</item>
-		<item>ProtectedHome</item>
 		<item>ProtectHome</item>
 		<item>ProtectSystem</item>
 		<item>ReadOnlyDirectories</item>
-		<item>ReadOnlySystem</item>
 		<item>ReadWriteDirectories</item>
 		<item>RebootArgument</item>
 		<item>ReceiveBuffer</item>
@@ -230,6 +274,7 @@
 		<item>RemainAfterExit</item>
 		<item>Remote</item>
 		<item>RemoveOnStop</item>
+		<item>RequestBroadcast</item>
 		<item>RequiredBy</item>
 		<item>Requires</item>
 		<item>RequiresMountsFor</item>
@@ -244,10 +289,13 @@
 		<item>ReusePort</item>
 		<item>RootDirectory</item>
 		<item>RootDirectoryStartOnly</item>
+		<item>RouteMetric</item>
+		<item>RouteShortCircuit</item>
 		<item>RuntimeDirectory</item>
 		<item>RuntimeDirectoryMode</item>
 		<item>SecureBits</item>
 		<item>SELinuxContext</item>
+		<item>SELinuxContextFromNet</item>
 		<item>SendBuffer</item>
 		<item>SendHostname</item>
 		<item>SendSIGHUP</item>
@@ -258,10 +306,12 @@
 		<item>SmackLabel</item>
 		<item>SmackLabelIPIn</item>
 		<item>SmackLabelIPOut</item>
+		<item>SmackProcessLabel</item>
 		<item>SocketGroup</item>
 		<item>SocketMode</item>
 		<item>Sockets</item>
 		<item>SocketUser</item>
+		<item>Source</item>
 		<item>SourcePath</item>
 		<item>StandardError</item>
 		<item>StandardInput</item>
@@ -269,6 +319,7 @@
 		<item>StartLimitAction</item>
 		<item>StartLimitBurst</item>
 		<item>StartLimitInterval</item>
+		<item>StartTimeoutSec</item>
 		<item>StartupBlockIOWeight</item>
 		<item>StartupCPUShares</item>
 		<item>StopWhenUnneeded</item>
@@ -282,14 +333,13 @@
 		<item>SystemCallArchitectures</item>
 		<item>SystemCallErrorNumber</item>
 		<item>SystemCallFilter</item>
-		<item>SysVStartPriority</item>
 		<item>TCPCongestion</item>
-		<item>Timeout</item>
 		<item>TimeoutSec</item>
 		<item>TimeoutStartSec</item>
 		<item>TimeoutStopSec</item>
 		<item>TimerSlackNSec</item>
 		<item>TOS</item>
+		<item>TransmitHashPolicy</item>
 		<item>Transparent</item>
 		<item>TTL</item>
 		<item>TTYPath</item>
@@ -300,18 +350,20 @@
 		<item>Type</item>
 		<item>UMask</item>
 		<item>Unit</item>
+		<item>UpDelaySec</item>
 		<item>UseDNS</item>
+		<item>UseDomains</item>
 		<item>UseHostname</item>
 		<item>UseMTU</item>
 		<item>User</item>
 		<item>UseRoutes</item>
 		<item>UtmpIdentifier</item>
+		<item>VendorClassIdentifier</item>
 		<item>Virtualization</item>
 		<item>VLAN</item>
 		<item>VXLAN</item>
 		<item>WakeOnLan</item>
 		<item>WakeSystem</item>
-		<item>Wanted</item>
 		<item>WantedBy</item>
 		<item>Wants</item>
 		<item>WatchdogSec</item>
