@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd"
+[
+	<!ENTITY name    "[A-Za-z_:][\w.:_-]*">
+	<!ENTITY entref  "&amp;(#[0-9]+|#[xX][0-9A-Fa-f]+|&name;);">
+]>
+<language name="Vue" indenter="cstyle" version="1.0" kateversion="3.4" section="Scripts" extensions="*.vue" mimetype="" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
+
+<highlighting>
+
+<contexts>
+	<context name="Start" attribute="Normal Text" lineEndContext="#stay">
+		<IncludeRules context="Find HTML" />
+		<RegExpr attribute="Element" context="CSS" String="&lt;style\b" insensitive="true" beginRegion="style" />
+		<RegExpr attribute="Element" context="Script" String="&lt;script\b" insensitive="true" beginRegion="script" />
+	</context>
+
+	<!-- GENERIC -->
+	<context name="FindEntityRefs" attribute="Other Text" lineEndContext="#stay">
+		<RegExpr attribute="EntityRef" context="#stay" String="&entref;" />
+		<AnyChar attribute="Error" context="#stay" String="&amp;&lt;" />
+	</context>
+
+	<context name="FindAttributes" attribute="Other Text" lineEndContext="#stay">
+		<RegExpr attribute="Attribute" context="#stay" String="&name;" column="0"/>
+		<RegExpr attribute="Attribute" context="#stay" String="\s+&name;" />
+		<DetectChar attribute="Attribute" context="Value" char="=" />
+	</context>
+
+	<context name="Value" attribute="Other Text" lineEndContext="#stay" fallthrough="true" fallthroughContext="Value NQ">
+		<DetectChar attribute="Value" context="Value DQ" char="&quot;" />
+		<DetectChar attribute="Value" context="Value SQ" char="&apos;" />
+		<DetectSpaces />
+	</context>
+
+	<context name="Value DQ" attribute="Value" lineEndContext="#stay">
+		<DetectChar attribute="Value" context="#pop#pop" char="&quot;" />
+		<IncludeRules context="FindEntityRefs" />
+	</context>
+
+	<context name="Value SQ" attribute="Value" lineEndContext="#stay">
+		<DetectChar attribute="Value" context="#pop#pop" char="&apos;" />
+		<IncludeRules context="FindEntityRefs" />
+	</context>
+
+	<context name="Value NQ" attribute="Other Text" lineEndContext="#pop#pop" fallthrough="true" fallthroughContext="#pop#pop">
+		<IncludeRules context="FindEntityRefs" />
+		<RegExpr attribute="Value" context="#stay" String="/(?!&gt;)" />
+		<RegExpr attribute="Value" context="#stay" String="[^/&gt;&lt;&quot;&apos;\s]" />
+	</context>
+
+  <context name="El Close" attribute="Other Text" lineEndContext="#stay">
+    <DetectChar attribute="Element" context="#pop#pop#pop" char="&gt;" />
+    <RegExpr attribute="Error" context="#stay" String="\S" />
+  </context>
+	<!-- END GENERIC -->
+
+
+	<!-- STYLE -->
+	<context name="CSS" attribute="Other Text" lineEndContext="#stay">
+		<Detect2Chars attribute="Element" context="#pop" char="/" char1="&gt;" endRegion="style" />
+		<DetectChar attribute="Element" context="CSS content" char="&gt;" />
+		<IncludeRules context="FindAttributes" />
+		<RegExpr attribute="Error" context="#stay" String="\S" />
+	</context>
+
+	<context name="CSS content" attribute="Other Text" lineEndContext="#stay">
+		<RegExpr attribute="Element" context="El Close" String="&lt;/style\b" insensitive="true" endRegion="style" />
+		<IncludeRules context="##CSS" includeAttrib="true"/>
+	</context>
+	<!-- END STYLE -->
+
+
+	<!-- TEMPLATE -->
+	<context name="Find HTML" attribute="Normal Text" lineEndContext="#stay">
+		<RegExpr attribute="Element" context="HTML" String="&lt;template\b" insensitive="true" beginRegion="template" />
+	</context>
+
+	<context name="HTML" attribute="Other Text" lineEndContext="#stay">
+		<Detect2Chars attribute="Element" context="#pop" char="/" char1="&gt;" endRegion="template" />
+		<DetectChar attribute="Element" context="HTML content" char="&gt;" />
+		<IncludeRules context="FindAttributes" />
+		<RegExpr attribute="Error" context="#stay" String="\S" />
+	</context>
+
+	<context name="HTML content" attribute="Other Text" lineEndContext="#stay">
+		<IncludeRules context="Find HTML" />
+		<RegExpr attribute="Element" context="El Close" String="&lt;/template\b" insensitive="true" endRegion="template" />
+		<IncludeRules context="##HTML" includeAttrib="true"/>
+	</context>
+	<!-- END TEMPLATE -->
+
+
+	<!-- SCRIPT -->
+	<context name="Script" attribute="Other Text" lineEndContext="#stay">
+		<Detect2Chars attribute="Element" context="#pop" char="/" char1="&gt;" endRegion="script" />
+		<DetectChar attribute="Element" context="JavaScript content" char="&gt;" />
+		<IncludeRules context="FindAttributes" />
+		<RegExpr attribute="Error" context="#stay" String="\S" />
+	</context>
+
+	<context name="JavaScript content" attribute="Other Text" lineEndContext="#stay">
+		<RegExpr attribute="Element" context="El Close" String="&lt;/script\b" insensitive="true" endRegion="script" />
+		<IncludeRules context="Normal##JavaScript" includeAttrib="true"/>
+	</context>
+	<!-- END SCRIPT -->
+
+</contexts>
+
+<itemDatas>
+  <itemData name="Normal Text" defStyleNum="dsNormal" />
+  <itemData name="Other Text" defStyleNum="dsNormal" spellChecking="false" />
+  <itemData name="Element" defStyleNum="dsKeyword" spellChecking="false" />
+  <itemData name="Attribute" defStyleNum="dsOthers" spellChecking="false" />
+  <itemData name="Value" defStyleNum="dsString" color="#a00" spellChecking="false" />
+  <itemData name="EntityRef" defStyleNum="dsDecVal" spellChecking="false" />
+  <itemData name="Error" defStyleNum="dsError" spellChecking="false" />
+</itemDatas>
+
+</highlighting>
+</language>

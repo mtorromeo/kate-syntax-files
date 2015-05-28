@@ -27,6 +27,11 @@ CleanCSS
 ''''''''
 Syntax highlighting for the `CleanCSS <http://github.com/mtorromeo/py-cleancss/>`_ files.
 
+Vue
+'''
+Vue component bundle comprising of CSS + HTML + JavaScript in the same file.
+See https://github.com/vuejs/vue-component-compiler.
+
 Installation
 ------------
 Copy the xml files in ~/.kde4/share/apps/katepart/syntax for KDE4 or ~/.local/share/katepart5/syntax for KF5.
