@@ -14,6 +14,7 @@
 		<item>mail</item>
 		<item>map</item>
 		<item>server</item>
+		<item>split_clients</item>
 		<item>types</item>
 		<item>upstream</item>
 	</list>
@@ -31,9 +32,11 @@
 		<item>memcached_pass</item>
 		<item>proxy_pass</item>
 		<item>root</item>
+		<item>scgi_pass</item>
 		<item>server</item>
 		<item>server_name</item>
 		<item>try_files</item>
+		<item>uwsgi_pass</item>
 	</list>
 
 	<list name="control">
@@ -51,9 +54,11 @@
 	<list name="deprecated">
 		<item>connections</item>
 		<item>imap</item>
+		<item>limit_zone</item>
 		<item>open_file_cache_retest</item>
 		<item>optimize_server_names</item>
 		<item>satisfy_any</item>
+		<item>so_keepalive</item>
 	</list>
 
 	<list name="rewrite_flags">
@@ -64,6 +69,7 @@
 	</list>
 
 	<list name="directives">
+		<item>acceptex_read</item>
 		<item>accept_mutex</item>
 		<item>accept_mutex_delay</item>
 		<item>access_log</item>
@@ -81,11 +87,14 @@
 		<item>auth_http</item>
 		<item>auth_http_header</item>
 		<item>auth_http_timeout</item>
+		<item>auth_request</item>
+		<item>auth_request_set</item>
 		<item>autoindex</item>
 		<item>autoindex_exact_size</item>
 		<item>autoindex_localtime</item>
 		<item>charset</item>
 		<item>charset_types</item>
+		<item>chunked_transfer_encoding</item>
 		<item>client_body_buffer_size</item>
 		<item>client_body_in_file_only</item>
 		<item>client_body_in_single_buffer</item>
@@ -109,32 +118,44 @@
 		<item>devpoll_events</item>
 		<item>directio</item>
 		<item>directio_alignment</item>
+		<item>disable_symlinks</item>
 		<item>empty_gif</item>
 		<item>env</item>
 		<item>epoll_events</item>
 		<item>error_log</item>
+		<item>etag</item>
 		<item>eventport_events</item>
 		<item>expires</item>
 		<item>fastcgi_bind</item>
+		<item>fastcgi_buffering</item>
 		<item>fastcgi_buffers</item>
 		<item>fastcgi_buffer_size</item>
 		<item>fastcgi_busy_buffers_size</item>
 		<item>fastcgi_cache</item>
+		<item>fastcgi_cache_bypass</item>
 		<item>fastcgi_cache_key</item>
+		<item>fastcgi_cache_lock</item>
+		<item>fastcgi_cache_lock_timeout</item>
 		<item>fastcgi_cache_methods</item>
 		<item>fastcgi_cache_min_uses</item>
 		<item>fastcgi_cache_path</item>
+		<item>fastcgi_cache_revalidate</item>
 		<item>fastcgi_cache_use_stale</item>
 		<item>fastcgi_cache_valid</item>
 		<item>fastcgi_catch_stderr</item>
 		<item>fastcgi_connect_timeout</item>
+		<item>fastcgi_force_ranges</item>
 		<item>fastcgi_hide_header</item>
 		<item>fastcgi_ignore_client_abort</item>
 		<item>fastcgi_ignore_headers</item>
 		<item>fastcgi_index</item>
 		<item>fastcgi_intercept_errors</item>
+		<item>fastcgi_keep_conn</item>
 		<item>fastcgi_max_temp_file_size</item>
 		<item>fastcgi_next_upstream</item>
+		<item>fastcgi_next_upstream_timeout</item>
+		<item>fastcgi_next_upstream_tries</item>
+		<item>fastcgi_no_cache</item>
 		<item>fastcgi_param</item>
 		<item>fastcgi_pass_header</item>
 		<item>fastcgi_pass_request_body</item>
@@ -147,12 +168,15 @@
 		<item>fastcgi_store_access</item>
 		<item>fastcgi_temp_file_write_size</item>
 		<item>fastcgi_temp_path</item>
-		<item>fastcgi_upstream_fail_timeout</item>
-		<item>fastcgi_upstream_max_fails</item>
 		<item>flv</item>
 		<item>geoip_city</item>
 		<item>geoip_country</item>
+		<item>geoip_org</item>
+		<item>geoip_proxy</item>
+		<item>geoip_proxy_recursive</item>
 		<item>google_perftools_profiles</item>
+		<item>gunzip</item>
+		<item>gunzip_buffers</item>
 		<item>gzip</item>
 		<item>gzip_buffers</item>
 		<item>gzip_comp_level</item>
@@ -166,30 +190,40 @@
 		<item>gzip_types</item>
 		<item>gzip_vary</item>
 		<item>gzip_window</item>
+		<item>hash</item>
 		<item>if_modified_since</item>
 		<item>ignore_invalid_headers</item>
 		<item>image_filter</item>
 		<item>image_filter_buffer</item>
+		<item>image_filter_interlace</item>
 		<item>image_filter_jpeg_quality</item>
+		<item>image_filter_sharpen</item>
 		<item>image_filter_transparency</item>
 		<item>imap_auth</item>
 		<item>imap_capabilities</item>
 		<item>imap_client_buffer</item>
 		<item>index</item>
+		<item>iocp_threads</item>
 		<item>ip_hash</item>
+		<item>keepalive</item>
+		<item>keepalive_disable</item>
 		<item>keepalive_requests</item>
 		<item>keepalive_timeout</item>
 		<item>kqueue_changes</item>
 		<item>kqueue_events</item>
 		<item>large_client_header_buffers</item>
+		<item>least_conn</item>
 		<item>limit_conn</item>
 		<item>limit_conn_log_level</item>
+		<item>limit_conn_status</item>
+		<item>limit_conn_zone</item>
 		<item>limit_rate</item>
 		<item>limit_rate_after</item>
 		<item>limit_req</item>
 		<item>limit_req_log_level</item>
+		<item>limit_req_status</item>
 		<item>limit_req_zone</item>
-		<item>limit_zone</item>
+		<item>lingering_close</item>
 		<item>lingering_time</item>
 		<item>lingering_timeout</item>
 		<item>lock_file</item>
@@ -199,21 +233,27 @@
 		<item>map_hash_bucket_size</item>
 		<item>map_hash_max_size</item>
 		<item>master_process</item>
+		<item>max_ranges</item>
 		<item>memcached_bind</item>
 		<item>memcached_buffer_size</item>
 		<item>memcached_connect_timeout</item>
+		<item>memcached_gzip_flag</item>
 		<item>memcached_next_upstream</item>
+		<item>memcached_next_upstream_timeout</item>
+		<item>memcached_next_upstream_tries</item>
 		<item>memcached_read_timeout</item>
 		<item>memcached_send_timeout</item>
-		<item>memcached_upstream_fail_timeout</item>
-		<item>memcached_upstream_max_fails</item>
 		<item>merge_slashes</item>
 		<item>min_delete_depth</item>
 		<item>modern_browser</item>
 		<item>modern_browser_value</item>
+		<item>mp4</item>
+		<item>mp4_buffer_size</item>
+		<item>mp4_max_buffer_size</item>
 		<item>msie_padding</item>
 		<item>msie_refresh</item>
 		<item>multi_accept</item>
+		<item>mysql_test</item>
 		<item>open_file_cache</item>
 		<item>open_file_cache_errors</item>
 		<item>open_file_cache_events</item>
@@ -222,6 +262,7 @@
 		<item>open_log_file_cache</item>
 		<item>output_buffers</item>
 		<item>override_charset</item>
+		<item>pcre_jit</item>
 		<item>perl</item>
 		<item>perl_modules</item>
 		<item>perl_require</item>
@@ -230,6 +271,7 @@
 		<item>pop3_auth</item>
 		<item>pop3_capabilities</item>
 		<item>port_in_redirect</item>
+		<item>post_acceptex</item>
 		<item>postpone_gzipping</item>
 		<item>postpone_output</item>
 		<item>protocol</item>
@@ -241,22 +283,33 @@
 		<item>proxy_buffer_size</item>
 		<item>proxy_busy_buffers_size</item>
 		<item>proxy_cache</item>
+		<item>proxy_cache_bypass</item>
 		<item>proxy_cache_key</item>
+		<item>proxy_cache_lock</item>
+		<item>proxy_cache_lock_timeout</item>
 		<item>proxy_cache_methods</item>
 		<item>proxy_cache_min_uses</item>
 		<item>proxy_cache_path</item>
+		<item>proxy_cache_revalidate</item>
 		<item>proxy_cache_use_stale</item>
 		<item>proxy_cache_valid</item>
 		<item>proxy_connect_timeout</item>
+		<item>proxy_cookie_domain</item>
+		<item>proxy_cookie_path</item>
+		<item>proxy_force_ranges</item>
 		<item>proxy_headers_hash_bucket_size</item>
 		<item>proxy_headers_hash_max_size</item>
 		<item>proxy_hide_header</item>
+		<item>proxy_http_version</item>
 		<item>proxy_ignore_client_abort</item>
 		<item>proxy_ignore_headers</item>
 		<item>proxy_intercept_errors</item>
 		<item>proxy_max_temp_file_size</item>
 		<item>proxy_method</item>
 		<item>proxy_next_upstream</item>
+		<item>proxy_next_upstream_timeout</item>
+		<item>proxy_next_upstream_tries</item>
+		<item>proxy_no_cache</item>
 		<item>proxy_pass_error_message</item>
 		<item>proxy_pass_header</item>
 		<item>proxy_pass_request_body</item>
@@ -267,18 +320,27 @@
 		<item>proxy_send_timeout</item>
 		<item>proxy_set_body</item>
 		<item>proxy_set_header</item>
+		<item>proxy_ssl_ciphers</item>
+		<item>proxy_ssl_crl</item>
+		<item>proxy_ssl_name</item>
+		<item>proxy_ssl_protocols</item>
+		<item>proxy_ssl_server_name</item>
 		<item>proxy_ssl_session_reuse</item>
+		<item>proxy_ssl_trusted_certificate</item>
+		<item>proxy_ssl_verify</item>
+		<item>proxy_ssl_verify_depth</item>
 		<item>proxy_store</item>
 		<item>proxy_store_access</item>
 		<item>proxy_temp_file_write_size</item>
 		<item>proxy_temp_path</item>
 		<item>proxy_timeout</item>
-		<item>proxy_upstream_fail_timeout</item>
-		<item>proxy_upstream_max_fails</item>
 		<item>random_index</item>
 		<item>read_ahead</item>
 		<item>real_ip_header</item>
+		<item>real_ip_recursive</item>
 		<item>recursive_error_pages</item>
+		<item>referer_hash_bucket_size</item>
+		<item>referer_hash_max_size</item>
 		<item>request_pool_size</item>
 		<item>reset_timedout_connection</item>
 		<item>resolver</item>
@@ -289,6 +351,45 @@
 		<item>rtsig_overflow_threshold</item>
 		<item>rtsig_signo</item>
 		<item>satisfy</item>
+		<item>scgi_bind</item>
+		<item>scgi_buffering</item>
+		<item>scgi_buffers</item>
+		<item>scgi_buffer_size</item>
+		<item>scgi_busy_buffers_size</item>
+		<item>scgi_cache</item>
+		<item>scgi_cache_bypass</item>
+		<item>scgi_cache_key</item>
+		<item>scgi_cache_lock</item>
+		<item>scgi_cache_lock_timeout</item>
+		<item>scgi_cache_methods</item>
+		<item>scgi_cache_min_uses</item>
+		<item>scgi_cache_path</item>
+		<item>scgi_cache_revalidate</item>
+		<item>scgi_cache_use_stale</item>
+		<item>scgi_cache_valid</item>
+		<item>scgi_connect_timeout</item>
+		<item>scgi_force_ranges</item>
+		<item>scgi_hide_header</item>
+		<item>scgi_ignore_client_abort</item>
+		<item>scgi_ignore_headers</item>
+		<item>scgi_intercept_errors</item>
+		<item>scgi_max_temp_file_size</item>
+		<item>scgi_next_upstream</item>
+		<item>scgi_next_upstream_timeout</item>
+		<item>scgi_next_upstream_tries</item>
+		<item>scgi_no_cache</item>
+		<item>scgi_param</item>
+		<item>scgi_pass_header</item>
+		<item>scgi_pass_request_body</item>
+		<item>scgi_pass_request_headers</item>
+		<item>scgi_read_timeout</item>
+		<item>scgi_send_timeout</item>
+		<item>scgi_store</item>
+		<item>scgi_store_access</item>
+		<item>scgi_temp_file_write_size</item>
+		<item>scgi_temp_path</item>
+		<item>secure_link</item>
+		<item>secure_link_md5</item>
 		<item>secure_link_secret</item>
 		<item>sendfile</item>
 		<item>sendfile_max_chunk</item>
@@ -303,31 +404,50 @@
 		<item>smtp_capabilities</item>
 		<item>smtp_client_buffer</item>
 		<item>smtp_greeting_delay</item>
-		<item>so_keepalive</item>
 		<item>source_charset</item>
+		<item>spdy_chunk_size</item>
+		<item>spdy_headers_comp</item>
+		<item>spdy_keepalive_timeout</item>
+		<item>spdy_max_concurrent_streams</item>
+		<item>spdy_pool_size</item>
+		<item>spdy_recv_buffer_size</item>
+		<item>spdy_recv_timeout</item>
+		<item>spdy_streams_index_size</item>
 		<item>ssi</item>
 		<item>ssi_ignore_recycled_buffers</item>
+		<item>ssi_last_modified</item>
 		<item>ssi_min_file_chunk</item>
 		<item>ssi_silent_errors</item>
 		<item>ssi_types</item>
 		<item>ssi_value_length</item>
 		<item>ssl</item>
+		<item>ssl_buffer_size</item>
 		<item>ssl_certificate</item>
 		<item>ssl_certificate_key</item>
 		<item>ssl_ciphers</item>
 		<item>ssl_client_certificate</item>
 		<item>ssl_crl</item>
 		<item>ssl_dhparam</item>
+		<item>ssl_ecdh_curve</item>
 		<item>ssl_engine</item>
+		<item>ssl_password_file</item>
 		<item>ssl_prefer_server_ciphers</item>
 		<item>ssl_protocols</item>
 		<item>ssl_session_cache</item>
+		<item>ssl_session_ticket_key</item>
+		<item>ssl_session_tickets</item>
 		<item>ssl_session_timeout</item>
+		<item>ssl_stapling</item>
+		<item>ssl_stapling_file</item>
+		<item>ssl_stapling_responder</item>
+		<item>ssl_stapling_verify</item>
+		<item>ssl_trusted_certificate</item>
 		<item>ssl_verify_client</item>
 		<item>ssl_verify_depth</item>
 		<item>starttls</item>
 		<item>stub_status</item>
 		<item>sub_filter</item>
+		<item>sub_filter_last_modified</item>
 		<item>sub_filter_once</item>
 		<item>sub_filter_types</item>
 		<item>tcp_nodelay</item>
@@ -349,9 +469,59 @@
 		<item>userid_p3p</item>
 		<item>userid_path</item>
 		<item>userid_service</item>
+		<item>uwsgi_bind</item>
+		<item>uwsgi_buffering</item>
+		<item>uwsgi_buffers</item>
+		<item>uwsgi_buffer_size</item>
+		<item>uwsgi_busy_buffers_size</item>
+		<item>uwsgi_cache</item>
+		<item>uwsgi_cache_bypass</item>
+		<item>uwsgi_cache_key</item>
+		<item>uwsgi_cache_lock</item>
+		<item>uwsgi_cache_lock_timeout</item>
+		<item>uwsgi_cache_methods</item>
+		<item>uwsgi_cache_min_uses</item>
+		<item>uwsgi_cache_path</item>
+		<item>uwsgi_cache_revalidate</item>
+		<item>uwsgi_cache_use_stale</item>
+		<item>uwsgi_cache_valid</item>
+		<item>uwsgi_connect_timeout</item>
+		<item>uwsgi_force_ranges</item>
+		<item>uwsgi_hide_header</item>
+		<item>uwsgi_ignore_client_abort</item>
+		<item>uwsgi_ignore_headers</item>
+		<item>uwsgi_intercept_errors</item>
+		<item>uwsgi_max_temp_file_size</item>
+		<item>uwsgi_modifier1</item>
+		<item>uwsgi_modifier2</item>
+		<item>uwsgi_next_upstream</item>
+		<item>uwsgi_next_upstream_timeout</item>
+		<item>uwsgi_next_upstream_tries</item>
+		<item>uwsgi_no_cache</item>
+		<item>uwsgi_param</item>
+		<item>uwsgi_pass_header</item>
+		<item>uwsgi_pass_request_body</item>
+		<item>uwsgi_pass_request_headers</item>
+		<item>uwsgi_read_timeout</item>
+		<item>uwsgi_send_timeout</item>
+		<item>uwsgi_ssl_ciphers</item>
+		<item>uwsgi_ssl_crl</item>
+		<item>uwsgi_ssl_name</item>
+		<item>uwsgi_ssl_protocols</item>
+		<item>uwsgi_ssl_server_name</item>
+		<item>uwsgi_ssl_session_reuse</item>
+		<item>uwsgi_ssl_trusted_certificate</item>
+		<item>uwsgi_ssl_verify</item>
+		<item>uwsgi_ssl_verify_depth</item>
+		<item>uwsgi_store</item>
+		<item>uwsgi_store_access</item>
+		<item>uwsgi_string</item>
+		<item>uwsgi_temp_file_write_size</item>
+		<item>uwsgi_temp_path</item>
 		<item>valid_referers</item>
 		<item>variables_hash_bucket_size</item>
 		<item>variables_hash_max_size</item>
+		<item>worker_aio_requests</item>
 		<item>worker_connections</item>
 		<item>worker_cpu_affinity</item>
 		<item>worker_priority</item>
@@ -363,6 +533,9 @@
 		<item>working_directory</item>
 		<item>xclient</item>
 		<item>xml_entities</item>
+		<item>xslt_last_modified</item>
+		<item>xslt_param</item>
+		<item>xslt_string_param</item>
 		<item>xslt_stylesheet</item>
 		<item>xslt_types</item>
 	</list>
@@ -549,43 +722,6 @@
 		<item>upload_store</item>
 		<item>upload_store_access</item>
 		<item>upstream_fair_shm_size</item>
-		<item>uwsgi_bind</item>
-		<item>uwsgi_buffering</item>
-		<item>uwsgi_buffers</item>
-		<item>uwsgi_buffer_size</item>
-		<item>uwsgi_busy_buffers_size</item>
-		<item>uwsgi_cache</item>
-		<item>uwsgi_cache_bypass</item>
-		<item>uwsgi_cache_key</item>
-		<item>uwsgi_cache_lock</item>
-		<item>uwsgi_cache_lock_timeout</item>
-		<item>uwsgi_cache_methods</item>
-		<item>uwsgi_cache_min_uses</item>
-		<item>uwsgi_cache_path</item>
-		<item>uwsgi_cache_use_stale</item>
-		<item>uwsgi_cache_valid</item>
-		<item>uwsgi_connect_timeout</item>
-		<item>uwsgi_hide_header</item>
-		<item>uwsgi_ignore_client_abort</item>
-		<item>uwsgi_ignore_headers</item>
-		<item>uwsgi_intercept_errors</item>
-		<item>uwsgi_max_temp_file_size</item>
-		<item>uwsgi_modifier1</item>
-		<item>uwsgi_modifier2</item>
-		<item>uwsgi_next_upstream</item>
-		<item>uwsgi_no_cache</item>
-		<item>uwsgi_param</item>
-		<item>uwsgi_pass</item>
-		<item>uwsgi_pass_header</item>
-		<item>uwsgi_pass_request_body</item>
-		<item>uwsgi_pass_request_headers</item>
-		<item>uwsgi_read_timeout</item>
-		<item>uwsgi_send_timeout</item>
-		<item>uwsgi_store</item>
-		<item>uwsgi_store_access</item>
-		<item>uwsgi_string</item>
-		<item>uwsgi_temp_file_write_size</item>
-		<item>uwsgi_temp_path</item>
 		<item>xss_callback_arg</item>
 		<item>xss_get</item>
 		<item>xss_input_types</item>
