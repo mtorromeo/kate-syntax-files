@@ -8,9 +8,11 @@
 		<item>Automount</item>
 		<item>Bond</item>
 		<item>Bridge</item>
+		<item>BridgeFDB</item>
 		<item>Device</item>
 		<item>DHCP</item>
 		<item>Install</item>
+		<item>IPVLAN</item>
 		<item>Link</item>
 		<item>MACVLAN</item>
 		<item>Match</item>
@@ -147,6 +149,7 @@
 		<item>ExecStopPre</item>
 		<item>FailureAction</item>
 		<item>FDBAgeingSec</item>
+		<item>FileDescriptorStoreMax</item>
 		<item>FreeBind</item>
 		<item>Gateway</item>
 		<item>Group</item>
@@ -159,10 +162,12 @@
 		<item>InaccessibleDirectories</item>
 		<item>IOSchedulingClass</item>
 		<item>IOSchedulingPriority</item>
+		<item>IPForward</item>
+		<item>IPMasquerade</item>
 		<item>IPTOS</item>
 		<item>IPTTL</item>
-		<item>IPv4LL</item>
 		<item>IPv4LLRoute</item>
+		<item>IPv6Token</item>
 		<item>JobTimeoutAction</item>
 		<item>JobTimeoutRebootArgument</item>
 		<item>JobTimeoutSec</item>
@@ -195,6 +200,7 @@
 		<item>LimitRTTIME</item>
 		<item>LimitSIGPENDING</item>
 		<item>LimitSTACK</item>
+		<item>LinkLocalAddressing</item>
 		<item>ListenDatagram</item>
 		<item>ListenFIFO</item>
 		<item>ListenMessageQueue</item>
@@ -202,6 +208,7 @@
 		<item>ListenSequentialPacket</item>
 		<item>ListenSpecial</item>
 		<item>ListenStream</item>
+		<item>LLDP</item>
 		<item>LLMNR</item>
 		<item>Local</item>
 		<item>MACAddress</item>
@@ -293,6 +300,7 @@
 		<item>RouteShortCircuit</item>
 		<item>RuntimeDirectory</item>
 		<item>RuntimeDirectoryMode</item>
+		<item>Scope</item>
 		<item>SecureBits</item>
 		<item>SELinuxContext</item>
 		<item>SELinuxContextFromNet</item>
@@ -333,6 +341,7 @@
 		<item>SystemCallArchitectures</item>
 		<item>SystemCallErrorNumber</item>
 		<item>SystemCallFilter</item>
+		<item>SystemdService</item>
 		<item>TCPCongestion</item>
 		<item>TimeoutSec</item>
 		<item>TimeoutStartSec</item>
@@ -361,6 +370,7 @@
 		<item>VendorClassIdentifier</item>
 		<item>Virtualization</item>
 		<item>VLAN</item>
+		<item>VLANId</item>
 		<item>VXLAN</item>
 		<item>WakeOnLan</item>
 		<item>WakeSystem</item>
