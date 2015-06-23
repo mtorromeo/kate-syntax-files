@@ -40,13 +40,19 @@
 		<item>Accept</item>
 		<item>AccuracySec</item>
 		<item>Address</item>
+		<item>AdSelect</item>
 		<item>After</item>
 		<item>Alias</item>
 		<item>AllowIsolate</item>
+		<item>AllSlavesActive</item>
 		<item>Also</item>
 		<item>AppArmorProfile</item>
 		<item>Architecture</item>
+		<item>ARPAllTargets</item>
+		<item>ARPIntervalSec</item>
+		<item>ARPIPTargets</item>
 		<item>ARPProxy</item>
+		<item>ARPValidate</item>
 		<item>AssertACPower</item>
 		<item>AssertArchitecture</item>
 		<item>AssertCapability</item>
@@ -67,6 +73,7 @@
 		<item>AssertVirtualization</item>
 		<item>Backlog</item>
 		<item>Before</item>
+		<item>BindCarrier</item>
 		<item>BindIPv6Only</item>
 		<item>BindsTo</item>
 		<item>BindToDevice</item>
@@ -83,6 +90,7 @@
 		<item>BusPolicy</item>
 		<item>Capabilities</item>
 		<item>CapabilityBoundingSet</item>
+		<item>ClientIdentifier</item>
 		<item>ConditionACPower</item>
 		<item>ConditionArchitecture</item>
 		<item>ConditionCapability</item>
@@ -147,11 +155,13 @@
 		<item>ExecStop</item>
 		<item>ExecStopPost</item>
 		<item>ExecStopPre</item>
+		<item>FailOverMACPolicy</item>
 		<item>FailureAction</item>
 		<item>FDBAgeingSec</item>
 		<item>FileDescriptorStoreMax</item>
 		<item>FreeBind</item>
 		<item>Gateway</item>
+		<item>GratuitousARP</item>
 		<item>Group</item>
 		<item>GuessMainPID</item>
 		<item>Host</item>
@@ -184,6 +194,7 @@
 		<item>L3MissNotification</item>
 		<item>Label</item>
 		<item>LACPTransmitRate</item>
+		<item>LearnPacketIntervalSec</item>
 		<item>LimitAS</item>
 		<item>LimitCORE</item>
 		<item>LimitCPU</item>
@@ -224,6 +235,7 @@
 		<item>MessageQueueMessageSize</item>
 		<item>Metric</item>
 		<item>MIIMonitorSec</item>
+		<item>MinLinks</item>
 		<item>Mode</item>
 		<item>MountFlags</item>
 		<item>MTUBytes</item>
@@ -249,6 +261,7 @@
 		<item>Options</item>
 		<item>OriginalName</item>
 		<item>PacketInfo</item>
+		<item>PacketsPerSlave</item>
 		<item>PAMName</item>
 		<item>PartOf</item>
 		<item>PassCredentials</item>
@@ -264,6 +277,7 @@
 		<item>Personality</item>
 		<item>PIDFile</item>
 		<item>PipeSize</item>
+		<item>PrimaryReselectPolicy</item>
 		<item>Priority</item>
 		<item>PrivateDevices</item>
 		<item>PrivateNetwork</item>
@@ -288,6 +302,7 @@
 		<item>RequiresOverridable</item>
 		<item>Requisite</item>
 		<item>RequisiteOverridable</item>
+		<item>ResendIGMP</item>
 		<item>Restart</item>
 		<item>RestartForceExitStatus</item>
 		<item>RestartPreventExitStatus</item>
@@ -343,6 +358,7 @@
 		<item>SystemCallFilter</item>
 		<item>SystemdService</item>
 		<item>TCPCongestion</item>
+		<item>TimeoutIdleSec</item>
 		<item>TimeoutSec</item>
 		<item>TimeoutStartSec</item>
 		<item>TimeoutStopSec</item>
@@ -357,6 +373,9 @@
 		<item>TTYVTDisallocate</item>
 		<item>Tunnel</item>
 		<item>Type</item>
+		<item>UDP6ZeroCheckSumRx</item>
+		<item>UDP6ZeroChecksumTx</item>
+		<item>UDPCheckSum</item>
 		<item>UMask</item>
 		<item>Unit</item>
 		<item>UpDelaySec</item>
@@ -364,6 +383,7 @@
 		<item>UseDomains</item>
 		<item>UseHostname</item>
 		<item>UseMTU</item>
+		<item>UseNTP</item>
 		<item>User</item>
 		<item>UseRoutes</item>
 		<item>UtmpIdentifier</item>
