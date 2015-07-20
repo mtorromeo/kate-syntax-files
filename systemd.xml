@@ -177,6 +177,7 @@
 		<item>IPTOS</item>
 		<item>IPTTL</item>
 		<item>IPv4LLRoute</item>
+		<item>IPv6PrivacyExtensions</item>
 		<item>IPv6Token</item>
 		<item>JobTimeoutAction</item>
 		<item>JobTimeoutRebootArgument</item>
