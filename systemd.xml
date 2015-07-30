@@ -15,6 +15,7 @@
 		<item>IPVLAN</item>
 		<item>Link</item>
 		<item>MACVLAN</item>
+		<item>MACVTAP</item>
 		<item>Match</item>
 		<item>Mount</item>
 		<item>NetDev</item>
@@ -44,6 +45,7 @@
 		<item>After</item>
 		<item>Alias</item>
 		<item>AllowIsolate</item>
+		<item>AllowPortToBeRoot</item>
 		<item>AllSlavesActive</item>
 		<item>Also</item>
 		<item>AppArmorProfile</item>
@@ -110,6 +112,7 @@
 		<item>ConditionSecurity</item>
 		<item>ConditionVirtualization</item>
 		<item>Conflicts</item>
+		<item>CopyDSCP</item>
 		<item>Cost</item>
 		<item>CPUAccounting</item>
 		<item>CPUAffinity</item>
@@ -157,6 +160,7 @@
 		<item>ExecStopPre</item>
 		<item>FailOverMACPolicy</item>
 		<item>FailureAction</item>
+		<item>FastLeave</item>
 		<item>FDBAgeingSec</item>
 		<item>FileDescriptorStoreMax</item>
 		<item>FreeBind</item>
@@ -164,7 +168,9 @@
 		<item>GratuitousARP</item>
 		<item>Group</item>
 		<item>GuessMainPID</item>
+		<item>HairPin</item>
 		<item>Host</item>
+		<item>Hostname</item>
 		<item>Id</item>
 		<item>IgnoreOnIsolate</item>
 		<item>IgnoreOnSnapshot</item>
@@ -177,6 +183,7 @@
 		<item>IPTOS</item>
 		<item>IPTTL</item>
 		<item>IPv4LLRoute</item>
+		<item>IPv6FlowLabel</item>
 		<item>IPv6PrivacyExtensions</item>
 		<item>IPv6Token</item>
 		<item>JobTimeoutAction</item>
@@ -378,8 +385,10 @@
 		<item>UDP6ZeroChecksumTx</item>
 		<item>UDPCheckSum</item>
 		<item>UMask</item>
+		<item>UnicastFlood</item>
 		<item>Unit</item>
 		<item>UpDelaySec</item>
+		<item>UseBPDU</item>
 		<item>UseDNS</item>
 		<item>UseDomains</item>
 		<item>UseHostname</item>
@@ -392,6 +401,7 @@
 		<item>Virtualization</item>
 		<item>VLAN</item>
 		<item>VLANId</item>
+		<item>VNetHeader</item>
 		<item>VXLAN</item>
 		<item>WakeOnLan</item>
 		<item>WakeSystem</item>
