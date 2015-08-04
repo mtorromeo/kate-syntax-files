@@ -167,6 +167,7 @@
 		<item>Gateway</item>
 		<item>GratuitousARP</item>
 		<item>Group</item>
+		<item>GroupPolicyExtension</item>
 		<item>GuessMainPID</item>
 		<item>HairPin</item>
 		<item>Host</item>
@@ -350,7 +351,6 @@
 		<item>StartLimitAction</item>
 		<item>StartLimitBurst</item>
 		<item>StartLimitInterval</item>
-		<item>StartTimeoutSec</item>
 		<item>StartupBlockIOWeight</item>
 		<item>StartupCPUShares</item>
 		<item>StopWhenUnneeded</item>
