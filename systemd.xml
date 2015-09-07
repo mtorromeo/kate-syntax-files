@@ -397,6 +397,7 @@
 		<item>User</item>
 		<item>UseRoutes</item>
 		<item>UtmpIdentifier</item>
+		<item>UtmpMode</item>
 		<item>VendorClassIdentifier</item>
 		<item>Virtualization</item>
 		<item>VLAN</item>
