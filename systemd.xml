@@ -11,6 +11,9 @@
 		<item>BridgeFDB</item>
 		<item>Device</item>
 		<item>DHCP</item>
+		<item>DHCPServer</item>
+		<item>Exec</item>
+		<item>Files</item>
 		<item>Install</item>
 		<item>IPVLAN</item>
 		<item>Link</item>
@@ -75,8 +78,10 @@
 		<item>AssertVirtualization</item>
 		<item>Backlog</item>
 		<item>Before</item>
+		<item>Bind</item>
 		<item>BindCarrier</item>
 		<item>BindIPv6Only</item>
+		<item>BindReadOnly</item>
 		<item>BindsTo</item>
 		<item>BindToDevice</item>
 		<item>BitsPerSecond</item>
@@ -86,11 +91,13 @@
 		<item>BlockIOWeight</item>
 		<item>BlockIOWriteBandwidth</item>
 		<item>Bond</item>
+		<item>Boot</item>
 		<item>Bridge</item>
 		<item>Broadcast</item>
 		<item>BusName</item>
 		<item>BusPolicy</item>
 		<item>Capabilities</item>
+		<item>Capability</item>
 		<item>CapabilityBoundingSet</item>
 		<item>ClientIdentifier</item>
 		<item>ConditionACPower</item>
@@ -127,6 +134,7 @@
 		<item>DefaultDependencies</item>
 		<item>DefaultEnvironment</item>
 		<item>DefaultInstance</item>
+		<item>DefaultLeaseTimeSec</item>
 		<item>DefaultMemoryAccounting</item>
 		<item>DefaultStartLimitBurst</item>
 		<item>DefaultStartLimitInterval</item>
@@ -148,7 +156,12 @@
 		<item>Domains</item>
 		<item>DownDelaySec</item>
 		<item>Driver</item>
+		<item>DropCapability</item>
 		<item>Duplex</item>
+		<item>EmitDNS</item>
+		<item>EmitNTP</item>
+		<item>EmitTimezone</item>
+		<item>EncapsulationLimit</item>
 		<item>Environment</item>
 		<item>EnvironmentFile</item>
 		<item>ExecReload</item>
@@ -177,6 +190,7 @@
 		<item>IgnoreOnSnapshot</item>
 		<item>IgnoreSIGPIPE</item>
 		<item>InaccessibleDirectories</item>
+		<item>Interface</item>
 		<item>IOSchedulingClass</item>
 		<item>IOSchedulingPriority</item>
 		<item>IPForward</item>
@@ -187,6 +201,7 @@
 		<item>IPv6FlowLabel</item>
 		<item>IPv6PrivacyExtensions</item>
 		<item>IPv6Token</item>
+		<item>IPVLAN</item>
 		<item>JobTimeoutAction</item>
 		<item>JobTimeoutRebootArgument</item>
 		<item>JobTimeoutSec</item>
@@ -233,11 +248,13 @@
 		<item>Local</item>
 		<item>MACAddress</item>
 		<item>MACAddressPolicy</item>
+		<item>MachineID</item>
 		<item>MacLearning</item>
 		<item>MACVLAN</item>
 		<item>MakeDirectory</item>
 		<item>Mark</item>
 		<item>MaxConnections</item>
+		<item>MaxLeaseTimeSec</item>
 		<item>MemoryAccounting</item>
 		<item>MemoryLimit</item>
 		<item>MessageQueueMaxMessages</item>
@@ -272,6 +289,7 @@
 		<item>PacketInfo</item>
 		<item>PacketsPerSlave</item>
 		<item>PAMName</item>
+		<item>Parameters</item>
 		<item>PartOf</item>
 		<item>PassCredentials</item>
 		<item>PassSecurity</item>
@@ -286,14 +304,19 @@
 		<item>Personality</item>
 		<item>PIDFile</item>
 		<item>PipeSize</item>
+		<item>PoolOffset</item>
+		<item>PoolSize</item>
+		<item>Port</item>
 		<item>PrimaryReselectPolicy</item>
 		<item>Priority</item>
+		<item>Private</item>
 		<item>PrivateDevices</item>
 		<item>PrivateNetwork</item>
 		<item>PrivateTmp</item>
 		<item>PropagatesReloadTo</item>
 		<item>ProtectHome</item>
 		<item>ProtectSystem</item>
+		<item>ReadOnly</item>
 		<item>ReadOnlyDirectories</item>
 		<item>ReadWriteDirectories</item>
 		<item>RebootArgument</item>
@@ -366,11 +389,13 @@
 		<item>SystemCallFilter</item>
 		<item>SystemdService</item>
 		<item>TCPCongestion</item>
+		<item>TemporaryFileSystem</item>
 		<item>TimeoutIdleSec</item>
 		<item>TimeoutSec</item>
 		<item>TimeoutStartSec</item>
 		<item>TimeoutStopSec</item>
 		<item>TimerSlackNSec</item>
+		<item>Timezone</item>
 		<item>TOS</item>
 		<item>TransmitHashPolicy</item>
 		<item>Transparent</item>
@@ -396,13 +421,16 @@
 		<item>UseNTP</item>
 		<item>User</item>
 		<item>UseRoutes</item>
+		<item>UseTimezone</item>
 		<item>UtmpIdentifier</item>
 		<item>UtmpMode</item>
 		<item>VendorClassIdentifier</item>
+		<item>VirtualEthernet</item>
 		<item>Virtualization</item>
 		<item>VLAN</item>
 		<item>VLANId</item>
 		<item>VNetHeader</item>
+		<item>Volatile</item>
 		<item>VXLAN</item>
 		<item>WakeOnLan</item>
 		<item>WakeSystem</item>
