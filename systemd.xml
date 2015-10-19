@@ -138,6 +138,7 @@
 		<item>DefaultMemoryAccounting</item>
 		<item>DefaultStartLimitBurst</item>
 		<item>DefaultStartLimitInterval</item>
+		<item>DefaultTasksAccounting</item>
 		<item>DefaultTimeoutStart</item>
 		<item>DefaultTimeoutStartSec</item>
 		<item>DefaultTimeoutStopSec</item>
@@ -175,7 +176,9 @@
 		<item>FailureAction</item>
 		<item>FastLeave</item>
 		<item>FDBAgeingSec</item>
+		<item>FileDescriptorName</item>
 		<item>FileDescriptorStoreMax</item>
+		<item>ForwardDelaySec</item>
 		<item>FreeBind</item>
 		<item>Gateway</item>
 		<item>GratuitousARP</item>
@@ -183,6 +186,7 @@
 		<item>GroupPolicyExtension</item>
 		<item>GuessMainPID</item>
 		<item>HairPin</item>
+		<item>HelloTimeSec</item>
 		<item>Host</item>
 		<item>Hostname</item>
 		<item>Id</item>
@@ -198,6 +202,7 @@
 		<item>IPTOS</item>
 		<item>IPTTL</item>
 		<item>IPv4LLRoute</item>
+		<item>IPv6AcceptRouterAdvertisements</item>
 		<item>IPv6FlowLabel</item>
 		<item>IPv6PrivacyExtensions</item>
 		<item>IPv6Token</item>
@@ -243,6 +248,7 @@
 		<item>ListenSequentialPacket</item>
 		<item>ListenSpecial</item>
 		<item>ListenStream</item>
+		<item>ListenUSBFunction</item>
 		<item>LLDP</item>
 		<item>LLMNR</item>
 		<item>Local</item>
@@ -253,6 +259,7 @@
 		<item>MACVLAN</item>
 		<item>MakeDirectory</item>
 		<item>Mark</item>
+		<item>MaxAgeSec</item>
 		<item>MaxConnections</item>
 		<item>MaxLeaseTimeSec</item>
 		<item>MemoryAccounting</item>
@@ -268,6 +275,7 @@
 		<item>MultiQueue</item>
 		<item>Name</item>
 		<item>NamePolicy</item>
+		<item>NetClass</item>
 		<item>Nice</item>
 		<item>NoDelay</item>
 		<item>NonBlocking</item>
@@ -307,6 +315,7 @@
 		<item>PoolOffset</item>
 		<item>PoolSize</item>
 		<item>Port</item>
+		<item>PreferredSource</item>
 		<item>PrimaryReselectPolicy</item>
 		<item>Priority</item>
 		<item>Private</item>
@@ -388,6 +397,8 @@
 		<item>SystemCallErrorNumber</item>
 		<item>SystemCallFilter</item>
 		<item>SystemdService</item>
+		<item>TasksAccounting</item>
+		<item>TasksMax</item>
 		<item>TCPCongestion</item>
 		<item>TemporaryFileSystem</item>
 		<item>TimeoutIdleSec</item>
@@ -413,6 +424,8 @@
 		<item>UnicastFlood</item>
 		<item>Unit</item>
 		<item>UpDelaySec</item>
+		<item>USBFunctionDescriptors</item>
+		<item>USBFunctionStrings</item>
 		<item>UseBPDU</item>
 		<item>UseDNS</item>
 		<item>UseDomains</item>
@@ -440,6 +453,7 @@
 		<item>What</item>
 		<item>Where</item>
 		<item>WorkingDirectory</item>
+		<item>Writable</item>
 	</list>
 
 	<list name="values">
