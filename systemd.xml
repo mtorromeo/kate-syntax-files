@@ -51,6 +51,7 @@
 		<item>AllowPortToBeRoot</item>
 		<item>AllSlavesActive</item>
 		<item>Also</item>
+		<item>AmbientCapabilities</item>
 		<item>AppArmorProfile</item>
 		<item>Architecture</item>
 		<item>ARPAllTargets</item>
@@ -139,6 +140,7 @@
 		<item>DefaultStartLimitBurst</item>
 		<item>DefaultStartLimitInterval</item>
 		<item>DefaultTasksAccounting</item>
+		<item>DefaultTasksMax</item>
 		<item>DefaultTimeoutStart</item>
 		<item>DefaultTimeoutStartSec</item>
 		<item>DefaultTimeoutStopSec</item>
@@ -146,6 +148,7 @@
 		<item>Delegate</item>
 		<item>Description</item>
 		<item>Destination</item>
+		<item>DestinationPort</item>
 		<item>DeviceAllow</item>
 		<item>DHCP</item>
 		<item>DHCPServer</item>
@@ -153,6 +156,8 @@
 		<item>DirectoryNotEmpty</item>
 		<item>DiscoverPathMTU</item>
 		<item>DNS</item>
+		<item>DNSSEC</item>
+		<item>DNSSECNegativeTrustAnchors</item>
 		<item>Documentation</item>
 		<item>Domains</item>
 		<item>DownDelaySec</item>
@@ -191,7 +196,6 @@
 		<item>Hostname</item>
 		<item>Id</item>
 		<item>IgnoreOnIsolate</item>
-		<item>IgnoreOnSnapshot</item>
 		<item>IgnoreSIGPIPE</item>
 		<item>InaccessibleDirectories</item>
 		<item>Interface</item>
@@ -203,7 +207,9 @@
 		<item>IPTTL</item>
 		<item>IPv4LLRoute</item>
 		<item>IPv6AcceptRouterAdvertisements</item>
+		<item>IPv6DuplicateAddressDetection</item>
 		<item>IPv6FlowLabel</item>
+		<item>IPv6HopLimit</item>
 		<item>IPv6PrivacyExtensions</item>
 		<item>IPv6Token</item>
 		<item>IPVLAN</item>
@@ -261,6 +267,7 @@
 		<item>Mark</item>
 		<item>MaxAgeSec</item>
 		<item>MaxConnections</item>
+		<item>MaximumFDBEntries</item>
 		<item>MaxLeaseTimeSec</item>
 		<item>MemoryAccounting</item>
 		<item>MemoryLimit</item>
@@ -272,10 +279,10 @@
 		<item>Mode</item>
 		<item>MountFlags</item>
 		<item>MTUBytes</item>
+		<item>MulticastDNS</item>
 		<item>MultiQueue</item>
 		<item>Name</item>
 		<item>NamePolicy</item>
-		<item>NetClass</item>
 		<item>Nice</item>
 		<item>NoDelay</item>
 		<item>NonBlocking</item>
@@ -300,6 +307,7 @@
 		<item>Parameters</item>
 		<item>PartOf</item>
 		<item>PassCredentials</item>
+		<item>PassEnvironment</item>
 		<item>PassSecurity</item>
 		<item>Path</item>
 		<item>PathChanged</item>
@@ -315,6 +323,7 @@
 		<item>PoolOffset</item>
 		<item>PoolSize</item>
 		<item>Port</item>
+		<item>PortRange</item>
 		<item>PreferredSource</item>
 		<item>PrimaryReselectPolicy</item>
 		<item>Priority</item>
@@ -322,9 +331,11 @@
 		<item>PrivateDevices</item>
 		<item>PrivateNetwork</item>
 		<item>PrivateTmp</item>
+		<item>ProcessTwo</item>
 		<item>PropagatesReloadTo</item>
 		<item>ProtectHome</item>
 		<item>ProtectSystem</item>
+		<item>RandomizedDelaySec</item>
 		<item>ReadOnly</item>
 		<item>ReadOnlyDirectories</item>
 		<item>ReadWriteDirectories</item>
@@ -333,16 +344,16 @@
 		<item>RefuseManualStart</item>
 		<item>RefuseManualStop</item>
 		<item>ReloadPropagatedFrom</item>
+		<item>RemainAfterElapse</item>
 		<item>RemainAfterExit</item>
+		<item>RemainAfterLeapse</item>
 		<item>Remote</item>
 		<item>RemoveOnStop</item>
 		<item>RequestBroadcast</item>
 		<item>RequiredBy</item>
 		<item>Requires</item>
 		<item>RequiresMountsFor</item>
-		<item>RequiresOverridable</item>
 		<item>Requisite</item>
-		<item>RequisiteOverridable</item>
 		<item>ResendIGMP</item>
 		<item>Restart</item>
 		<item>RestartForceExitStatus</item>
@@ -356,6 +367,7 @@
 		<item>RouteShortCircuit</item>
 		<item>RuntimeDirectory</item>
 		<item>RuntimeDirectoryMode</item>
+		<item>RuntimeMaxSec</item>
 		<item>Scope</item>
 		<item>SecureBits</item>
 		<item>SELinuxContext</item>
@@ -373,6 +385,7 @@
 		<item>SmackProcessLabel</item>
 		<item>SocketGroup</item>
 		<item>SocketMode</item>
+		<item>SocketProtocol</item>
 		<item>Sockets</item>
 		<item>SocketUser</item>
 		<item>Source</item>
@@ -439,6 +452,7 @@
 		<item>UtmpMode</item>
 		<item>VendorClassIdentifier</item>
 		<item>VirtualEthernet</item>
+		<item>VirtualEthernetExtra</item>
 		<item>Virtualization</item>
 		<item>VLAN</item>
 		<item>VLANId</item>
