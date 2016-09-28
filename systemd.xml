@@ -9,12 +9,14 @@
 		<item>Bond</item>
 		<item>Bridge</item>
 		<item>BridgeFDB</item>
+		<item>BridgeVLAN</item>
 		<item>Device</item>
 		<item>DHCP</item>
 		<item>DHCPServer</item>
 		<item>Exec</item>
 		<item>Files</item>
 		<item>Install</item>
+		<item>IPv6AcceptRA</item>
 		<item>IPVLAN</item>
 		<item>Link</item>
 		<item>MACVLAN</item>
@@ -96,8 +98,6 @@
 		<item>Bridge</item>
 		<item>Broadcast</item>
 		<item>BusName</item>
-		<item>BusPolicy</item>
-		<item>Capabilities</item>
 		<item>Capability</item>
 		<item>CapabilityBoundingSet</item>
 		<item>ClientIdentifier</item>
@@ -135,10 +135,11 @@
 		<item>DefaultDependencies</item>
 		<item>DefaultEnvironment</item>
 		<item>DefaultInstance</item>
+		<item>DefaultIOAccounting</item>
 		<item>DefaultLeaseTimeSec</item>
 		<item>DefaultMemoryAccounting</item>
 		<item>DefaultStartLimitBurst</item>
-		<item>DefaultStartLimitInterval</item>
+		<item>DefaultStartLimitIntervalSec</item>
 		<item>DefaultTasksAccounting</item>
 		<item>DefaultTasksMax</item>
 		<item>DefaultTimeoutStart</item>
@@ -163,9 +164,14 @@
 		<item>DownDelaySec</item>
 		<item>Driver</item>
 		<item>DropCapability</item>
+		<item>DUIDRawData</item>
+		<item>DUIDType</item>
 		<item>Duplex</item>
+		<item>EgressUntagged</item>
 		<item>EmitDNS</item>
+		<item>EmitLLDP</item>
 		<item>EmitNTP</item>
+		<item>EmitRouter</item>
 		<item>EmitTimezone</item>
 		<item>EncapsulationLimit</item>
 		<item>Environment</item>
@@ -194,19 +200,28 @@
 		<item>HelloTimeSec</item>
 		<item>Host</item>
 		<item>Hostname</item>
+		<item>IAID</item>
 		<item>Id</item>
 		<item>IgnoreOnIsolate</item>
 		<item>IgnoreSIGPIPE</item>
-		<item>InaccessibleDirectories</item>
+		<item>InaccessiblePaths</item>
+		<item>InputKey</item>
 		<item>Interface</item>
+		<item>IOAccounting</item>
+		<item>IODeviceWeight</item>
+		<item>IOReadBandwidthMax</item>
+		<item>IOReadIOPSMax</item>
 		<item>IOSchedulingClass</item>
 		<item>IOSchedulingPriority</item>
+		<item>IOWeight</item>
+		<item>IOWriteBandwidthMax</item>
+		<item>IOWriteIOPSMax</item>
 		<item>IPForward</item>
 		<item>IPMasquerade</item>
 		<item>IPTOS</item>
 		<item>IPTTL</item>
 		<item>IPv4LLRoute</item>
-		<item>IPv6AcceptRouterAdvertisements</item>
+		<item>IPv6AcceptRA</item>
 		<item>IPv6DuplicateAddressDetection</item>
 		<item>IPv6FlowLabel</item>
 		<item>IPv6HopLimit</item>
@@ -222,6 +237,7 @@
 		<item>KeepAliveProbes</item>
 		<item>KeepAliveTimeSec</item>
 		<item>KernelCommandLine</item>
+		<item>Key</item>
 		<item>KillMode</item>
 		<item>KillSignal</item>
 		<item>Kind</item>
@@ -270,7 +286,11 @@
 		<item>MaximumFDBEntries</item>
 		<item>MaxLeaseTimeSec</item>
 		<item>MemoryAccounting</item>
+		<item>MemoryDenyWriteExecute</item>
+		<item>MemoryHigh</item>
 		<item>MemoryLimit</item>
+		<item>MemoryLow</item>
+		<item>MemoryMax</item>
 		<item>MessageQueueMaxMessages</item>
 		<item>MessageQueueMessageSize</item>
 		<item>Metric</item>
@@ -280,6 +300,8 @@
 		<item>MountFlags</item>
 		<item>MTUBytes</item>
 		<item>MulticastDNS</item>
+		<item>MulticastQuerier</item>
+		<item>MulticastSnooping</item>
 		<item>MultiQueue</item>
 		<item>Name</item>
 		<item>NamePolicy</item>
@@ -288,6 +310,7 @@
 		<item>NonBlocking</item>
 		<item>NoNewPrivileges</item>
 		<item>NotifyAccess</item>
+		<item>NotifyReady</item>
 		<item>NTP</item>
 		<item>OnActiveSec</item>
 		<item>OnBootSec</item>
@@ -301,6 +324,7 @@
 		<item>OOMScoreAdjust</item>
 		<item>Options</item>
 		<item>OriginalName</item>
+		<item>OutputKey</item>
 		<item>PacketInfo</item>
 		<item>PacketsPerSlave</item>
 		<item>PAMName</item>
@@ -324,6 +348,7 @@
 		<item>PoolSize</item>
 		<item>Port</item>
 		<item>PortRange</item>
+		<item>PreferredLifetime</item>
 		<item>PreferredSource</item>
 		<item>PrimaryReselectPolicy</item>
 		<item>Priority</item>
@@ -331,14 +356,18 @@
 		<item>PrivateDevices</item>
 		<item>PrivateNetwork</item>
 		<item>PrivateTmp</item>
+		<item>PrivateUsers</item>
+		<item>PrivateUsersChown</item>
 		<item>ProcessTwo</item>
 		<item>PropagatesReloadTo</item>
 		<item>ProtectHome</item>
 		<item>ProtectSystem</item>
+		<item>ProxyARP</item>
+		<item>PVID</item>
 		<item>RandomizedDelaySec</item>
 		<item>ReadOnly</item>
-		<item>ReadOnlyDirectories</item>
-		<item>ReadWriteDirectories</item>
+		<item>ReadOnlyPaths</item>
+		<item>ReadWritePaths</item>
 		<item>RebootArgument</item>
 		<item>ReceiveBuffer</item>
 		<item>RefuseManualStart</item>
@@ -346,7 +375,6 @@
 		<item>ReloadPropagatedFrom</item>
 		<item>RemainAfterElapse</item>
 		<item>RemainAfterExit</item>
-		<item>RemainAfterLeapse</item>
 		<item>Remote</item>
 		<item>RemoveOnStop</item>
 		<item>RequestBroadcast</item>
@@ -360,6 +388,7 @@
 		<item>RestartPreventExitStatus</item>
 		<item>RestartSec</item>
 		<item>RestrictAddressFamilies</item>
+		<item>RestrictRealtime</item>
 		<item>ReusePort</item>
 		<item>RootDirectory</item>
 		<item>RootDirectoryStartOnly</item>
@@ -395,9 +424,10 @@
 		<item>StandardOutput</item>
 		<item>StartLimitAction</item>
 		<item>StartLimitBurst</item>
-		<item>StartLimitInterval</item>
+		<item>StartLimitIntervalSec</item>
 		<item>StartupBlockIOWeight</item>
 		<item>StartupCPUShares</item>
+		<item>StartupIOWeight</item>
 		<item>StopWhenUnneeded</item>
 		<item>SuccessExitStatus</item>
 		<item>SupplementaryGroups</item>
@@ -410,6 +440,7 @@
 		<item>SystemCallErrorNumber</item>
 		<item>SystemCallFilter</item>
 		<item>SystemdService</item>
+		<item>Table</item>
 		<item>TasksAccounting</item>
 		<item>TasksMax</item>
 		<item>TCPCongestion</item>
@@ -423,6 +454,8 @@
 		<item>TOS</item>
 		<item>TransmitHashPolicy</item>
 		<item>Transparent</item>
+		<item>TriggerLimitBurst</item>
+		<item>TriggerLimitIntervalSec</item>
 		<item>TTL</item>
 		<item>TTYPath</item>
 		<item>TTYReset</item>
@@ -455,9 +488,11 @@
 		<item>VirtualEthernetExtra</item>
 		<item>Virtualization</item>
 		<item>VLAN</item>
+		<item>VLANFiltering</item>
 		<item>VLANId</item>
 		<item>VNetHeader</item>
 		<item>Volatile</item>
+		<item>VRF</item>
 		<item>VXLAN</item>
 		<item>WakeOnLan</item>
 		<item>WakeSystem</item>
@@ -468,6 +503,7 @@
 		<item>Where</item>
 		<item>WorkingDirectory</item>
 		<item>Writable</item>
+		<item>Zone</item>
 	</list>
 
 	<list name="values">
