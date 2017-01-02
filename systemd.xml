@@ -48,6 +48,7 @@
 		<item>Address</item>
 		<item>AdSelect</item>
 		<item>After</item>
+		<item>AgeingTimeSec</item>
 		<item>Alias</item>
 		<item>AllowIsolate</item>
 		<item>AllowPortToBeRoot</item>
@@ -56,6 +57,7 @@
 		<item>AmbientCapabilities</item>
 		<item>AppArmorProfile</item>
 		<item>Architecture</item>
+		<item>ARP</item>
 		<item>ARPAllTargets</item>
 		<item>ARPIntervalSec</item>
 		<item>ARPIPTargets</item>
@@ -79,6 +81,7 @@
 		<item>AssertPathIsSymbolicLink</item>
 		<item>AssertSecurity</item>
 		<item>AssertVirtualization</item>
+		<item>AutoJoin</item>
 		<item>Backlog</item>
 		<item>Before</item>
 		<item>Bind</item>
@@ -129,6 +132,7 @@
 		<item>CPUSchedulingPriority</item>
 		<item>CPUSchedulingResetOnFork</item>
 		<item>CPUShares</item>
+		<item>CPUWeight</item>
 		<item>CriticalConnection</item>
 		<item>DefaultBlockIOAccounting</item>
 		<item>DefaultCPUAccounting</item>
@@ -137,12 +141,14 @@
 		<item>DefaultInstance</item>
 		<item>DefaultIOAccounting</item>
 		<item>DefaultLeaseTimeSec</item>
+		<item>DefaultLimitCPU</item>
+		<item>DefaultLimitFSIZE</item>
 		<item>DefaultMemoryAccounting</item>
+		<item>DefaultPVID</item>
 		<item>DefaultStartLimitBurst</item>
 		<item>DefaultStartLimitIntervalSec</item>
 		<item>DefaultTasksAccounting</item>
 		<item>DefaultTasksMax</item>
-		<item>DefaultTimeoutStart</item>
 		<item>DefaultTimeoutStartSec</item>
 		<item>DefaultTimeoutStopSec</item>
 		<item>DeferAcceptSec</item>
@@ -167,6 +173,8 @@
 		<item>DUIDRawData</item>
 		<item>DUIDType</item>
 		<item>Duplex</item>
+		<item>DuplicateAddressDetection</item>
+		<item>DynamicUser</item>
 		<item>EgressUntagged</item>
 		<item>EmitDNS</item>
 		<item>EmitLLDP</item>
@@ -189,15 +197,19 @@
 		<item>FDBAgeingSec</item>
 		<item>FileDescriptorName</item>
 		<item>FileDescriptorStoreMax</item>
+		<item>ForceUnmount</item>
 		<item>ForwardDelaySec</item>
 		<item>FreeBind</item>
 		<item>Gateway</item>
+		<item>GenericReceiveOffload</item>
+		<item>GenericSegmentationOffload</item>
 		<item>GratuitousARP</item>
 		<item>Group</item>
 		<item>GroupPolicyExtension</item>
 		<item>GuessMainPID</item>
 		<item>HairPin</item>
 		<item>HelloTimeSec</item>
+		<item>HomeAddress</item>
 		<item>Host</item>
 		<item>Hostname</item>
 		<item>IAID</item>
@@ -245,6 +257,8 @@
 		<item>L3MissNotification</item>
 		<item>Label</item>
 		<item>LACPTransmitRate</item>
+		<item>LargeReceiveOffload</item>
+		<item>LazyUnmount</item>
 		<item>LearnPacketIntervalSec</item>
 		<item>LimitAS</item>
 		<item>LimitCORE</item>
@@ -280,9 +294,11 @@
 		<item>MacLearning</item>
 		<item>MACVLAN</item>
 		<item>MakeDirectory</item>
+		<item>ManageTemporaryAddress</item>
 		<item>Mark</item>
 		<item>MaxAgeSec</item>
 		<item>MaxConnections</item>
+		<item>MaxConnectionsPerSource</item>
 		<item>MaximumFDBEntries</item>
 		<item>MaxLeaseTimeSec</item>
 		<item>MemoryAccounting</item>
@@ -291,6 +307,7 @@
 		<item>MemoryLimit</item>
 		<item>MemoryLow</item>
 		<item>MemoryMax</item>
+		<item>MemorySwapMax</item>
 		<item>MessageQueueMaxMessages</item>
 		<item>MessageQueueMessageSize</item>
 		<item>Metric</item>
@@ -350,6 +367,7 @@
 		<item>PortRange</item>
 		<item>PreferredLifetime</item>
 		<item>PreferredSource</item>
+		<item>PrefixRoute</item>
 		<item>PrimaryReselectPolicy</item>
 		<item>Priority</item>
 		<item>Private</item>
@@ -360,7 +378,10 @@
 		<item>PrivateUsersChown</item>
 		<item>ProcessTwo</item>
 		<item>PropagatesReloadTo</item>
+		<item>ProtectControlGroups</item>
 		<item>ProtectHome</item>
+		<item>ProtectKernelModules</item>
+		<item>ProtectKernelTunables</item>
 		<item>ProtectSystem</item>
 		<item>ProxyARP</item>
 		<item>PVID</item>
@@ -376,6 +397,9 @@
 		<item>RemainAfterElapse</item>
 		<item>RemainAfterExit</item>
 		<item>Remote</item>
+		<item>RemoteChecksumRx</item>
+		<item>RemoteChecksumTx</item>
+		<item>RemoveIPC</item>
 		<item>RemoveOnStop</item>
 		<item>RequestBroadcast</item>
 		<item>RequiredBy</item>
@@ -394,6 +418,7 @@
 		<item>RootDirectoryStartOnly</item>
 		<item>RouteMetric</item>
 		<item>RouteShortCircuit</item>
+		<item>RouteTable</item>
 		<item>RuntimeDirectory</item>
 		<item>RuntimeDirectoryMode</item>
 		<item>RuntimeMaxSec</item>
@@ -427,8 +452,10 @@
 		<item>StartLimitIntervalSec</item>
 		<item>StartupBlockIOWeight</item>
 		<item>StartupCPUShares</item>
+		<item>StartupCPUWeight</item>
 		<item>StartupIOWeight</item>
 		<item>StopWhenUnneeded</item>
+		<item>STP</item>
 		<item>SuccessExitStatus</item>
 		<item>SupplementaryGroups</item>
 		<item>Symlinks</item>
@@ -444,6 +471,7 @@
 		<item>TasksAccounting</item>
 		<item>TasksMax</item>
 		<item>TCPCongestion</item>
+		<item>TCPSegmentationOffload</item>
 		<item>TemporaryFileSystem</item>
 		<item>TimeoutIdleSec</item>
 		<item>TimeoutSec</item>
@@ -463,9 +491,10 @@
 		<item>TTYVTDisallocate</item>
 		<item>Tunnel</item>
 		<item>Type</item>
-		<item>UDP6ZeroCheckSumRx</item>
+		<item>UDP6ZeroChecksumRx</item>
 		<item>UDP6ZeroChecksumTx</item>
-		<item>UDPCheckSum</item>
+		<item>UDPChecksum</item>
+		<item>UDPSegmentationOffload</item>
 		<item>UMask</item>
 		<item>UnicastFlood</item>
 		<item>Unit</item>
