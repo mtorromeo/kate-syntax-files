@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language name="IPW Firewall rules" version="1.0" kateversion="5.0" section="Configuration" extensions="rc.firewall.local" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
+<language name="IPFW Firewall rules" version="1.0" kateversion="5.0" section="Configuration" extensions="rc.firewall.local" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
 
 	<highlighting>
 		<list name="rule_actions">
