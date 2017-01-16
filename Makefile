@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
-INSTALLDIR = $(DESTDIR)/usr/share/katepart5/syntax
+PREFIX = /usr
+INSTALLDIR = $(DESTDIR)$(PREFIX)/share/katepart5/syntax
 RM = rm -rf
 INSTALL_STD = install -Dm644
 
