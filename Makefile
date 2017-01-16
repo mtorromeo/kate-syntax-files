@@ -17,6 +17,6 @@ clear:
 	$(RM) $(INSTALLDIR)/yaml.xml
 
 local:
-	find *.xml -type f -exec $(INSTALL_STD) '{}' "$(INSTALLDIR)/{}" \;
+	find . -name "*.xml" -type f -exec $(INSTALL_STD) '{}' "$(INSTALLDIR)/{}" \;
 
 uninstall: clear
