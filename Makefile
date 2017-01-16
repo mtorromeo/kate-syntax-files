@@ -7,7 +7,6 @@ INSTALL_STD = install -Dm644
 install: local
 
 clear:
-	$(RM) $(INSTALLDIR)/ccss.xml
 	$(RM) $(INSTALLDIR)/ipfw.xml
 	$(RM) $(INSTALLDIR)/nginx.xml
 	$(RM) $(INSTALLDIR)/python.xml

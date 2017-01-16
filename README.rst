@@ -24,10 +24,6 @@ Smarty
 Syntax highlighting for the `Smarty templating engine <http://www.smarty.net>`_ for PHP.
 Already supports Smarty 3.
 
-CleanCSS
-''''''''
-Syntax highlighting for the `CleanCSS <http://github.com/mtorromeo/py-cleancss/>`_ files.
-
 Vue
 '''
 Vue component bundle comprising of CSS + HTML + JavaScript in the same file.
