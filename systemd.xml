@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language name="SystemD Unit Files" section="Configuration" extensions="*.service;*.socket;*.device;*.mount;*.automount;*.swap;*.target;*.path;*.timer;*.snapshot;*.slice;*.scope" mimetype="" version="1.1" kateversion="2.0" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
+<language name="SystemD Unit Files" section="Configuration" extensions="*.service;*.socket;*.device;*.mount;*.automount;*.swap;*.target;*.path;*.timer;*.snapshot;*.slice;*.scope" mimetype="" version="1.1" kateversion="5.0" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
 
 <highlighting>
 	<list name="sections">

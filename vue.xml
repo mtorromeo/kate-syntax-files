@@ -4,7 +4,7 @@
 	<!ENTITY name    "[A-Za-z_:][\w.:_-]*">
 	<!ENTITY entref  "&amp;(#[0-9]+|#[xX][0-9A-Fa-f]+|&name;);">
 ]>
-<language name="Vue" indenter="cstyle" version="1.0" kateversion="3.4" section="Scripts" extensions="*.vue" mimetype="" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
+<language name="Vue" indenter="cstyle" version="1.0" kateversion="5.0" section="Scripts" extensions="*.vue" mimetype="" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
 
 <highlighting>
 

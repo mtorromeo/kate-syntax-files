@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language name="NGINX Configuration" version="1.0" kateversion="2.4" section="Configuration" extensions="nginx.conf" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
+<language name="NGINX Configuration" version="1.0" kateversion="5.0" section="Configuration" extensions="nginx.conf" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
 
 <highlighting>
 	<list name="blocks">
