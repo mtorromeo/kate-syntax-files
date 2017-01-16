@@ -36,9 +36,15 @@ Installation
 ------------
 Copy the xml files in ~/.kde4/share/apps/katepart/syntax for KDE4 or ~/.local/share/katepart5/syntax for KF5.
 
+Resources
+---------
+
+- `Original Kate syntax definitions <https://kate-editor.org/syntax/data>`_
+- `Working with Syntax Highlighting <https://docs.kde.org/stable5/en/applications/katepart/highlight.html>`_
+
 LICENSE
 -------
-Copyright (c) 2010-2015 Massimiliano Torromeo
+Copyright (c) 2010-2017 Massimiliano Torromeo
 
 Free software released under the terms of the BSD license.
 
