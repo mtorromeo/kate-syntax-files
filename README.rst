@@ -24,7 +24,6 @@ Python
 Smarty
 ''''''
 - Syntax definition for the `Smarty templating engine <http://www.smarty.net>`_ for PHP.
-Already supports Smarty 3.
 
 Vue
 '''
