@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
 <!-- Author: Dr Orlovsky MA <maxim@orlovsky.info> //-->
-<language name="YAML" version="1.3" kateversion="3.4" section="Markup"
+<language name="YAML" version="3" kateversion="5.0" section="Markup"
           extensions="*.yaml;*.yml" mimetype="text/yaml"
           author="Dr Orlovsky MA (dr.orlovsky@gmail.com)" license="LGPL">
   <highlighting>
@@ -11,8 +11,8 @@
         <RegExpr attribute="End of Document" context="EOD" String="^\.\.\.$"/>
         <RegExpr attribute="Directive" context="directive" String="^%"/>
 
-        <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
         <DetectSpaces/>
+        <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
 
         <DetectChar attribute="Operator" firstNonSpace="true"  context="dash" char="-" />
 
@@ -32,8 +32,8 @@
       </context>
 
       <context attribute="List" lineEndContext="#pop" name="dash">
-        <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
         <DetectSpaces/>
+        <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
         <RegExpr attribute="Data Types" context="#stay" String="null$" />
         <RegExpr attribute="Data Types" context="#stay" String="!!\S+" />
         <RegExpr attribute="Alias" context="#stay" String="&amp;\S+" />
@@ -62,8 +62,8 @@
       </context>
 
       <context attribute="Attribute" lineEndContext="#pop" name="attribute-pre">
-        <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
         <DetectSpaces/>
+        <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
         <RegExpr attribute="Data Types" context="#stay" String="null$" />
         <RegExpr attribute="Data Types" context="#stay" String="!!\S+" />
         <DetectChar attribute="Operator" context="list" char="[" beginRegion="List" />
@@ -76,8 +76,8 @@
       </context>
 
       <context attribute="Attribute" lineEndContext="#pop" name="attribute-pre-inline">
-        <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
         <DetectSpaces/>
+        <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
 
         <StringDetect attribute="Data Types" context="#stay" String="null" />
         <RegExpr attribute="Data Types" context="#stay" String="!!\S+" />
@@ -94,8 +94,8 @@
       </context>
 
       <context attribute="List" lineEndContext="#stay" name="list">
-        <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
         <DetectSpaces/>
+        <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
 
         <DetectChar attribute="Operator" context="#pop" char="]" endRegion="List" />
 
@@ -116,8 +116,8 @@
       </context>
 
       <context attribute="Hash" lineEndContext="#stay" name="hash">
-        <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
         <DetectSpaces/>
+        <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
 
         <RegExpr attribute="Key" context="attribute-pre-inline" String="\??\s*[^&quot;'#-][^:#]*:"/>
         <RegExpr attribute="Key" context="attribute-pre-inline" String="\??\s*&quot;[^&quot;#]+&quot;\s*:"/>
@@ -177,6 +177,7 @@
       <itemData name="Hash" defStyleNum="dsNormal" />
       <itemData name="Comment" defStyleNum="dsComment" />
       <itemData name="End of Document" defStyleNum="dsComment" />
+      <itemData name="Attribute" defStyleNum="dsAttribute" />
       <itemData name="Document Header" defStyleNum="dsOthers" />
       <itemData name="Data Types" defStyleNum="dsDataType" />
       <itemData name="Alias" defStyleNum="dsDataType" />
