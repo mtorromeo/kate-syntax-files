@@ -13,11 +13,11 @@ Syntax highlighting for `systemd <http://www.freedesktop.org/wiki/Software/syste
 YAML
 ''''
 - Implemented indentation based folding in the editor.
-- Associated syntax with the .sls file extension (`Salt <https://saltstack.com/>`_ state files)
+- Associated syntax with the .sls file extension (`Salt <https://saltstack.com/>`_ state files).
 
 Python
 ''''''
-This is a modified version of the original python syntax distributed with KDE that adds highlighting for identifiers that resemble a class name (IE: MyClass)
+- Implemented highlighting for identifiers that resemble a class name (IE: MyClass).
 
 Smarty
 ''''''
