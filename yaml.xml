@@ -2,7 +2,7 @@
 <!DOCTYPE language SYSTEM "language.dtd">
 <!-- Author: Dr Orlovsky MA <maxim@orlovsky.info> //-->
 <language name="YAML" version="3" kateversion="5.0" section="Markup"
-          extensions="*.yaml;*.yml" mimetype="text/yaml"
+          extensions="*.yaml;*.yml;*.sls" mimetype="text/yaml"
           author="Dr Orlovsky MA (dr.orlovsky@gmail.com)" license="LGPL">
   <highlighting>
     <contexts>
