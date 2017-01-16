@@ -4,11 +4,13 @@ A set of new or modified syntax highlight definitions for the `Kate text editor 
 
 Nginx
 '''''
-Syntax highlighting for the configuration files of the `Nginx <http://nginx.com/>`_ web server.
+- Syntax definition for the configuration files of the `Nginx <http://nginx.com/>`_ web server.
+- The nginx-keywords.sh script can be used to automatically updated the keyword lists from the official vim definitions.
 
 systemd
 '''''''
-Syntax highlighting for `systemd <http://www.freedesktop.org/wiki/Software/systemd/>`_ units with keywords extracted from the man pages.
+- Syntax definition for `systemd <http://www.freedesktop.org/wiki/Software/systemd/>`_ units with keywords extracted from the man pages.
+- The systemd-keywords.sh script can be used to automatically updated the keyword lists from the man pages.
 
 YAML
 ''''
@@ -21,12 +23,12 @@ Python
 
 Smarty
 ''''''
-Syntax highlighting for the `Smarty templating engine <http://www.smarty.net>`_ for PHP.
+- Syntax definition for the `Smarty templating engine <http://www.smarty.net>`_ for PHP.
 Already supports Smarty 3.
 
 Vue
 '''
-Vue component bundle comprising of CSS + HTML + JavaScript in the same file.
+- Vue component bundle comprising of CSS + HTML + JavaScript in the same file.
 See https://github.com/vuejs/vue-component-compiler.
 
 Installation
