@@ -11,8 +11,8 @@
         <RegExpr attribute="End of Document" context="EOD" String="^\.\.\.$"/>
         <RegExpr attribute="Directive" context="directive" String="^%"/>
 
-        <DetectSpaces/>
         <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
+        <DetectSpaces/>
 
         <DetectChar attribute="Operator" firstNonSpace="true"  context="dash" char="-" />
 
@@ -32,8 +32,8 @@
       </context>
 
       <context attribute="List" lineEndContext="#pop" name="dash">
-        <DetectSpaces/>
         <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
+        <DetectSpaces/>
         <RegExpr attribute="Data Types" context="#stay" String="null$" />
         <RegExpr attribute="Data Types" context="#stay" String="!!\S+" />
         <RegExpr attribute="Alias" context="#stay" String="&amp;\S+" />
@@ -62,8 +62,8 @@
       </context>
 
       <context attribute="Attribute" lineEndContext="#pop" name="attribute-pre">
-        <DetectSpaces/>
         <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
+        <DetectSpaces/>
         <RegExpr attribute="Data Types" context="#stay" String="null$" />
         <RegExpr attribute="Data Types" context="#stay" String="!!\S+" />
         <DetectChar attribute="Operator" context="list" char="[" beginRegion="List" />
@@ -76,8 +76,8 @@
       </context>
 
       <context attribute="Attribute" lineEndContext="#pop" name="attribute-pre-inline">
-        <DetectSpaces/>
         <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
+        <DetectSpaces/>
 
         <StringDetect attribute="Data Types" context="#stay" String="null" />
         <RegExpr attribute="Data Types" context="#stay" String="!!\S+" />
@@ -94,8 +94,8 @@
       </context>
 
       <context attribute="List" lineEndContext="#stay" name="list">
-        <DetectSpaces/>
         <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
+        <DetectSpaces/>
 
         <DetectChar attribute="Operator" context="#pop" char="]" endRegion="List" />
 
@@ -116,8 +116,8 @@
       </context>
 
       <context attribute="Hash" lineEndContext="#stay" name="hash">
-        <DetectSpaces/>
         <RegExpr attribute="Comment" context="comment" String="(^|\s+)#" />
+        <DetectSpaces/>
 
         <RegExpr attribute="Key" context="attribute-pre-inline" String="\??\s*[^&quot;'#-][^:#]*:"/>
         <RegExpr attribute="Key" context="attribute-pre-inline" String="\??\s*&quot;[^&quot;#]+&quot;\s*:"/>
