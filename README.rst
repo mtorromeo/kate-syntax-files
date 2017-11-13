@@ -12,6 +12,12 @@ systemd
 - Syntax definition for `systemd <http://www.freedesktop.org/wiki/Software/systemd/>`_ units with keywords extracted from the man pages.
 - The systemd-keywords.sh script can be used to automatically updated the keyword lists from the man pages.
 
+Exim
+''''
+- Syntax definition for `Exim's filters <https://www.exim.org/exim-html-current/doc/html/spec_html/ch-systemwide_message_filtering.html>`_.
+- There is no clear file extension to be used for this definition.
+- The file should contain the commend <code># Exim filter</code> as exim's documentation.
+
 YAML
 ''''
 - Implemented indentation based folding in the editor.

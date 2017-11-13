@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd"
+[
+	<!ENTITY varname  "[A-Za-z][A-Za-z0-9_-]*:?">
+]>
+<language name="Exim filter" section="Configuration" extensions="*/exim/*filter;*_exim_*filter" mimetype="" version="1.1" kateversion="5.0" author="Massimiliano Torromeo (massimiliano.torromeo@gmail.com)" license="LGPL">
+
+<!-- https://www.exim.org/exim-html-current/doc/html/spec_html/ch-systemwide_message_filtering.html -->
+<!-- https://www.exim.org/exim-html-current/doc/html/spec_html/filter_ch-exim_filter_files.html -->
+
+<highlighting>
+	<list name="control">
+		<item>if</item>
+		<item>then</item>
+		<item>elif</item>
+		<item>else</item>
+		<item>endif</item>
+		<item>and</item>
+		<item>not</item>
+		<item>foranyaddress</item>
+	</list>
+
+	<list name="tests">
+		<item>contains</item>
+		<item>matches</item>
+		<item>is</item>
+		<item>begins</item>
+		<item>ends</item>
+		<item>error_message</item>
+		<item>delivered</item>
+		<item>above</item>
+		<item>below</item>
+		<item>first_delivery</item>
+		<item>manually_thawed</item>
+	</list>
+
+	<list name="commands">
+		<item>add</item>
+		<item>deliver</item>
+		<item>finish</item>
+		<item>freeze</item>
+		<item>headers</item>
+		<item>logfile</item>
+		<item>logwrite</item>
+		<item>mail</item>
+		<item>pipe</item>
+		<item>save</item>
+		<item>testprint</item>
+		<item>vacation</item>
+		<item>seen</item>
+		<item>unseen</item>
+	</list>
+
+	<contexts>
+		<context name="main" attribute="Error">
+			<RegExpr attribute="Header" context="Filter" String="^#\s*Exim filter(\s+.*)?$" />
+		</context>
+
+		<context name="Filter" attribute="Normal Text" lineEndContext="#stay">
+			<DetectChar char="#" attribute="Comment" context="Comment" firstNonSpace="true" />
+			<IncludeRules context="FindStrings" />
+			<IncludeRules context="FindVariables" />
+			<keyword attribute="Control" context="#stay" String="control" />
+			<keyword attribute="Keyword" context="#stay" String="tests" />
+			<RegExpr attribute="Keyword" context="#stay" String="does not (begin|end|contain|match)" />
+			<RegExpr attribute="Keyword" context="#stay" String="personal( alias)?" />
+			<RegExpr attribute="Command" context="#stay" String="headers (add|remove)" />
+			<RegExpr attribute="Command" context="#stay" String="fail( text)?" />
+			<keyword attribute="Command" context="#stay" String="commands" />
+		</context>
+
+		<context attribute="Normal Text" lineEndContext="#stay" name="FindStrings">
+			<Detect2Chars attribute="Escape" context="#stay" char="\\" char1="&quot;" />
+			<DetectChar attribute="String" context="String" char="&quot;" />
+		</context>
+
+		<context attribute="Normal Text" lineEndContext="#stay" name="FindVariables">
+			<Detect2Chars attribute="Escape" context="#stay" char="\\" char1="$" />
+			<RegExpr attribute="Variable" context="#stay" String="\$&varname;" />
+			<RegExpr attribute="Variable" context="#stay" String="\${&varname;}" />
+		</context>
+
+		<context attribute="String" lineEndContext="#stay" name="String">
+			<Detect2Chars attribute="Escape" context="#stay" char="\\" char1="&quot;" />
+			<DetectChar attribute="String" context="#pop" char="&quot;" />
+			<IncludeRules context="FindVariables" />
+		</context>
+
+		<context name="Comment" attribute="Comment" lineEndContext="#pop">
+			<DetectSpaces />
+			<IncludeRules context="##Alerts" />
+			<DetectIdentifier />
+		</context>
+	</contexts>
+
+
+	<itemDatas>
+		<itemData name="Normal Text" defStyleNum="dsNormal" />
+		<itemData name="Header" defStyleNum="dsString" />
+		<itemData name="Comment" defStyleNum="dsComment" />
+		<itemData name="String"	defStyleNum="dsString" />
+		<itemData name="Control"		defStyleNum="dsKeyword" />
+		<itemData name="Command" defStyleNum="dsFunction" />
+		<itemData name="Keyword" defStyleNum="dsKeyword" />
+		<itemData name="Variable" 	defStyleNum="dsVariable" />
+		<itemData name="Error"		defStyleNum="dsError" />
+	</itemDatas>
+</highlighting>
+
+
+<general>
+	<comments>
+		<comment name="singleLine" start="#" />
+	</comments>
+</general>
+
+</language>
