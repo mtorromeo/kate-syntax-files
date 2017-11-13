@@ -15,8 +15,12 @@
 		<item>DHCPServer</item>
 		<item>Exec</item>
 		<item>Files</item>
+		<item>GENEVE</item>
 		<item>Install</item>
 		<item>IPv6AcceptRA</item>
+		<item>IPv6AddressLabel</item>
+		<item>IPv6Prefix</item>
+		<item>IPv6PrefixDelegation</item>
 		<item>IPVLAN</item>
 		<item>Link</item>
 		<item>MACVLAN</item>
@@ -28,6 +32,7 @@
 		<item>Path</item>
 		<item>Peer</item>
 		<item>Route</item>
+		<item>RoutingPolicyRule</item>
 		<item>Service</item>
 		<item>Slice</item>
 		<item>Socket</item>
@@ -45,7 +50,9 @@
 	<list name="keywords">
 		<item>Accept</item>
 		<item>AccuracySec</item>
+		<item>ActiveSlave</item>
 		<item>Address</item>
+		<item>AddressAutoconfiguration</item>
 		<item>AdSelect</item>
 		<item>After</item>
 		<item>AgeingTimeSec</item>
@@ -55,13 +62,13 @@
 		<item>AllSlavesActive</item>
 		<item>Also</item>
 		<item>AmbientCapabilities</item>
+		<item>Anonymize</item>
 		<item>AppArmorProfile</item>
 		<item>Architecture</item>
 		<item>ARP</item>
 		<item>ARPAllTargets</item>
 		<item>ARPIntervalSec</item>
 		<item>ARPIPTargets</item>
-		<item>ARPProxy</item>
 		<item>ARPValidate</item>
 		<item>AssertACPower</item>
 		<item>AssertArchitecture</item>
@@ -70,6 +77,7 @@
 		<item>AssertFileIsExecutable</item>
 		<item>AssertFileNotEmpty</item>
 		<item>AssertFirstBoot</item>
+		<item>AssertGroup</item>
 		<item>AssertHost</item>
 		<item>AssertKernelCommandLine</item>
 		<item>AssertNeedsUpdate</item>
@@ -80,14 +88,18 @@
 		<item>AssertPathIsReadWrite</item>
 		<item>AssertPathIsSymbolicLink</item>
 		<item>AssertSecurity</item>
+		<item>AssertUser</item>
 		<item>AssertVirtualization</item>
 		<item>AutoJoin</item>
+		<item>AutoNegotiation</item>
 		<item>Backlog</item>
 		<item>Before</item>
 		<item>Bind</item>
 		<item>BindCarrier</item>
 		<item>BindIPv6Only</item>
+		<item>BindPaths</item>
 		<item>BindReadOnly</item>
+		<item>BindReadOnlyPaths</item>
 		<item>BindsTo</item>
 		<item>BindToDevice</item>
 		<item>BitsPerSecond</item>
@@ -101,6 +113,8 @@
 		<item>Bridge</item>
 		<item>Broadcast</item>
 		<item>BusName</item>
+		<item>CacheDirectory</item>
+		<item>CacheDirectoryMode</item>
 		<item>Capability</item>
 		<item>CapabilityBoundingSet</item>
 		<item>ClientIdentifier</item>
@@ -111,6 +125,7 @@
 		<item>ConditionFileIsExecutable</item>
 		<item>ConditionFileNotEmpty</item>
 		<item>ConditionFirstBoot</item>
+		<item>ConditionGroup</item>
 		<item>ConditionHost</item>
 		<item>ConditionKernelCommandLine</item>
 		<item>ConditionNeedsUpdate</item>
@@ -121,7 +136,11 @@
 		<item>ConditionPathIsReadWrite</item>
 		<item>ConditionPathIsSymbolicLink</item>
 		<item>ConditionSecurity</item>
+		<item>ConditionUser</item>
 		<item>ConditionVirtualization</item>
+		<item>ConfigurationDirectory</item>
+		<item>ConfigurationDirectoryMode</item>
+		<item>ConfigureWithoutCarrier</item>
 		<item>Conflicts</item>
 		<item>CopyDSCP</item>
 		<item>Cost</item>
@@ -140,6 +159,7 @@
 		<item>DefaultEnvironment</item>
 		<item>DefaultInstance</item>
 		<item>DefaultIOAccounting</item>
+		<item>DefaultIPAccounting</item>
 		<item>DefaultLeaseTimeSec</item>
 		<item>DefaultLimitCPU</item>
 		<item>DefaultLimitFSIZE</item>
@@ -163,6 +183,7 @@
 		<item>DirectoryNotEmpty</item>
 		<item>DiscoverPathMTU</item>
 		<item>DNS</item>
+		<item>DNSLifetimeSec</item>
 		<item>DNSSEC</item>
 		<item>DNSSECNegativeTrustAnchors</item>
 		<item>Documentation</item>
@@ -184,6 +205,7 @@
 		<item>EncapsulationLimit</item>
 		<item>Environment</item>
 		<item>EnvironmentFile</item>
+		<item>EnvironmentFiles</item>
 		<item>ExecReload</item>
 		<item>ExecStart</item>
 		<item>ExecStartPost</item>
@@ -197,16 +219,22 @@
 		<item>FDBAgeingSec</item>
 		<item>FileDescriptorName</item>
 		<item>FileDescriptorStoreMax</item>
+		<item>FirewallMark</item>
+		<item>FlowLabel</item>
 		<item>ForceUnmount</item>
 		<item>ForwardDelaySec</item>
 		<item>FreeBind</item>
+		<item>From</item>
 		<item>Gateway</item>
+		<item>GatewayOnlink</item>
 		<item>GenericReceiveOffload</item>
 		<item>GenericSegmentationOffload</item>
 		<item>GratuitousARP</item>
 		<item>Group</item>
+		<item>GroupForwardMask</item>
 		<item>GroupPolicyExtension</item>
 		<item>GuessMainPID</item>
+		<item>GVRP</item>
 		<item>HairPin</item>
 		<item>HelloTimeSec</item>
 		<item>HomeAddress</item>
@@ -217,6 +245,7 @@
 		<item>IgnoreOnIsolate</item>
 		<item>IgnoreSIGPIPE</item>
 		<item>InaccessiblePaths</item>
+		<item>Independent</item>
 		<item>InputKey</item>
 		<item>Interface</item>
 		<item>IOAccounting</item>
@@ -228,18 +257,27 @@
 		<item>IOWeight</item>
 		<item>IOWriteBandwidthMax</item>
 		<item>IOWriteIOPSMax</item>
+		<item>IPAccounting</item>
+		<item>IPAddressAllow</item>
+		<item>IPAddressDeny</item>
 		<item>IPForward</item>
 		<item>IPMasquerade</item>
 		<item>IPTOS</item>
 		<item>IPTTL</item>
 		<item>IPv4LLRoute</item>
+		<item>IPv4ProxyARP</item>
 		<item>IPv6AcceptRA</item>
 		<item>IPv6DuplicateAddressDetection</item>
 		<item>IPv6FlowLabel</item>
 		<item>IPv6HopLimit</item>
+		<item>IPv6Preference</item>
+		<item>IPv6PrefixDelegation</item>
 		<item>IPv6PrivacyExtensions</item>
+		<item>IPv6ProxyNDP</item>
+		<item>IPv6ProxyNDPAddress</item>
 		<item>IPv6Token</item>
 		<item>IPVLAN</item>
+		<item>JobRunningTimeoutSec</item>
 		<item>JobTimeoutAction</item>
 		<item>JobTimeoutRebootArgument</item>
 		<item>JobTimeoutSec</item>
@@ -250,6 +288,7 @@
 		<item>KeepAliveTimeSec</item>
 		<item>KernelCommandLine</item>
 		<item>Key</item>
+		<item>KeyringMode</item>
 		<item>KillMode</item>
 		<item>KillSignal</item>
 		<item>Kind</item>
@@ -281,6 +320,7 @@
 		<item>ListenFIFO</item>
 		<item>ListenMessageQueue</item>
 		<item>ListenNetlink</item>
+		<item>ListenPort</item>
 		<item>ListenSequentialPacket</item>
 		<item>ListenSpecial</item>
 		<item>ListenStream</item>
@@ -288,12 +328,17 @@
 		<item>LLDP</item>
 		<item>LLMNR</item>
 		<item>Local</item>
+		<item>LockPersonality</item>
+		<item>LogsDirectory</item>
+		<item>LogsDirectoryMode</item>
+		<item>LooseBinding</item>
 		<item>MACAddress</item>
 		<item>MACAddressPolicy</item>
 		<item>MachineID</item>
 		<item>MacLearning</item>
 		<item>MACVLAN</item>
 		<item>MakeDirectory</item>
+		<item>Managed</item>
 		<item>ManageTemporaryAddress</item>
 		<item>Mark</item>
 		<item>MaxAgeSec</item>
@@ -314,12 +359,14 @@
 		<item>MIIMonitorSec</item>
 		<item>MinLinks</item>
 		<item>Mode</item>
+		<item>MountAPIVFS</item>
 		<item>MountFlags</item>
 		<item>MTUBytes</item>
 		<item>MulticastDNS</item>
 		<item>MulticastQuerier</item>
 		<item>MulticastSnooping</item>
 		<item>MultiQueue</item>
+		<item>MVRP</item>
 		<item>Name</item>
 		<item>NamePolicy</item>
 		<item>Nice</item>
@@ -335,13 +382,17 @@
 		<item>OneQueue</item>
 		<item>OnFailure</item>
 		<item>OnFailureJobMode</item>
+		<item>OnLink</item>
 		<item>OnStartupSec</item>
 		<item>OnUnitActiveSec</item>
 		<item>OnUnitInactiveSec</item>
 		<item>OOMScoreAdjust</item>
 		<item>Options</item>
 		<item>OriginalName</item>
+		<item>OtherInformation</item>
 		<item>OutputKey</item>
+		<item>Overlay</item>
+		<item>OverlayReadOnly</item>
 		<item>PacketInfo</item>
 		<item>PacketsPerSlave</item>
 		<item>PAMName</item>
@@ -361,14 +412,18 @@
 		<item>Personality</item>
 		<item>PIDFile</item>
 		<item>PipeSize</item>
+		<item>PivotRoot</item>
 		<item>PoolOffset</item>
 		<item>PoolSize</item>
 		<item>Port</item>
 		<item>PortRange</item>
 		<item>PreferredLifetime</item>
+		<item>PreferredLifetimeSec</item>
 		<item>PreferredSource</item>
+		<item>Prefix</item>
 		<item>PrefixRoute</item>
 		<item>PrimaryReselectPolicy</item>
+		<item>PrimarySlave</item>
 		<item>Priority</item>
 		<item>Private</item>
 		<item>PrivateDevices</item>
@@ -383,7 +438,7 @@
 		<item>ProtectKernelModules</item>
 		<item>ProtectKernelTunables</item>
 		<item>ProtectSystem</item>
-		<item>ProxyARP</item>
+		<item>Protocol</item>
 		<item>PVID</item>
 		<item>RandomizedDelaySec</item>
 		<item>ReadOnly</item>
@@ -391,6 +446,7 @@
 		<item>ReadWritePaths</item>
 		<item>RebootArgument</item>
 		<item>ReceiveBuffer</item>
+		<item>ReduceARPProxy</item>
 		<item>RefuseManualStart</item>
 		<item>RefuseManualStop</item>
 		<item>ReloadPropagatedFrom</item>
@@ -401,6 +457,7 @@
 		<item>RemoteChecksumTx</item>
 		<item>RemoveIPC</item>
 		<item>RemoveOnStop</item>
+		<item>ReorderHeader</item>
 		<item>RequestBroadcast</item>
 		<item>RequiredBy</item>
 		<item>Requires</item>
@@ -412,15 +469,20 @@
 		<item>RestartPreventExitStatus</item>
 		<item>RestartSec</item>
 		<item>RestrictAddressFamilies</item>
+		<item>RestrictNamespaces</item>
 		<item>RestrictRealtime</item>
 		<item>ReusePort</item>
 		<item>RootDirectory</item>
 		<item>RootDirectoryStartOnly</item>
+		<item>RootImage</item>
 		<item>RouteMetric</item>
+		<item>RouterLifetimeSec</item>
+		<item>RouterPreference</item>
 		<item>RouteShortCircuit</item>
 		<item>RouteTable</item>
 		<item>RuntimeDirectory</item>
 		<item>RuntimeDirectoryMode</item>
+		<item>RuntimeDirectoryPreserve</item>
 		<item>RuntimeMaxSec</item>
 		<item>Scope</item>
 		<item>SecureBits</item>
@@ -454,6 +516,8 @@
 		<item>StartupCPUShares</item>
 		<item>StartupCPUWeight</item>
 		<item>StartupIOWeight</item>
+		<item>StateDirectory</item>
+		<item>StateDirectoryMode</item>
 		<item>StopWhenUnneeded</item>
 		<item>STP</item>
 		<item>SuccessExitStatus</item>
@@ -470,6 +534,7 @@
 		<item>Table</item>
 		<item>TasksAccounting</item>
 		<item>TasksMax</item>
+		<item>TCP6SegmentationOffload</item>
 		<item>TCPCongestion</item>
 		<item>TCPSegmentationOffload</item>
 		<item>TemporaryFileSystem</item>
@@ -479,6 +544,7 @@
 		<item>TimeoutStopSec</item>
 		<item>TimerSlackNSec</item>
 		<item>Timezone</item>
+		<item>To</item>
 		<item>TOS</item>
 		<item>TransmitHashPolicy</item>
 		<item>Transparent</item>
@@ -491,6 +557,7 @@
 		<item>TTYVTDisallocate</item>
 		<item>Tunnel</item>
 		<item>Type</item>
+		<item>TypeOfService</item>
 		<item>UDP6ZeroChecksumRx</item>
 		<item>UDP6ZeroChecksumTx</item>
 		<item>UDPChecksum</item>
@@ -498,6 +565,8 @@
 		<item>UMask</item>
 		<item>UnicastFlood</item>
 		<item>Unit</item>
+		<item>Unmanaged</item>
+		<item>UnsetEnvironment</item>
 		<item>UpDelaySec</item>
 		<item>USBFunctionDescriptors</item>
 		<item>USBFunctionStrings</item>
@@ -512,6 +581,7 @@
 		<item>UseTimezone</item>
 		<item>UtmpIdentifier</item>
 		<item>UtmpMode</item>
+		<item>ValidLifetimeSec</item>
 		<item>VendorClassIdentifier</item>
 		<item>VirtualEthernet</item>
 		<item>VirtualEthernetExtra</item>
