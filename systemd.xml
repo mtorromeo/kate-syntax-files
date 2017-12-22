@@ -44,6 +44,7 @@
 		<item>Tunnel</item>
 		<item>Unit</item>
 		<item>VLAN</item>
+		<item>VXCAN</item>
 		<item>VXLAN</item>
 	</list>
 
@@ -110,6 +111,7 @@
 		<item>BlockIOWriteBandwidth</item>
 		<item>Bond</item>
 		<item>Boot</item>
+		<item>BoundBy</item>
 		<item>Bridge</item>
 		<item>Broadcast</item>
 		<item>BusName</item>
@@ -118,6 +120,7 @@
 		<item>Capability</item>
 		<item>CapabilityBoundingSet</item>
 		<item>ClientIdentifier</item>
+		<item>CollectMode</item>
 		<item>ConditionACPower</item>
 		<item>ConditionArchitecture</item>
 		<item>ConditionCapability</item>
@@ -141,7 +144,9 @@
 		<item>ConfigurationDirectory</item>
 		<item>ConfigurationDirectoryMode</item>
 		<item>ConfigureWithoutCarrier</item>
+		<item>ConflictedBy</item>
 		<item>Conflicts</item>
+		<item>ConsistsOf</item>
 		<item>CopyDSCP</item>
 		<item>Cost</item>
 		<item>CPUAccounting</item>
@@ -165,6 +170,8 @@
 		<item>DefaultLimitFSIZE</item>
 		<item>DefaultMemoryAccounting</item>
 		<item>DefaultPVID</item>
+		<item>DefaultStandardError</item>
+		<item>DefaultStandardOutput</item>
 		<item>DefaultStartLimitBurst</item>
 		<item>DefaultStartLimitIntervalSec</item>
 		<item>DefaultTasksAccounting</item>
@@ -198,6 +205,7 @@
 		<item>DynamicUser</item>
 		<item>EgressUntagged</item>
 		<item>EmitDNS</item>
+		<item>EmitDomains</item>
 		<item>EmitLLDP</item>
 		<item>EmitNTP</item>
 		<item>EmitRouter</item>
@@ -205,7 +213,6 @@
 		<item>EncapsulationLimit</item>
 		<item>Environment</item>
 		<item>EnvironmentFile</item>
-		<item>EnvironmentFiles</item>
 		<item>ExecReload</item>
 		<item>ExecStart</item>
 		<item>ExecStartPost</item>
@@ -245,6 +252,7 @@
 		<item>IgnoreOnIsolate</item>
 		<item>IgnoreSIGPIPE</item>
 		<item>InaccessiblePaths</item>
+		<item>IncomingInterface</item>
 		<item>Independent</item>
 		<item>InputKey</item>
 		<item>Interface</item>
@@ -329,6 +337,8 @@
 		<item>LLMNR</item>
 		<item>Local</item>
 		<item>LockPersonality</item>
+		<item>LogExtraFields</item>
+		<item>LogLevelMax</item>
 		<item>LogsDirectory</item>
 		<item>LogsDirectoryMode</item>
 		<item>LooseBinding</item>
@@ -346,6 +356,7 @@
 		<item>MaxConnectionsPerSource</item>
 		<item>MaximumFDBEntries</item>
 		<item>MaxLeaseTimeSec</item>
+		<item>MaxLevelStore</item>
 		<item>MemoryAccounting</item>
 		<item>MemoryDenyWriteExecute</item>
 		<item>MemoryHigh</item>
@@ -390,6 +401,7 @@
 		<item>Options</item>
 		<item>OriginalName</item>
 		<item>OtherInformation</item>
+		<item>OutgoingInterface</item>
 		<item>OutputKey</item>
 		<item>Overlay</item>
 		<item>OverlayReadOnly</item>
@@ -460,9 +472,11 @@
 		<item>ReorderHeader</item>
 		<item>RequestBroadcast</item>
 		<item>RequiredBy</item>
+		<item>RequiredForOnline</item>
 		<item>Requires</item>
 		<item>RequiresMountsFor</item>
 		<item>Requisite</item>
+		<item>RequisiteOf</item>
 		<item>ResendIGMP</item>
 		<item>Restart</item>
 		<item>RestartForceExitStatus</item>
@@ -508,6 +522,8 @@
 		<item>SourcePath</item>
 		<item>StandardError</item>
 		<item>StandardInput</item>
+		<item>StandardInputData</item>
+		<item>StandardInputText</item>
 		<item>StandardOutput</item>
 		<item>StartLimitAction</item>
 		<item>StartLimitBurst</item>
@@ -520,6 +536,7 @@
 		<item>StateDirectoryMode</item>
 		<item>StopWhenUnneeded</item>
 		<item>STP</item>
+		<item>SuccessAction</item>
 		<item>SuccessExitStatus</item>
 		<item>SupplementaryGroups</item>
 		<item>Symlinks</item>
@@ -548,14 +565,19 @@
 		<item>TOS</item>
 		<item>TransmitHashPolicy</item>
 		<item>Transparent</item>
+		<item>TriggeredBy</item>
 		<item>TriggerLimitBurst</item>
 		<item>TriggerLimitIntervalSec</item>
+		<item>Triggers</item>
+		<item>TriggersBy</item>
 		<item>TTL</item>
 		<item>TTYPath</item>
 		<item>TTYReset</item>
 		<item>TTYVHangup</item>
 		<item>TTYVTDisallocate</item>
 		<item>Tunnel</item>
+		<item>TxtData</item>
+		<item>TxtText</item>
 		<item>Type</item>
 		<item>TypeOfService</item>
 		<item>UDP6ZeroChecksumRx</item>
@@ -598,6 +620,7 @@
 		<item>WantedBy</item>
 		<item>Wants</item>
 		<item>WatchdogSec</item>
+		<item>Weight</item>
 		<item>What</item>
 		<item>Where</item>
 		<item>WorkingDirectory</item>
