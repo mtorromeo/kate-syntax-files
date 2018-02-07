@@ -10,6 +10,7 @@
 
 <contexts>
 	<context name="Start" attribute="Normal Text" lineEndContext="#stay">
+		<IncludeRules context="Find PUG" />
 		<IncludeRules context="Find HTML" />
 		<RegExpr attribute="Element" context="CSS" String="&lt;style\b" insensitive="true" beginRegion="style" />
 		<RegExpr attribute="Element" context="Script" String="&lt;script\b" insensitive="true" beginRegion="script" />
@@ -71,7 +72,27 @@
 	<!-- END STYLE -->
 
 
-	<!-- TEMPLATE -->
+	<!-- TEMPLATE lang="pug" -->
+	<context name="Find PUG" attribute="Normal Text" lineEndContext="#stay">
+		<RegExpr attribute="Element" context="PUG" String="&lt;template\s+lang=(&quot;|&apos;)pug(&quot;|&apos;)" insensitive="true" beginRegion="template" />
+	</context>
+
+	<context name="PUG" attribute="Other Text" lineEndContext="#stay">
+		<Detect2Chars attribute="Element" context="#pop" char="/" char1="&gt;" endRegion="template" />
+		<DetectChar attribute="Element" context="PUG content" char="&gt;" />
+		<IncludeRules context="FindAttributes" />
+		<RegExpr attribute="Error" context="#stay" String="\S" />
+	</context>
+
+	<context name="PUG content" attribute="Other Text" lineEndContext="#stay">
+		<IncludeRules context="Find PUG" />
+		<RegExpr attribute="Element" context="El Close" String="&lt;/template\b" insensitive="true" endRegion="template" />
+		<IncludeRules context="##Pug" includeAttrib="true"/>
+	</context>
+	<!-- END TEMPLATE lang="pug" -->
+
+
+	<!-- TEMPLATE (default) -->
 	<context name="Find HTML" attribute="Normal Text" lineEndContext="#stay">
 		<RegExpr attribute="Element" context="HTML" String="&lt;template\b" insensitive="true" beginRegion="template" />
 	</context>
