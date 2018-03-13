@@ -46,6 +46,8 @@
 		<item>VLAN</item>
 		<item>VXCAN</item>
 		<item>VXLAN</item>
+		<item>WireGuard</item>
+		<item>WireGuardPeer</item>
 	</list>
 
 	<list name="keywords">
@@ -58,7 +60,9 @@
 		<item>After</item>
 		<item>AgeingTimeSec</item>
 		<item>Alias</item>
+		<item>AllowedIPs</item>
 		<item>AllowIsolate</item>
+		<item>AllowLocalRemote</item>
 		<item>AllowPortToBeRoot</item>
 		<item>AllSlavesActive</item>
 		<item>Also</item>
@@ -74,6 +78,7 @@
 		<item>AssertACPower</item>
 		<item>AssertArchitecture</item>
 		<item>AssertCapability</item>
+		<item>AssertControlGroupController</item>
 		<item>AssertDirectoryNotEmpty</item>
 		<item>AssertFileIsExecutable</item>
 		<item>AssertFileNotEmpty</item>
@@ -81,6 +86,7 @@
 		<item>AssertGroup</item>
 		<item>AssertHost</item>
 		<item>AssertKernelCommandLine</item>
+		<item>AssertKernelVersion</item>
 		<item>AssertNeedsUpdate</item>
 		<item>AssertPathExists</item>
 		<item>AssertPathExistsGlob</item>
@@ -124,6 +130,7 @@
 		<item>ConditionACPower</item>
 		<item>ConditionArchitecture</item>
 		<item>ConditionCapability</item>
+		<item>ConditionControlGroupController</item>
 		<item>ConditionDirectoryNotEmpty</item>
 		<item>ConditionFileIsExecutable</item>
 		<item>ConditionFileNotEmpty</item>
@@ -131,6 +138,7 @@
 		<item>ConditionGroup</item>
 		<item>ConditionHost</item>
 		<item>ConditionKernelCommandLine</item>
+		<item>ConditionKernelVersion</item>
 		<item>ConditionNeedsUpdate</item>
 		<item>ConditionPathExists</item>
 		<item>ConditionPathExistsGlob</item>
@@ -211,6 +219,7 @@
 		<item>EmitRouter</item>
 		<item>EmitTimezone</item>
 		<item>EncapsulationLimit</item>
+		<item>Endpoint</item>
 		<item>Environment</item>
 		<item>EnvironmentFile</item>
 		<item>ExecReload</item>
@@ -227,11 +236,13 @@
 		<item>FileDescriptorName</item>
 		<item>FileDescriptorStoreMax</item>
 		<item>FirewallMark</item>
+		<item>Flags</item>
 		<item>FlowLabel</item>
 		<item>ForceUnmount</item>
 		<item>ForwardDelaySec</item>
 		<item>FreeBind</item>
 		<item>From</item>
+		<item>FwMark</item>
 		<item>Gateway</item>
 		<item>GatewayOnlink</item>
 		<item>GenericReceiveOffload</item>
@@ -254,6 +265,8 @@
 		<item>InaccessiblePaths</item>
 		<item>IncomingInterface</item>
 		<item>Independent</item>
+		<item>InitialAdvertisedReceiveWindow</item>
+		<item>InitialCongestionWindow</item>
 		<item>InputKey</item>
 		<item>Interface</item>
 		<item>IOAccounting</item>
@@ -295,6 +308,7 @@
 		<item>KeepAliveProbes</item>
 		<item>KeepAliveTimeSec</item>
 		<item>KernelCommandLine</item>
+		<item>KernelVersion</item>
 		<item>Key</item>
 		<item>KeyringMode</item>
 		<item>KillMode</item>
@@ -421,6 +435,7 @@
 		<item>Peer</item>
 		<item>PermissionsStartOnly</item>
 		<item>Persistent</item>
+		<item>PersistentKeepalive</item>
 		<item>Personality</item>
 		<item>PIDFile</item>
 		<item>PipeSize</item>
@@ -434,11 +449,13 @@
 		<item>PreferredSource</item>
 		<item>Prefix</item>
 		<item>PrefixRoute</item>
+		<item>PresharedKey</item>
 		<item>PrimaryReselectPolicy</item>
 		<item>PrimarySlave</item>
 		<item>Priority</item>
 		<item>Private</item>
 		<item>PrivateDevices</item>
+		<item>PrivateKey</item>
 		<item>PrivateNetwork</item>
 		<item>PrivateTmp</item>
 		<item>PrivateUsers</item>
@@ -451,8 +468,11 @@
 		<item>ProtectKernelTunables</item>
 		<item>ProtectSystem</item>
 		<item>Protocol</item>
+		<item>PublicKey</item>
 		<item>PVID</item>
+		<item>QuickAck</item>
 		<item>RandomizedDelaySec</item>
+		<item>RapidCommit</item>
 		<item>ReadOnly</item>
 		<item>ReadOnlyPaths</item>
 		<item>ReadWritePaths</item>
