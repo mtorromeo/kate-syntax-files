@@ -13,9 +13,10 @@
 		<item>location</item>
 		<item>mail</item>
 		<item>map</item>
+		<item>match</item>
 		<item>server</item>
 		<item>split_clients</item>
-		<item>tcp</item>
+		<item>stream</item>
 		<item>types</item>
 		<item>upstream</item>
 	</list>
@@ -29,12 +30,10 @@
 		<item>fastcgi_pass</item>
 		<item>include</item>
 		<item>internal</item>
-		<item>listen</item>
 		<item>memcached_pass</item>
 		<item>proxy_pass</item>
 		<item>root</item>
 		<item>scgi_pass</item>
-		<item>server</item>
 		<item>server_name</item>
 		<item>try_files</item>
 		<item>uwsgi_pass</item>
@@ -53,38 +52,17 @@
 	</list>
 
 	<list name="deprecated">
-		<item>accesskey</item>
-		<item>accesskey_arg</item>
-		<item>accesskey_hashmethod</item>
-		<item>accesskey_signature</item>
-		<item>chunkin</item>
-		<item>chunkin_keepalive</item>
-		<item>chunkin_max_chunks_per_buf</item>
-		<item>chunkin_resume</item>
-		<item>connections</item>
-		<item>fastcgi_upstream_fail_timeout</item>
-		<item>fastcgi_upstream_max_fails</item>
-		<item>geoip_country_file</item>
-		<item>hash</item>
-		<item>hash_again</item>
-		<item>imap</item>
-		<item>limit_zone</item>
-		<item>log_request_speed_filter</item>
-		<item>log_request_speed_filter_timeout</item>
-		<item>mysql_test</item>
-		<item>on_start</item>
-		<item>on_stop</item>
-		<item>open_file_cache_retest</item>
-		<item>optimize_server_names</item>
-		<item>passenger_debug_log_file</item>
-		<item>push_buffer_size</item>
-		<item>push_listener</item>
-		<item>push_message_timeout</item>
-		<item>push_queue_messages</item>
-		<item>push_sender</item>
-		<item>rails_spawn_method</item>
-		<item>satisfy_any</item>
-		<item>so_keepalive</item>
+		<item>proxy_downstream_buffer</item>
+		<item>proxy_upstream_buffer</item>
+		<item>spdy_chunk_size</item>
+		<item>spdy_headers_comp</item>
+		<item>spdy_keepalive_timeout</item>
+		<item>spdy_max_concurrent_streams</item>
+		<item>spdy_pool_size</item>
+		<item>spdy_recv_buffer_size</item>
+		<item>spdy_recv_timeout</item>
+		<item>spdy_streams_index_size</item>
+		<item>upstream_conf</item>
 	</list>
 
 	<list name="rewrite_flags">
@@ -104,6 +82,7 @@
 		<item>add_before_body</item>
 		<item>add_header</item>
 		<item>addition_types</item>
+		<item>add_trailer</item>
 		<item>aio</item>
 		<item>aio_write</item>
 		<item>alias</item>
@@ -125,7 +104,6 @@
 		<item>autoindex_format</item>
 		<item>autoindex_localtime</item>
 		<item>charset</item>
-		<item>charset_map</item>
 		<item>charset_types</item>
 		<item>chunked_transfer_encoding</item>
 		<item>client_body_buffer_size</item>
@@ -167,6 +145,7 @@
 		<item>fastcgi_buffer_size</item>
 		<item>fastcgi_busy_buffers_size</item>
 		<item>fastcgi_cache</item>
+		<item>fastcgi_cache_background_update</item>
 		<item>fastcgi_cache_bypass</item>
 		<item>fastcgi_cache_key</item>
 		<item>fastcgi_cache_lock</item>
@@ -215,6 +194,32 @@
 		<item>geoip_proxy</item>
 		<item>geoip_proxy_recursive</item>
 		<item>google_perftools_profiles</item>
+		<item>grpc_bind</item>
+		<item>grpc_buffer_size</item>
+		<item>grpc_connect_timeout</item>
+		<item>grpc_hide_header</item>
+		<item>grpc_ignore_headers</item>
+		<item>grpc_intercept_errors</item>
+		<item>grpc_next_upstream</item>
+		<item>grpc_next_upstream_timeout</item>
+		<item>grpc_next_upstream_tries</item>
+		<item>grpc_pass</item>
+		<item>grpc_pass_header</item>
+		<item>grpc_read_timeout</item>
+		<item>grpc_send_timeout</item>
+		<item>grpc_set_header</item>
+		<item>grpc_ssl_certificate</item>
+		<item>grpc_ssl_certificate_key</item>
+		<item>grpc_ssl_ciphers</item>
+		<item>grpc_ssl_crl</item>
+		<item>grpc_ssl_name</item>
+		<item>grpc_ssl_password_file</item>
+		<item>grpc_ssl_protocols</item>
+		<item>grpc_ssl_server_name</item>
+		<item>grpc_ssl_session_reuse</item>
+		<item>grpc_ssl_trusted_certificate</item>
+		<item>grpc_ssl_verify</item>
+		<item>grpc_ssl_verify_depth</item>
 		<item>gunzip</item>
 		<item>gunzip_buffers</item>
 		<item>gzip</item>
@@ -242,12 +247,17 @@
 		<item>http2_body_preread_size</item>
 		<item>http2_chunk_size</item>
 		<item>http2_idle_timeout</item>
+		<item>http2_max_concurrent_pushes</item>
 		<item>http2_max_concurrent_streams</item>
 		<item>http2_max_field_size</item>
 		<item>http2_max_header_size</item>
 		<item>http2_max_requests</item>
+		<item>http2_pool_size</item>
+		<item>http2_push</item>
+		<item>http2_push_preload</item>
 		<item>http2_recv_buffer_size</item>
 		<item>http2_recv_timeout</item>
+		<item>http2_streams_index_size</item>
 		<item>if_modified_since</item>
 		<item>ignore_invalid_headers</item>
 		<item>image_filter</item>
@@ -299,7 +309,6 @@
 		<item>map_hash_bucket_size</item>
 		<item>map_hash_max_size</item>
 		<item>master_process</item>
-		<item>match</item>
 		<item>max_ranges</item>
 		<item>memcached_bind</item>
 		<item>memcached_buffer_size</item>
@@ -313,6 +322,8 @@
 		<item>memcached_send_timeout</item>
 		<item>merge_slashes</item>
 		<item>min_delete_depth</item>
+		<item>mirror</item>
+		<item>mirror_request_body</item>
 		<item>modern_browser</item>
 		<item>modern_browser_value</item>
 		<item>mp4</item>
@@ -355,6 +366,7 @@
 		<item>proxy_buffer_size</item>
 		<item>proxy_busy_buffers_size</item>
 		<item>proxy_cache</item>
+		<item>proxy_cache_background_update</item>
 		<item>proxy_cache_bypass</item>
 		<item>proxy_cache_convert_head</item>
 		<item>proxy_cache_key</item>
@@ -402,6 +414,7 @@
 		<item>proxy_send_timeout</item>
 		<item>proxy_set_body</item>
 		<item>proxy_set_header</item>
+		<item>proxy_ssl</item>
 		<item>proxy_ssl_certificate</item>
 		<item>proxy_ssl_certificate_key</item>
 		<item>proxy_ssl_ciphers</item>
@@ -433,10 +446,6 @@
 		<item>resolver</item>
 		<item>resolver_timeout</item>
 		<item>rewrite_log</item>
-		<item>rtsig_overflow_events</item>
-		<item>rtsig_overflow_test</item>
-		<item>rtsig_overflow_threshold</item>
-		<item>rtsig_signo</item>
 		<item>satisfy</item>
 		<item>scgi_bind</item>
 		<item>scgi_buffering</item>
@@ -444,6 +453,7 @@
 		<item>scgi_buffer_size</item>
 		<item>scgi_busy_buffers_size</item>
 		<item>scgi_cache</item>
+		<item>scgi_cache_background_update</item>
 		<item>scgi_cache_bypass</item>
 		<item>scgi_cache_key</item>
 		<item>scgi_cache_lock</item>
@@ -501,14 +511,6 @@
 		<item>smtp_client_buffer</item>
 		<item>smtp_greeting_delay</item>
 		<item>source_charset</item>
-		<item>spdy_chunk_size</item>
-		<item>spdy_headers_comp</item>
-		<item>spdy_keepalive_timeout</item>
-		<item>spdy_max_concurrent_streams</item>
-		<item>spdy_pool_size</item>
-		<item>spdy_recv_buffer_size</item>
-		<item>spdy_recv_timeout</item>
-		<item>spdy_streams_index_size</item>
 		<item>ssi</item>
 		<item>ssi_ignore_recycled_buffers</item>
 		<item>ssi_last_modified</item>
@@ -554,17 +556,16 @@
 		<item>sub_filter_last_modified</item>
 		<item>sub_filter_once</item>
 		<item>sub_filter_types</item>
+		<item>subrequest_output_buffer_size</item>
 		<item>tcp_nodelay</item>
 		<item>tcp_nopush</item>
 		<item>thread_pool</item>
-		<item>thread_stack_size</item>
 		<item>timeout</item>
 		<item>timer_resolution</item>
 		<item>types_hash_bucket_size</item>
 		<item>types_hash_max_size</item>
 		<item>underscores_in_headers</item>
 		<item>uninitialized_variable_warn</item>
-		<item>upstream_conf</item>
 		<item>use</item>
 		<item>user</item>
 		<item>userid</item>
@@ -581,11 +582,13 @@
 		<item>uwsgi_buffer_size</item>
 		<item>uwsgi_busy_buffers_size</item>
 		<item>uwsgi_cache</item>
+		<item>uwsgi_cache_background_update</item>
 		<item>uwsgi_cache_bypass</item>
 		<item>uwsgi_cache_key</item>
 		<item>uwsgi_cache_lock</item>
 		<item>uwsgi_cache_lock_age</item>
 		<item>uwsgi_cache_lock_timeout</item>
+		<item>uwsgi_cache_max_range_offset</item>
 		<item>uwsgi_cache_methods</item>
 		<item>uwsgi_cache_min_uses</item>
 		<item>uwsgi_cache_path</item>
@@ -608,7 +611,6 @@
 		<item>uwsgi_next_upstream_tries</item>
 		<item>uwsgi_no_cache</item>
 		<item>uwsgi_param</item>
-		<item>uwsgi_pass</item>
 		<item>uwsgi_pass_header</item>
 		<item>uwsgi_pass_request_body</item>
 		<item>uwsgi_pass_request_headers</item>
@@ -642,8 +644,7 @@
 		<item>worker_processes</item>
 		<item>worker_rlimit_core</item>
 		<item>worker_rlimit_nofile</item>
-		<item>worker_rlimit_sigpending</item>
-		<item>worker_threads</item>
+		<item>worker_shutdown_timeout</item>
 		<item>working_directory</item>
 		<item>xclient</item>
 		<item>xml_entities</item>
@@ -674,10 +675,43 @@
 		<item>access_handler_name</item>
 		<item>access_handler_property</item>
 		<item>access_handler_type</item>
-		<item>access_log</item>
 		<item>access_log_bypass_if</item>
 		<item>ack_window</item>
-		<item>allow</item>
+		<item>ajp_buffers</item>
+		<item>ajp_buffer_size</item>
+		<item>ajp_busy_buffers_size</item>
+		<item>ajp_cache</item>
+		<item>ajp_cache_key</item>
+		<item>ajp_cache_lock</item>
+		<item>ajp_cache_lock_timeout</item>
+		<item>ajp_cache_methods</item>
+		<item>ajp_cache_min_uses</item>
+		<item>ajp_cache_path</item>
+		<item>ajp_cache_use_stale</item>
+		<item>ajp_cache_valid</item>
+		<item>ajp_connect_timeout</item>
+		<item>ajp_header_packet_buffer_size</item>
+		<item>ajp_hide_header</item>
+		<item>ajp_ignore_client_abort</item>
+		<item>ajp_ignore_headers</item>
+		<item>ajp_intercept_errors</item>
+		<item>ajp_keep_conn</item>
+		<item>ajp_max_data_packet_size</item>
+		<item>ajp_max_temp_file_size</item>
+		<item>ajp_next_upstream</item>
+		<item>ajp_pass</item>
+		<item>ajp_pass_header</item>
+		<item>ajp_pass_request_body</item>
+		<item>ajp_pass_request_headers</item>
+		<item>ajp_read_timeout</item>
+		<item>ajp_send_lowat</item>
+		<item>ajp_send_timeout</item>
+		<item>ajp_store</item>
+		<item>ajp_store_access</item>
+		<item>ajp_temp_file_write_size</item>
+		<item>ajp_temp_path</item>
+		<item>ajp_upstream_fail_timeout</item>
+		<item>ajp_upstream_max_fails</item>
 		<item>always_read_body</item>
 		<item>application</item>
 		<item>array_join</item>
@@ -685,7 +719,10 @@
 		<item>array_map_op</item>
 		<item>array_split</item>
 		<item>auth_digest</item>
+		<item>auth_digest_drop_time</item>
+		<item>auth_digest_evasion_time</item>
 		<item>auth_digest_expires</item>
+		<item>auth_digest_maxtries</item>
 		<item>auth_digest_replays</item>
 		<item>auth_digest_shm_size</item>
 		<item>auth_digest_timeout</item>
@@ -693,13 +730,20 @@
 		<item>auth_gss</item>
 		<item>auth_gss_allow_basic_fallback</item>
 		<item>auth_gss_authorized_principal</item>
+		<item>auth_gss_force_realm</item>
+		<item>auth_gss_format_full</item>
 		<item>auth_gss_keytab</item>
 		<item>auth_gss_realm</item>
 		<item>auth_gss_service_name</item>
+		<item>auth_ldap</item>
+		<item>auth_ldap_cache_enabled</item>
+		<item>auth_ldap_cache_expiration_time</item>
+		<item>auth_ldap_cache_size</item>
+		<item>auth_ldap_servers</item>
+		<item>auth_ldap_servers_size</item>
 		<item>auth_pam</item>
 		<item>auth_pam_service_name</item>
-		<item>auth_request</item>
-		<item>auth_request_set</item>
+		<item>auth_pam_set_pam_env</item>
 		<item>auto_upgrade_ws</item>
 		<item>aws_access_key</item>
 		<item>aws_endpoint</item>
@@ -711,10 +755,15 @@
 		<item>backtrace_max_stack_size</item>
 		<item>balancer_by_lua_block</item>
 		<item>balancer_by_lua_file</item>
+		<item>basic_rule</item>
 		<item>BasicRule</item>
 		<item>body_filter_by_lua</item>
 		<item>body_filter_by_lua_block</item>
 		<item>body_filter_by_lua_file</item>
+		<item>body_filter_code</item>
+		<item>body_filter_name</item>
+		<item>body_filter_property</item>
+		<item>body_filter_type</item>
 		<item>brotli</item>
 		<item>brotli_buffers</item>
 		<item>brotli_comp_level</item>
@@ -722,13 +771,17 @@
 		<item>brotli_static</item>
 		<item>brotli_types</item>
 		<item>brotli_window</item>
+		<item>buffer</item>
+		<item>buflen</item>
+		<item>busy</item>
 		<item>check</item>
+		<item>check_fastcgi_param</item>
 		<item>check_http_expect_alive</item>
 		<item>check_http_send</item>
+		<item>check_keepalive_requests</item>
+		<item>check_rule</item>
 		<item>CheckRule</item>
 		<item>check_shm_size</item>
-		<item>check_smtp_expect_alive</item>
-		<item>check_smtp_send</item>
 		<item>check_status</item>
 		<item>chunk_size</item>
 		<item>circle_gif</item>
@@ -755,10 +808,12 @@
 		<item>dash_nested</item>
 		<item>dash_path</item>
 		<item>dash_playlist_length</item>
+		<item>dav_ext_methods</item>
+		<item>denied_url</item>
 		<item>DeniedUrl</item>
-		<item>deny</item>
 		<item>drizzle_buffer_size</item>
 		<item>drizzle_connect_timeout</item>
+		<item>drizzle_dbname</item>
 		<item>drizzle_keepalive</item>
 		<item>drizzle_module_header</item>
 		<item>drizzle_pass</item>
@@ -770,12 +825,15 @@
 		<item>drizzle_status</item>
 		<item>drop_idle_publisher</item>
 		<item>dynamic_etags</item>
+		<item>dynamic_upstream</item>
 		<item>dyups_interface</item>
+		<item>dyups_read_msg_log</item>
 		<item>dyups_read_msg_timeout</item>
 		<item>dyups_shm_zone_size</item>
 		<item>dyups_trylock</item>
 		<item>dyups_upstream_conf</item>
 		<item>echo</item>
+		<item>echo_abort_parent</item>
 		<item>echo_after_body</item>
 		<item>echo_before_body</item>
 		<item>echo_blocking_sleep</item>
@@ -826,6 +884,7 @@
 		<item>eval_override_content_type</item>
 		<item>eval_subrequest_in_memory</item>
 		<item>exec</item>
+		<item>exec_block</item>
 		<item>exec_kill_signal</item>
 		<item>exec_options</item>
 		<item>exec_play</item>
@@ -850,41 +909,6 @@
 		<item>fancyindex_name_length</item>
 		<item>fancyindex_show_path</item>
 		<item>fancyindex_time_format</item>
-		<item>fastcgi_bind</item>
-		<item>fastcgi_buffers</item>
-		<item>fastcgi_buffer_size</item>
-		<item>fastcgi_busy_buffers_size</item>
-		<item>fastcgi_cache</item>
-		<item>fastcgi_cache_key</item>
-		<item>fastcgi_cache_methods</item>
-		<item>fastcgi_cache_min_uses</item>
-		<item>fastcgi_cache_path</item>
-		<item>fastcgi_cache_purge</item>
-		<item>fastcgi_cache_use_stale</item>
-		<item>fastcgi_cache_valid</item>
-		<item>fastcgi_catch_stderr</item>
-		<item>fastcgi_connect_timeout</item>
-		<item>fastcgi_hide_header</item>
-		<item>fastcgi_ignore_client_abort</item>
-		<item>fastcgi_ignore_headers</item>
-		<item>fastcgi_index</item>
-		<item>fastcgi_intercept_errors</item>
-		<item>fastcgi_max_temp_file_size</item>
-		<item>fastcgi_next_upstream</item>
-		<item>fastcgi_param</item>
-		<item>fastcgi_pass</item>
-		<item>fastcgi_pass_header</item>
-		<item>fastcgi_pass_request_body</item>
-		<item>fastcgi_pass_request_headers</item>
-		<item>fastcgi_read_timeout</item>
-		<item>fastcgi_send_lowat</item>
-		<item>fastcgi_send_timeout</item>
-		<item>fastcgi_split_path_info</item>
-		<item>fastcgi_store</item>
-		<item>fastcgi_store_access</item>
-		<item>fastcgi_temp_file_write_size</item>
-		<item>fastcgi_temp_path</item>
-		<item>FileETag</item>
 		<item>file_in_unzip</item>
 		<item>file_in_unzip_archivefile</item>
 		<item>file_in_unzip_extract</item>
@@ -897,11 +921,22 @@
 		<item>form_auth_password</item>
 		<item>form_auth_remote_user</item>
 		<item>g2o</item>
+		<item>g2o_data_header</item>
+		<item>g2o_hash_function</item>
 		<item>g2o_key</item>
+		<item>g2o_log_level</item>
 		<item>g2o_nonce</item>
+		<item>g2o_sign_header</item>
+		<item>g2o_time_window</item>
+		<item>g2o_version</item>
 		<item>geoip2</item>
+		<item>geoip2_proxy</item>
+		<item>geoip2_proxy_recursive</item>
 		<item>gridfs</item>
+		<item>handler_code</item>
+		<item>handler_name</item>
 		<item>handlers_lazy_init</item>
+		<item>handler_type</item>
 		<item>hash_key</item>
 		<item>header_filter_by_lua</item>
 		<item>header_filter_by_lua_block</item>
@@ -910,25 +945,20 @@
 		<item>header_filter_name</item>
 		<item>header_filter_property</item>
 		<item>header_filter_type</item>
-		<item>healthcheck_buffer</item>
-		<item>healthcheck_delay</item>
-		<item>healthcheck_enabled</item>
-		<item>healthcheck_expected</item>
-		<item>healthcheck_failcount</item>
-		<item>healthcheck_send</item>
-		<item>healthcheck_status</item>
-		<item>healthcheck_timeout</item>
-		<item>hls</item>
+		<item>hls_audio_buffer_size</item>
 		<item>hls_base_url</item>
 		<item>hls_cleanup</item>
 		<item>hls_continuous</item>
-		<item>hls_fragment</item>
 		<item>hls_fragment_naming</item>
+		<item>hls_fragment_naming_granularity</item>
 		<item>hls_fragment_slicing</item>
 		<item>hls_fragments_per_key</item>
 		<item>hls_key_path</item>
 		<item>hls_keys</item>
 		<item>hls_key_url</item>
+		<item>hls_max_audio_delay</item>
+		<item>hls_max_fragment</item>
+		<item>hls_muxdelay</item>
 		<item>hls_nested</item>
 		<item>hls_path</item>
 		<item>hls_playlist_length</item>
@@ -951,20 +981,12 @@
 		<item>init_worker_by_lua_file</item>
 		<item>interleave</item>
 		<item>internal_redirect_if</item>
-		<item>internal_redirect_if_no_postponed</item>
+		<item>internal_redirect_if_no_postpone</item>
 		<item>ip2location_database</item>
 		<item>ip_blocker</item>
-		<item>ip_hash</item>
 		<item>jdomain</item>
-		<item>js</item>
-		<item>js_access</item>
-		<item>js_filter</item>
-		<item>js_filter_types</item>
-		<item>js_load</item>
-		<item>js_maxmem</item>
-		<item>js_require</item>
-		<item>js_set</item>
-		<item>js_utf8</item>
+		<item>json_status</item>
+		<item>json_status_type</item>
 		<item>jvm_classpath</item>
 		<item>jvm_classpath_check</item>
 		<item>jvm_exit_handler_code</item>
@@ -983,32 +1005,36 @@
 		<item>lang_list</item>
 		<item>lang_post_var</item>
 		<item>lang_referer</item>
+		<item>ldap_server</item>
+		<item>learning_mode</item>
 		<item>LearningMode</item>
+		<item>let</item>
+		<item>libinjection_sql</item>
 		<item>LibInjectionSql</item>
+		<item>libinjection_xss</item>
 		<item>LibInjectionXss</item>
 		<item>limit_upload_rate</item>
 		<item>limit_upload_rate_after</item>
+		<item>limit_upload_rate_log_level</item>
 		<item>limit_upstream_conn</item>
 		<item>limit_upstream_log_level</item>
 		<item>limit_upstream_zone</item>
-		<item>listen</item>
 		<item>live</item>
 		<item>log_by_lua</item>
 		<item>log_by_lua_block</item>
 		<item>log_by_lua_file</item>
-		<item>log_format</item>
 		<item>log_zmq_endpoint</item>
 		<item>log_zmq_format</item>
 		<item>log_zmq_off</item>
 		<item>log_zmq_server</item>
 		<item>lower</item>
+		<item>lua_add_variable</item>
+		<item>lua_capture_error_log</item>
 		<item>lua_check_client_abort</item>
 		<item>lua_code_cache</item>
+		<item>lua_fake_shm</item>
 		<item>lua_file</item>
 		<item>lua_http10_buffering</item>
-		<item>lua_lingering_close</item>
-		<item>lua_lingering_time</item>
-		<item>lua_lingering_timeout</item>
 		<item>lua_malloc_trim</item>
 		<item>lua_max_pending_timers</item>
 		<item>lua_max_running_timers</item>
@@ -1017,8 +1043,6 @@
 		<item>lua_package_path</item>
 		<item>lua_regex_cache_max_entries</item>
 		<item>lua_regex_match_limit</item>
-		<item>lua_resolver</item>
-		<item>lua_resolver_timeout</item>
 		<item>lua_shared_dict</item>
 		<item>lua_socket_buffer_size</item>
 		<item>lua_socket_connect_timeout</item>
@@ -1035,18 +1059,20 @@
 		<item>lua_ssl_verify_depth</item>
 		<item>lua_transform_underscores_in_response_headers</item>
 		<item>lua_use_default_type</item>
+		<item>main_rule</item>
 		<item>MainRule</item>
+		<item>max_balanced_tcp_connections</item>
 		<item>max_connections</item>
 		<item>max_connections_max_queue_length</item>
 		<item>max_connections_queue_timeout</item>
 		<item>max_message</item>
-		<item>max_queue</item>
 		<item>max_streams</item>
 		<item>md5_filter</item>
 		<item>memc_buffer_size</item>
 		<item>memc_cmds_allowed</item>
 		<item>memc_connect_timeout</item>
 		<item>memc_flags_to_last_modified</item>
+		<item>memc_ignore_client_abort</item>
 		<item>memc_next_upstream</item>
 		<item>memc_pass</item>
 		<item>memc_read_timeout</item>
@@ -1065,6 +1091,7 @@
 		<item>mogilefs_read_timeout</item>
 		<item>mogilefs_send_timeout</item>
 		<item>mogilefs_tracker</item>
+		<item>mongo</item>
 		<item>mongo_auth</item>
 		<item>mongo_bind</item>
 		<item>mongo_buffering</item>
@@ -1082,7 +1109,6 @@
 		<item>more_clear_input_headers</item>
 		<item>more_set_headers</item>
 		<item>more_set_input_headers</item>
-		<item>mp4</item>
 		<item>nchan_access_control_allow_origin</item>
 		<item>nchan_authorize_request</item>
 		<item>nchan_channel_events_channel_id</item>
@@ -1092,6 +1118,7 @@
 		<item>nchan_channel_id</item>
 		<item>nchan_channel_id_split_delimiter</item>
 		<item>nchan_channel_timeout</item>
+		<item>nchan_deflate_message_for_websocket</item>
 		<item>nchan_eventsource_event</item>
 		<item>nchan_group_location</item>
 		<item>nchan_group_max_channels</item>
@@ -1104,21 +1131,37 @@
 		<item>nchan_max_channel_subscribers</item>
 		<item>nchan_max_reserved_memory</item>
 		<item>nchan_message_buffer_length</item>
+		<item>nchan_message_max_buffer_length</item>
+		<item>nchan_message_temp_path</item>
 		<item>nchan_message_timeout</item>
+		<item>nchan_permessage_deflate_compression_level</item>
+		<item>nchan_permessage_deflate_compression_memlevel</item>
+		<item>nchan_permessage_deflate_compression_strategy</item>
+		<item>nchan_permessage_deflate_compression_window</item>
+		<item>nchan_pub_channel_id</item>
 		<item>nchan_publisher</item>
 		<item>nchan_publisher_channel_id</item>
+		<item>nchan_publisher_location</item>
 		<item>nchan_publisher_upstream_request</item>
 		<item>nchan_pubsub</item>
+		<item>nchan_pubsub_channel_id</item>
+		<item>nchan_pubsub_location</item>
+		<item>nchan_redis_fakesub_timer_interval</item>
 		<item>nchan_redis_idle_channel_cache_timeout</item>
 		<item>nchan_redis_namespace</item>
 		<item>nchan_redis_pass</item>
+		<item>nchan_redis_pass_inheritable</item>
 		<item>nchan_redis_ping_interval</item>
+		<item>nchan_redis_publish_msgpacked_max_size</item>
 		<item>nchan_redis_server</item>
 		<item>nchan_redis_storage_mode</item>
 		<item>nchan_redis_url</item>
+		<item>nchan_redis_wait_after_connecting</item>
+		<item>nchan_shared_memory_size</item>
 		<item>nchan_storage_engine</item>
 		<item>nchan_store_messages</item>
 		<item>nchan_stub_status</item>
+		<item>nchan_sub_channel_id</item>
 		<item>nchan_subscribe_existing_channels_only</item>
 		<item>nchan_subscriber</item>
 		<item>nchan_subscriber_channel_id</item>
@@ -1127,11 +1170,16 @@
 		<item>nchan_subscriber_first_message</item>
 		<item>nchan_subscriber_http_raw_stream_separator</item>
 		<item>nchan_subscriber_last_message_id</item>
+		<item>nchan_subscriber_location</item>
 		<item>nchan_subscriber_message_id_custom_etag_header</item>
 		<item>nchan_subscriber_timeout</item>
 		<item>nchan_unsubscribe_request</item>
 		<item>nchan_use_redis</item>
+		<item>nchan_websocket_client_heartbeat</item>
 		<item>nchan_websocket_ping_interval</item>
+		<item>netcall_buffer</item>
+		<item>netcall_timeout</item>
+		<item>ngx_fastdfs_module</item>
 		<item>ngx_hls_audio_track</item>
 		<item>ngx_hls_audio_track_output_format</item>
 		<item>ngx_hls_audio_track_output_header</item>
@@ -1144,9 +1192,8 @@
 		<item>notify_update_timeout</item>
 		<item>ocsp_cache_timeout</item>
 		<item>ocsp_proxy</item>
-		<item>omallow</item>
-		<item>omdeny</item>
 		<item>on_connect</item>
+		<item>on_disconnect</item>
 		<item>on_done</item>
 		<item>on_play</item>
 		<item>on_play_done</item>
@@ -1159,17 +1206,22 @@
 		<item>out_cork</item>
 		<item>out_queue</item>
 		<item>pagespeed</item>
+		<item>passenger_abort_on_startup_error</item>
 		<item>passenger_abort_websockets_on_process_shutdown</item>
 		<item>passenger_app_env</item>
 		<item>passenger_app_file_descriptor_ulimit</item>
 		<item>passenger_app_group_name</item>
+		<item>passenger_app_rights</item>
 		<item>passenger_app_root</item>
 		<item>passenger_app_type</item>
 		<item>passenger_base_uri</item>
 		<item>passenger_buffer_response</item>
-		<item>passenger_buffer_size,</item>
+		<item>passenger_buffers</item>
+		<item>passenger_buffer_size</item>
+		<item>passenger_busy_buffers_size</item>
 		<item>passenger_concurrency_model</item>
 		<item>passenger_core_file_descriptor_ulimit</item>
+		<item>passenger_ctl</item>
 		<item>passenger_data_buffer_dir</item>
 		<item>passenger_debugger</item>
 		<item>passenger_default_group</item>
@@ -1197,6 +1249,7 @@
 		<item>passenger_max_pool_size</item>
 		<item>passenger_max_preloader_idle_time</item>
 		<item>passenger_max_request_queue_size</item>
+		<item>passenger_max_request_queue_time</item>
 		<item>passenger_max_requests</item>
 		<item>passenger_max_request_time</item>
 		<item>passenger_memory_limit</item>
@@ -1207,6 +1260,7 @@
 		<item>passenger_pool_idle_time</item>
 		<item>passenger_pre_start</item>
 		<item>passenger_python</item>
+		<item>passenger_read_timeout</item>
 		<item>passenger_request_queue_overflow_status_code</item>
 		<item>passenger_resist_deployment_errors</item>
 		<item>passenger_response_buffer_high_watermark</item>
@@ -1225,8 +1279,10 @@
 		<item>passenger_sticky_sessions</item>
 		<item>passenger_sticky_sessions_cookie_name</item>
 		<item>passenger_thread_count</item>
+		<item>passenger_turbocaching</item>
 		<item>passenger_user</item>
 		<item>passenger_user_switching</item>
+		<item>passenger_vary_turbocache_by_cookie</item>
 		<item>php_session_parse</item>
 		<item>php_session_strip_formatting</item>
 		<item>ping</item>
@@ -1235,7 +1291,7 @@
 		<item>play_local_path</item>
 		<item>play_restart</item>
 		<item>play_temp_path</item>
-		<item>pool_context</item>
+		<item>play_time_fix</item>
 		<item>pool_context_hash_size</item>
 		<item>postgres_connect_timeout</item>
 		<item>postgres_escape</item>
@@ -1247,43 +1303,27 @@
 		<item>postgres_rewrite</item>
 		<item>postgres_server</item>
 		<item>postgres_set</item>
-		<item>proxy_buffer</item>
-		<item>proxy_cache_purge</item>
-		<item>proxy_connect_timeout</item>
-		<item>proxy_pass</item>
-		<item>proxy_read_timeout</item>
-		<item>proxy_write_timeout</item>
-		<item>pubcookie_addl_request</item>
-		<item>pubcookie_app_id</item>
-		<item>pubcookie_app_srv_id</item>
-		<item>pubcookie_auth_type_names</item>
-		<item>pubcookie_catenate_app_ids</item>
-		<item>pubcookie_crypt_key_file</item>
-		<item>pubcookie_dir_depth</item>
-		<item>pubcookie_domain</item>
-		<item>pubcookie_egd_device</item>
-		<item>pubcookie_encryption</item>
-		<item>pubcookie_end_session</item>
-		<item>pubcookie_granting_cert_file</item>
-		<item>pubcookie_hard_expire</item>
-		<item>pubcookie_inactive_expire</item>
-		<item>pubcookie_login</item>
-		<item>pubcookie_login_method</item>
-		<item>pubcookie_no_blank</item>
-		<item>pubcookie_no_clean_creds</item>
-		<item>pubcookie_no_obscure_cookies</item>
-		<item>pubcookie_no_prompt</item>
-		<item>pubcookie_on_demand</item>
-		<item>pubcookie_post</item>
-		<item>pubcookie_session_cert_file</item>
-		<item>pubcookie_session_key_file</item>
-		<item>pubcookie_session_reauth</item>
-		<item>pubcookie_set_remote_user</item>
-		<item>pubcookie_super_debug</item>
+		<item>preread_by_lua_block</item>
+		<item>preread_by_lua_file</item>
+		<item>preread_by_lua_no_postpone</item>
 		<item>publish_notify</item>
+		<item>publish_time_fix</item>
 		<item>pull</item>
+		<item>pull_reconnect</item>
 		<item>push</item>
+		<item>push_authorized_channels_only</item>
+		<item>push_channel_group</item>
+		<item>push_channel_timeout</item>
+		<item>push_max_channel_id_length</item>
+		<item>push_max_channel_subscribers</item>
+		<item>push_max_message_buffer_length</item>
+		<item>push_max_reserved_memory</item>
+		<item>push_message_buffer_length</item>
+		<item>push_message_timeout</item>
+		<item>push_min_message_buffer_length</item>
+		<item>push_publisher</item>
 		<item>push_reconnect</item>
+		<item>push_store_messages</item>
 		<item>push_stream_allow_connections_to_events_channel</item>
 		<item>push_stream_allowed_origins</item>
 		<item>push_stream_authorized_channels_only</item>
@@ -1320,6 +1360,9 @@
 		<item>push_stream_websocket_allow_publish</item>
 		<item>push_stream_wildcard_channel_max_qtd</item>
 		<item>push_stream_wildcard_channel_prefix</item>
+		<item>push_subscriber</item>
+		<item>push_subscriber_concurrency</item>
+		<item>push_subscriber_timeout</item>
 		<item>rdns</item>
 		<item>rdns_allow</item>
 		<item>rdns_deny</item>
@@ -1350,6 +1393,7 @@
 		<item>record_path</item>
 		<item>record_suffix</item>
 		<item>record_unique</item>
+		<item>redis2_bind</item>
 		<item>redis2_buffer_size</item>
 		<item>redis2_connect_timeout</item>
 		<item>redis2_literal_raw_query</item>
@@ -1368,16 +1412,17 @@
 		<item>redis_pass</item>
 		<item>redis_read_timeout</item>
 		<item>redis_send_timeout</item>
+		<item>relay_buffer</item>
 		<item>replace_filter</item>
 		<item>replace_filter_last_modified</item>
 		<item>replace_filter_max_buffered_size</item>
 		<item>replace_filter_skip</item>
 		<item>replace_filter_types</item>
 		<item>report_uploads</item>
-		<item>resolver</item>
-		<item>resolver_timeout</item>
 		<item>respawn</item>
 		<item>respawn_timeout</item>
+		<item>response</item>
+		<item>response_type</item>
 		<item>rewrite_by_lua</item>
 		<item>rewrite_by_lua_block</item>
 		<item>rewrite_by_lua_file</item>
@@ -1401,6 +1446,8 @@
 		<item>rtmpt_proxy_stat</item>
 		<item>rtmpt_proxy_stylesheet</item>
 		<item>rtmpt_proxy_target</item>
+		<item>rules_disabled</item>
+		<item>rules_enabled</item>
 		<item>sass_compile</item>
 		<item>sass_error_log</item>
 		<item>sass_include_path</item>
@@ -1411,19 +1458,14 @@
 		<item>sass_precision</item>
 		<item>sass_source_comments</item>
 		<item>sass_source_map_embed</item>
-		<item>scgi_cache_purge</item>
 		<item>SecRulesDisabled</item>
 		<item>SecRulesEnabled</item>
-		<item>secure_download</item>
-		<item>secure_download_path_mode</item>
-		<item>secure_download_secret</item>
 		<item>selective_cache_purge_query</item>
 		<item>selective_cache_purge_redis_database</item>
 		<item>selective_cache_purge_redis_host</item>
+		<item>selective_cache_purge_redis_password</item>
 		<item>selective_cache_purge_redis_port</item>
 		<item>selective_cache_purge_redis_unix_socket</item>
-		<item>server</item>
-		<item>server_name</item>
 		<item>session_relay</item>
 		<item>set_base32_alphabet</item>
 		<item>set_base32_padding</item>
@@ -1474,13 +1516,6 @@
 		<item>shib_request</item>
 		<item>shib_request_set</item>
 		<item>shib_request_use_headers</item>
-		<item>slice</item>
-		<item>slice_arg_begin</item>
-		<item>slice_arg_end</item>
-		<item>slice_footer</item>
-		<item>slice_footer_last</item>
-		<item>slice_header</item>
-		<item>slice_header_first</item>
 		<item>slowfs_big_file_size</item>
 		<item>slowfs_cache</item>
 		<item>slowfs_cache_key</item>
@@ -1497,10 +1532,8 @@
 		<item>small_light_pattern_define</item>
 		<item>small_light_radius_max</item>
 		<item>small_light_sigma_max</item>
-		<item>smrzr_filename</item>
-		<item>smrzr_ratio</item>
 		<item>so_keepalive</item>
-		<item>sorted_querystring_filter_parameter</item>
+		<item>sorted_querysting_filter_parameter</item>
 		<item>sphinx2_bind</item>
 		<item>sphinx2_buffer_size</item>
 		<item>sphinx2_connect_timeout</item>
@@ -1508,6 +1541,7 @@
 		<item>sphinx2_pass</item>
 		<item>sphinx2_read_timeout</item>
 		<item>sphinx2_send_timeout</item>
+		<item>srcache_buffer</item>
 		<item>srcache_default_expire</item>
 		<item>srcache_fetch</item>
 		<item>srcache_fetch_skip</item>
@@ -1529,6 +1563,8 @@
 		<item>srcache_store_statuses</item>
 		<item>ssl_certificate_by_lua_block</item>
 		<item>ssl_certificate_by_lua_file</item>
+		<item>ssl_ct</item>
+		<item>ssl_ct_static_scts</item>
 		<item>ssl_session_fetch_by_lua_block</item>
 		<item>ssl_session_fetch_by_lua_file</item>
 		<item>ssl_session_store_by_lua_block</item>
@@ -1545,18 +1581,27 @@
 		<item>statsd_sample_rate</item>
 		<item>statsd_server</item>
 		<item>statsd_timing</item>
-		<item>sticky</item>
+		<item>stream_buckets</item>
 		<item>strip</item>
 		<item>subrange</item>
+		<item>subs_buffers</item>
 		<item>subs_filter</item>
+		<item>subs_filter_bypass</item>
 		<item>subs_filter_types</item>
+		<item>subs_line_buffer_size</item>
+		<item>summarizer_bind</item>
+		<item>summarizer_buffer_size</item>
+		<item>summarizer_connect_timeout</item>
+		<item>summarizer_next_upstream</item>
+		<item>summarizer_pass</item>
+		<item>summarizer_read_timeout</item>
+		<item>summarizer_send_timeout</item>
 		<item>supervisord</item>
 		<item>supervisord_inherit_backend_status</item>
 		<item>supervisord_name</item>
 		<item>supervisord_start</item>
 		<item>supervisord_stop</item>
 		<item>sync</item>
-		<item>tcp_nodelay</item>
 		<item>testcookie</item>
 		<item>testcookie_arg</item>
 		<item>testcookie_deny_keepalive</item>
@@ -1572,45 +1617,65 @@
 		<item>testcookie_p3p</item>
 		<item>testcookie_pass</item>
 		<item>testcookie_path</item>
+		<item>testcookie_port_in_redirect</item>
 		<item>testcookie_redirect_via_refresh</item>
 		<item>testcookie_refresh_encrypt_cookie</item>
+		<item>testcookie_refresh_encrypt_cookie_iv</item>
 		<item>testcookie_refresh_encrypt_cookie_key</item>
-		<item>testcookie_refresh_encrypt_iv</item>
 		<item>testcookie_refresh_status</item>
 		<item>testcookie_refresh_template</item>
 		<item>testcookie_secret</item>
 		<item>testcookie_secure_flag</item>
 		<item>testcookie_session</item>
 		<item>testcookie_whitelist</item>
-		<item>timeout</item>
+		<item>tnt_allowed_indexes</item>
+		<item>tnt_allowed_spaces</item>
 		<item>tnt_buffer_size</item>
 		<item>tnt_connect_timeout</item>
-		<item>tnt_http_allowed_methods</item>
+		<item>tnt_delete</item>
 		<item>tnt_http_methods</item>
 		<item>tnt_http_rest_methods</item>
+		<item>tnt_in_multiplier</item>
+		<item>tnt_insert</item>
 		<item>tnt_method</item>
+		<item>tnt_multireturn_skip_count</item>
 		<item>tnt_next_upstream</item>
 		<item>tnt_next_upstream_timeout</item>
 		<item>tnt_next_upstream_tries</item>
+		<item>tnt_out_multiplier</item>
 		<item>tnt_pass</item>
 		<item>tnt_pass_http_request</item>
 		<item>tnt_pass_http_request_buffer_size</item>
+		<item>tnt_pure_result</item>
 		<item>tnt_read_timeout</item>
+		<item>tnt_replace</item>
+		<item>tnt_select</item>
+		<item>tnt_select_limit_max</item>
 		<item>tnt_send_timeout</item>
+		<item>tnt_set_header</item>
+		<item>tnt_update</item>
+		<item>tnt_upsert</item>
 		<item>track_uploads</item>
 		<item>types_filter</item>
 		<item>types_filter_use_default</item>
-		<item>union_station_filter</item>
-		<item>union_station_gateway_address</item>
-		<item>union_station_gateway_cert</item>
-		<item>union_station_gateway_port</item>
-		<item>union_station_key</item>
-		<item>union_station_proxy_address</item>
-		<item>union_station_support</item>
 		<item>upload_aggregate_form_field</item>
+		<item>upload_archive_elm</item>
+		<item>upload_archive_elm_separator</item>
+		<item>upload_archive_path</item>
+		<item>upload_archive_path_separator</item>
 		<item>upload_buffer_size</item>
 		<item>upload_cleanup</item>
-		<item>upload_limit_rate</item>
+		<item>upload_content_type</item>
+		<item>upload_discard</item>
+		<item>upload_field_name</item>
+		<item>upload_file_crc32</item>
+		<item>upload_file_md5</item>
+		<item>upload_file_md5_uc</item>
+		<item>upload_file_name</item>
+		<item>upload_file_sha1</item>
+		<item>upload_file_sha1_uc</item>
+		<item>upload_file_size</item>
+		<item>upload_filter</item>
 		<item>upload_max_file_size</item>
 		<item>upload_max_output_body_len</item>
 		<item>upload_max_part_header_len</item>
@@ -1620,34 +1685,43 @@
 		<item>upload_progress</item>
 		<item>upload_progress_content_type</item>
 		<item>upload_progress_header</item>
+		<item>upload_progress_java_output</item>
 		<item>upload_progress_json_output</item>
 		<item>upload_progress_jsonp_output</item>
 		<item>upload_progress_jsonp_parameter</item>
 		<item>upload_progress_template</item>
-		<item>upload_resumable</item>
 		<item>upload_set_form_field</item>
-		<item>upload_state_store</item>
 		<item>upload_store</item>
 		<item>upload_store_access</item>
-		<item>upload_tame_arrays</item>
+		<item>upload_tmp_path</item>
+		<item>upload_unzip</item>
+		<item>upload_unzip_buffers</item>
+		<item>upload_unzip_hash</item>
+		<item>upload_unzip_max_file_name_len</item>
+		<item>upload_unzip_window</item>
+		<item>upload_void_content_type</item>
 		<item>upper</item>
-		<item>upstream</item>
 		<item>upstream_fair_shm_size</item>
-		<item>upstream_list</item>
 		<item>upstream_show</item>
 		<item>upsync</item>
 		<item>upsync_dump_path</item>
 		<item>upsync_lb</item>
-		<item>upsync_show</item>
 		<item>url_encoding_convert</item>
+		<item>url_encoding_convert_alloc_size</item>
+		<item>url_encoding_convert_alloc_size_x</item>
 		<item>url_encoding_convert_from</item>
+		<item>url_encoding_convert_phase</item>
 		<item>url_encoding_convert_to</item>
 		<item>user_agent</item>
-		<item>uwsgi_cache_purge</item>
 		<item>vhost_traffic_status</item>
+		<item>vhost_traffic_status_average_method</item>
+		<item>vhost_traffic_status_bypass_limit</item>
+		<item>vhost_traffic_status_bypass_stats</item>
 		<item>vhost_traffic_status_display</item>
 		<item>vhost_traffic_status_display_format</item>
 		<item>vhost_traffic_status_display_jsonp</item>
+		<item>vhost_traffic_status_display_sum_key</item>
+		<item>vhost_traffic_status_dump</item>
 		<item>vhost_traffic_status_filter</item>
 		<item>vhost_traffic_status_filter_by_host</item>
 		<item>vhost_traffic_status_filter_by_set_key</item>
@@ -1656,10 +1730,17 @@
 		<item>vhost_traffic_status_limit_check_duplicate</item>
 		<item>vhost_traffic_status_limit_traffic</item>
 		<item>vhost_traffic_status_limit_traffic_by_set_key</item>
+		<item>vhost_traffic_status_set_by_filter</item>
 		<item>vhost_traffic_status_zone</item>
 		<item>video_thumbextractor</item>
 		<item>video_thumbextractor_image_height</item>
 		<item>video_thumbextractor_image_width</item>
+		<item>video_thumbextractor_jpeg_baseline</item>
+		<item>video_thumbextractor_jpeg_dpi</item>
+		<item>video_thumbextractor_jpeg_optimize</item>
+		<item>video_thumbextractor_jpeg_progressive_mode</item>
+		<item>video_thumbextractor_jpeg_quality</item>
+		<item>video_thumbextractor_jpeg_smooth</item>
 		<item>video_thumbextractor_next_time</item>
 		<item>video_thumbextractor_only_keyframe</item>
 		<item>video_thumbextractor_processes_per_worker</item>
@@ -1674,6 +1755,76 @@
 		<item>video_thumbextractor_tile_sample_interval</item>
 		<item>video_thumbextractor_video_filename</item>
 		<item>video_thumbextractor_video_second</item>
+		<item>vod</item>
+		<item>vod_align_segments_to_key_frames</item>
+		<item>vod_apply_dynamic_mapping</item>
+		<item>vod_base_url</item>
+		<item>vod_bootstrap_segment_durations</item>
+		<item>vod_cache_buffer_size</item>
+		<item>vod_clip_from_param_name</item>
+		<item>vod_clip_to_param_name</item>
+		<item>vod_drm_clear_lead_segment_count</item>
+		<item>vod_drm_enabled</item>
+		<item>vod_drm_info_cache</item>
+		<item>vod_drm_max_info_length</item>
+		<item>vod_drm_request_uri</item>
+		<item>vod_drm_single_key</item>
+		<item>vod_drm_upstream_location</item>
+		<item>vod_dynamic_clip_map_uri</item>
+		<item>vod_dynamic_mapping_cache</item>
+		<item>vod_encryption_iv_seed</item>
+		<item>vod_expires</item>
+		<item>vod_expires_live</item>
+		<item>vod_expires_live_time_dependent</item>
+		<item>vod_fallback_upstream_location</item>
+		<item>vod_force_continuous_timestamps</item>
+		<item>vod_force_playlist_type_vod</item>
+		<item>vod_gop_look_ahead</item>
+		<item>vod_gop_look_behind</item>
+		<item>vod_ignore_edit_list</item>
+		<item>vod_initial_read_size</item>
+		<item>vod_lang_param_name</item>
+		<item>vod_last_modified</item>
+		<item>vod_last_modified_types</item>
+		<item>vod_live_mapping_cache</item>
+		<item>vod_live_response_cache</item>
+		<item>vod_live_window_duration</item>
+		<item>vod_manifest_duration_policy</item>
+		<item>vod_manifest_segment_durations_mode</item>
+		<item>vod_mapping_cache</item>
+		<item>vod_max_frames_size</item>
+		<item>vod_max_mapping_response_size</item>
+		<item>vod_max_metadata_size</item>
+		<item>vod_max_upstream_headers_size</item>
+		<item>vod_media_set_map_uri</item>
+		<item>vod_media_set_override_json</item>
+		<item>vod_metadata_cache</item>
+		<item>vod_min_single_nalu_per_frame_segment</item>
+		<item>vod_mode</item>
+		<item>vod_multi_uri_suffix</item>
+		<item>vod_notification_uri</item>
+		<item>vod_open_file_thread_pool</item>
+		<item>vod_output_buffer_pool</item>
+		<item>vod_parse_hdlr_name</item>
+		<item>vod_path_response_postfix</item>
+		<item>vod_path_response_prefix</item>
+		<item>vod_performance_counters</item>
+		<item>vod_proxy_header_name</item>
+		<item>vod_proxy_header_value</item>
+		<item>vod_redirect_segments_url</item>
+		<item>vod_remote_upstream_location</item>
+		<item>vod_response_cache</item>
+		<item>vod_secret_key</item>
+		<item>vod_segment_count_policy</item>
+		<item>vod_segment_duration</item>
+		<item>vod_segments_base_url</item>
+		<item>vod_source_clip_map_uri</item>
+		<item>vod_speed_param_name</item>
+		<item>vod_status</item>
+		<item>vod_time_shift_param_name</item>
+		<item>vod_tracks_param_name</item>
+		<item>vod_upstream_extra_args</item>
+		<item>vod_upstream_location</item>
 		<item>wait_key</item>
 		<item>wait_video</item>
 		<item>write_page_size</item>
@@ -1681,6 +1832,7 @@
 		<item>xss_check_status</item>
 		<item>xss_get</item>
 		<item>xss_input_types</item>
+		<item>xss_output_type</item>
 		<item>xss_override_status</item>
 	</list>
 

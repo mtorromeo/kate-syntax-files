@@ -4,7 +4,7 @@ VIMFILE="/usr/share/vim/vimfiles/syntax/nginx.vim"
 
 replacelist() {
 	name=$1
-	items=$(echo "$2" | sort | uniq -i | awk '{printf "\\t\\t<item>"$1"</item>\\n"}')
+	items=$(echo "$2" | sort | uniq -i | awk '{gsub("^contained ", ""); printf "\\t\\t<item>"$1"</item>\\n"}')
 	perl -0777pe 's#<list name="'$name'">.*?</list>#<list name="'$name'">\n'$items'\t</list>#s' -i nginx.xml
 }
 
