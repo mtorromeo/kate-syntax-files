@@ -10,6 +10,7 @@
 		<item>Bridge</item>
 		<item>BridgeFDB</item>
 		<item>BridgeVLAN</item>
+		<item>CAN</item>
 		<item>Device</item>
 		<item>DHCP</item>
 		<item>DHCPServer</item>
@@ -60,6 +61,7 @@
 		<item>After</item>
 		<item>AgeingTimeSec</item>
 		<item>Alias</item>
+		<item>AllMulticast</item>
 		<item>AllowedIPs</item>
 		<item>AllowIsolate</item>
 		<item>AllowLocalRemote</item>
@@ -109,6 +111,7 @@
 		<item>BindReadOnlyPaths</item>
 		<item>BindsTo</item>
 		<item>BindToDevice</item>
+		<item>BitRate</item>
 		<item>BitsPerSecond</item>
 		<item>BlockIOAccounting</item>
 		<item>BlockIODeviceWeight</item>
@@ -127,6 +130,7 @@
 		<item>CapabilityBoundingSet</item>
 		<item>ClientIdentifier</item>
 		<item>CollectMode</item>
+		<item>CombinedChannels</item>
 		<item>ConditionACPower</item>
 		<item>ConditionArchitecture</item>
 		<item>ConditionCapability</item>
@@ -199,6 +203,7 @@
 		<item>DiscoverPathMTU</item>
 		<item>DNS</item>
 		<item>DNSLifetimeSec</item>
+		<item>DNSOverTLS</item>
 		<item>DNSSEC</item>
 		<item>DNSSECNegativeTrustAnchors</item>
 		<item>Documentation</item>
@@ -238,6 +243,7 @@
 		<item>FirewallMark</item>
 		<item>Flags</item>
 		<item>FlowLabel</item>
+		<item>Following</item>
 		<item>ForceUnmount</item>
 		<item>ForwardDelaySec</item>
 		<item>FreeBind</item>
@@ -291,6 +297,7 @@
 		<item>IPv6DuplicateAddressDetection</item>
 		<item>IPv6FlowLabel</item>
 		<item>IPv6HopLimit</item>
+		<item>IPv6MTUBytes</item>
 		<item>IPv6Preference</item>
 		<item>IPv6PrefixDelegation</item>
 		<item>IPv6PrivacyExtensions</item>
@@ -337,6 +344,7 @@
 		<item>LimitRTTIME</item>
 		<item>LimitSIGPENDING</item>
 		<item>LimitSTACK</item>
+		<item>LinkJournal</item>
 		<item>LinkLocalAddressing</item>
 		<item>ListenDatagram</item>
 		<item>ListenFIFO</item>
@@ -387,6 +395,7 @@
 		<item>MountAPIVFS</item>
 		<item>MountFlags</item>
 		<item>MTUBytes</item>
+		<item>Multicast</item>
 		<item>MulticastDNS</item>
 		<item>MulticastQuerier</item>
 		<item>MulticastSnooping</item>
@@ -414,6 +423,7 @@
 		<item>OOMScoreAdjust</item>
 		<item>Options</item>
 		<item>OriginalName</item>
+		<item>OtherChannels</item>
 		<item>OtherInformation</item>
 		<item>OutgoingInterface</item>
 		<item>OutputKey</item>
@@ -456,6 +466,7 @@
 		<item>Private</item>
 		<item>PrivateDevices</item>
 		<item>PrivateKey</item>
+		<item>PrivateMounts</item>
 		<item>PrivateNetwork</item>
 		<item>PrivateTmp</item>
 		<item>PrivateUsers</item>
@@ -498,6 +509,7 @@
 		<item>Requisite</item>
 		<item>RequisiteOf</item>
 		<item>ResendIGMP</item>
+		<item>ResolvConf</item>
 		<item>Restart</item>
 		<item>RestartForceExitStatus</item>
 		<item>RestartPreventExitStatus</item>
@@ -518,6 +530,8 @@
 		<item>RuntimeDirectoryMode</item>
 		<item>RuntimeDirectoryPreserve</item>
 		<item>RuntimeMaxSec</item>
+		<item>RxChannels</item>
+		<item>SamplePoint</item>
 		<item>Scope</item>
 		<item>SecureBits</item>
 		<item>SELinuxContext</item>
@@ -596,6 +610,7 @@
 		<item>TTYVHangup</item>
 		<item>TTYVTDisallocate</item>
 		<item>Tunnel</item>
+		<item>TxChannels</item>
 		<item>TxtData</item>
 		<item>TxtText</item>
 		<item>Type</item>
@@ -603,7 +618,6 @@
 		<item>UDP6ZeroChecksumRx</item>
 		<item>UDP6ZeroChecksumTx</item>
 		<item>UDPChecksum</item>
-		<item>UDPSegmentationOffload</item>
 		<item>UMask</item>
 		<item>UnicastFlood</item>
 		<item>Unit</item>
@@ -619,6 +633,7 @@
 		<item>UseMTU</item>
 		<item>UseNTP</item>
 		<item>User</item>
+		<item>UserClass</item>
 		<item>UseRoutes</item>
 		<item>UseTimezone</item>
 		<item>UtmpIdentifier</item>
