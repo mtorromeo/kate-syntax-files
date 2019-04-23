@@ -16,6 +16,7 @@
 		<item>DHCPServer</item>
 		<item>Exec</item>
 		<item>Files</item>
+		<item>FooOverUDP</item>
 		<item>GENEVE</item>
 		<item>Install</item>
 		<item>IPv6AcceptRA</item>
@@ -23,11 +24,14 @@
 		<item>IPv6Prefix</item>
 		<item>IPv6PrefixDelegation</item>
 		<item>IPVLAN</item>
+		<item>L2TP</item>
+		<item>L2TPSession</item>
 		<item>Link</item>
 		<item>MACVLAN</item>
 		<item>MACVTAP</item>
 		<item>Match</item>
 		<item>Mount</item>
+		<item>Neighbor</item>
 		<item>NetDev</item>
 		<item>Network</item>
 		<item>Path</item>
@@ -55,9 +59,13 @@
 		<item>Accept</item>
 		<item>AccuracySec</item>
 		<item>ActiveSlave</item>
+		<item>AdActorSystem</item>
+		<item>AdActorSystemPriority</item>
 		<item>Address</item>
 		<item>AddressAutoconfiguration</item>
 		<item>AdSelect</item>
+		<item>AdUserPortKey</item>
+		<item>Advertise</item>
 		<item>After</item>
 		<item>AgeingTimeSec</item>
 		<item>Alias</item>
@@ -135,6 +143,7 @@
 		<item>ConditionArchitecture</item>
 		<item>ConditionCapability</item>
 		<item>ConditionControlGroupController</item>
+		<item>ConditionCPUs</item>
 		<item>ConditionDirectoryNotEmpty</item>
 		<item>ConditionFileIsExecutable</item>
 		<item>ConditionFileNotEmpty</item>
@@ -143,6 +152,7 @@
 		<item>ConditionHost</item>
 		<item>ConditionKernelCommandLine</item>
 		<item>ConditionKernelVersion</item>
+		<item>ConditionMemory</item>
 		<item>ConditionNeedsUpdate</item>
 		<item>ConditionPathExists</item>
 		<item>ConditionPathExistsGlob</item>
@@ -164,6 +174,7 @@
 		<item>CPUAccounting</item>
 		<item>CPUAffinity</item>
 		<item>CPUQuota</item>
+		<item>CPUQuotaPeriodSec</item>
 		<item>CPUSchedulingPolicy</item>
 		<item>CPUSchedulingPriority</item>
 		<item>CPUSchedulingResetOnFork</item>
@@ -196,12 +207,15 @@
 		<item>Destination</item>
 		<item>DestinationPort</item>
 		<item>DeviceAllow</item>
+		<item>DevicePolicy</item>
 		<item>DHCP</item>
 		<item>DHCPServer</item>
 		<item>DirectoryMode</item>
 		<item>DirectoryNotEmpty</item>
+		<item>DisableControllers</item>
 		<item>DiscoverPathMTU</item>
 		<item>DNS</item>
+		<item>DNSDefaultRoute</item>
 		<item>DNSLifetimeSec</item>
 		<item>DNSOverTLS</item>
 		<item>DNSSEC</item>
@@ -215,6 +229,7 @@
 		<item>DUIDType</item>
 		<item>Duplex</item>
 		<item>DuplicateAddressDetection</item>
+		<item>DynamicTransmitLoadBalancing</item>
 		<item>DynamicUser</item>
 		<item>EgressUntagged</item>
 		<item>EmitDNS</item>
@@ -223,10 +238,14 @@
 		<item>EmitNTP</item>
 		<item>EmitRouter</item>
 		<item>EmitTimezone</item>
+		<item>Encapsulation</item>
 		<item>EncapsulationLimit</item>
+		<item>EncapsulationType</item>
 		<item>Endpoint</item>
 		<item>Environment</item>
 		<item>EnvironmentFile</item>
+		<item>Ephemeral</item>
+		<item>ERSPANIndex</item>
 		<item>ExecReload</item>
 		<item>ExecStart</item>
 		<item>ExecStartPost</item>
@@ -236,21 +255,27 @@
 		<item>ExecStopPre</item>
 		<item>FailOverMACPolicy</item>
 		<item>FailureAction</item>
+		<item>FailureActionExitStatus</item>
 		<item>FastLeave</item>
 		<item>FDBAgeingSec</item>
 		<item>FileDescriptorName</item>
 		<item>FileDescriptorStoreMax</item>
+		<item>FinalKillSignal</item>
 		<item>FirewallMark</item>
 		<item>Flags</item>
 		<item>FlowLabel</item>
 		<item>Following</item>
+		<item>FooOverUDP</item>
+		<item>ForceDHCPv6PDOtherInformation</item>
 		<item>ForceUnmount</item>
 		<item>ForwardDelaySec</item>
+		<item>FOUDestinationPort</item>
+		<item>FOUSourcePort</item>
 		<item>FreeBind</item>
 		<item>From</item>
 		<item>FwMark</item>
 		<item>Gateway</item>
-		<item>GatewayOnlink</item>
+		<item>GatewayOnLink</item>
 		<item>GenericReceiveOffload</item>
 		<item>GenericSegmentationOffload</item>
 		<item>GratuitousARP</item>
@@ -266,8 +291,10 @@
 		<item>Hostname</item>
 		<item>IAID</item>
 		<item>Id</item>
+		<item>IgnoreCarrierLoss</item>
 		<item>IgnoreOnIsolate</item>
 		<item>IgnoreSIGPIPE</item>
+		<item>Inaccessible</item>
 		<item>InaccessiblePaths</item>
 		<item>IncomingInterface</item>
 		<item>Independent</item>
@@ -275,7 +302,9 @@
 		<item>InitialCongestionWindow</item>
 		<item>InputKey</item>
 		<item>Interface</item>
+		<item>InvertRule</item>
 		<item>IOAccounting</item>
+		<item>IODeviceLatencyTargetSec</item>
 		<item>IODeviceWeight</item>
 		<item>IOReadBandwidthMax</item>
 		<item>IOReadIOPSMax</item>
@@ -289,6 +318,7 @@
 		<item>IPAddressDeny</item>
 		<item>IPForward</item>
 		<item>IPMasquerade</item>
+		<item>IPProtocol</item>
 		<item>IPTOS</item>
 		<item>IPTTL</item>
 		<item>IPv4LLRoute</item>
@@ -303,8 +333,10 @@
 		<item>IPv6PrivacyExtensions</item>
 		<item>IPv6ProxyNDP</item>
 		<item>IPv6ProxyNDPAddress</item>
+		<item>IPv6RapidDeploymentPrefix</item>
 		<item>IPv6Token</item>
 		<item>IPVLAN</item>
+		<item>ISATAP</item>
 		<item>JobRunningTimeoutSec</item>
 		<item>JobTimeoutAction</item>
 		<item>JobTimeoutRebootArgument</item>
@@ -326,7 +358,9 @@
 		<item>Label</item>
 		<item>LACPTransmitRate</item>
 		<item>LargeReceiveOffload</item>
+		<item>Layer2SpecificHeader</item>
 		<item>LazyUnmount</item>
+		<item>Learning</item>
 		<item>LearnPacketIntervalSec</item>
 		<item>LimitAS</item>
 		<item>LimitCORE</item>
@@ -361,6 +395,8 @@
 		<item>LockPersonality</item>
 		<item>LogExtraFields</item>
 		<item>LogLevelMax</item>
+		<item>LogRateLimitBurst</item>
+		<item>LogRateLimitIntervalSec</item>
 		<item>LogsDirectory</item>
 		<item>LogsDirectoryMode</item>
 		<item>LooseBinding</item>
@@ -385,6 +421,7 @@
 		<item>MemoryLimit</item>
 		<item>MemoryLow</item>
 		<item>MemoryMax</item>
+		<item>MemoryMin</item>
 		<item>MemorySwapMax</item>
 		<item>MessageQueueMaxMessages</item>
 		<item>MessageQueueMessageSize</item>
@@ -397,12 +434,16 @@
 		<item>MTUBytes</item>
 		<item>Multicast</item>
 		<item>MulticastDNS</item>
+		<item>MulticastFlood</item>
 		<item>MulticastQuerier</item>
 		<item>MulticastSnooping</item>
+		<item>MulticastToUnicast</item>
 		<item>MultiQueue</item>
 		<item>MVRP</item>
 		<item>Name</item>
 		<item>NamePolicy</item>
+		<item>NeighborSuppression</item>
+		<item>NetworkNamespacePath</item>
 		<item>Nice</item>
 		<item>NoDelay</item>
 		<item>NonBlocking</item>
@@ -413,11 +454,13 @@
 		<item>OnActiveSec</item>
 		<item>OnBootSec</item>
 		<item>OnCalendar</item>
+		<item>OnClockChange</item>
 		<item>OneQueue</item>
 		<item>OnFailure</item>
 		<item>OnFailureJobMode</item>
 		<item>OnLink</item>
 		<item>OnStartupSec</item>
+		<item>OnTimezoneChange</item>
 		<item>OnUnitActiveSec</item>
 		<item>OnUnitInactiveSec</item>
 		<item>OOMScoreAdjust</item>
@@ -443,7 +486,8 @@
 		<item>PathExistsGlob</item>
 		<item>PathModified</item>
 		<item>Peer</item>
-		<item>PermissionsStartOnly</item>
+		<item>PeerSessionId</item>
+		<item>PeerTunnelId</item>
 		<item>Persistent</item>
 		<item>PersistentKeepalive</item>
 		<item>Personality</item>
@@ -460,12 +504,14 @@
 		<item>Prefix</item>
 		<item>PrefixRoute</item>
 		<item>PresharedKey</item>
+		<item>PresharedKeyFile</item>
 		<item>PrimaryReselectPolicy</item>
 		<item>PrimarySlave</item>
 		<item>Priority</item>
 		<item>Private</item>
 		<item>PrivateDevices</item>
 		<item>PrivateKey</item>
+		<item>PrivateKeyFile</item>
 		<item>PrivateMounts</item>
 		<item>PrivateNetwork</item>
 		<item>PrivateTmp</item>
@@ -475,6 +521,7 @@
 		<item>PropagatesReloadTo</item>
 		<item>ProtectControlGroups</item>
 		<item>ProtectHome</item>
+		<item>ProtectHostname</item>
 		<item>ProtectKernelModules</item>
 		<item>ProtectKernelTunables</item>
 		<item>ProtectSystem</item>
@@ -484,6 +531,8 @@
 		<item>QuickAck</item>
 		<item>RandomizedDelaySec</item>
 		<item>RapidCommit</item>
+		<item>RateLimitBurst</item>
+		<item>RateLimitIntervalSec</item>
 		<item>ReadOnly</item>
 		<item>ReadOnlyPaths</item>
 		<item>ReadWritePaths</item>
@@ -517,6 +566,7 @@
 		<item>RestrictAddressFamilies</item>
 		<item>RestrictNamespaces</item>
 		<item>RestrictRealtime</item>
+		<item>RestrictSUIDSGID</item>
 		<item>ReusePort</item>
 		<item>RootDirectory</item>
 		<item>RootDirectoryStartOnly</item>
@@ -540,7 +590,9 @@
 		<item>SendHostname</item>
 		<item>SendSIGHUP</item>
 		<item>SendSIGKILL</item>
+		<item>SerializeTunneledPackets</item>
 		<item>Service</item>
+		<item>SessionId</item>
 		<item>Slice</item>
 		<item>SloppyOptions</item>
 		<item>SmackLabel</item>
@@ -554,6 +606,7 @@
 		<item>SocketUser</item>
 		<item>Source</item>
 		<item>SourcePath</item>
+		<item>SourcePort</item>
 		<item>StandardError</item>
 		<item>StandardInput</item>
 		<item>StandardInputData</item>
@@ -571,6 +624,7 @@
 		<item>StopWhenUnneeded</item>
 		<item>STP</item>
 		<item>SuccessAction</item>
+		<item>SuccessActionExitStatus</item>
 		<item>SuccessExitStatus</item>
 		<item>SupplementaryGroups</item>
 		<item>Symlinks</item>
@@ -604,12 +658,14 @@
 		<item>TriggerLimitIntervalSec</item>
 		<item>Triggers</item>
 		<item>TriggersBy</item>
+		<item>TripleSampling</item>
 		<item>TTL</item>
 		<item>TTYPath</item>
 		<item>TTYReset</item>
 		<item>TTYVHangup</item>
 		<item>TTYVTDisallocate</item>
 		<item>Tunnel</item>
+		<item>TunnelId</item>
 		<item>TxChannels</item>
 		<item>TxtData</item>
 		<item>TxtText</item>
@@ -618,6 +674,7 @@
 		<item>UDP6ZeroChecksumRx</item>
 		<item>UDP6ZeroChecksumTx</item>
 		<item>UDPChecksum</item>
+		<item>UDPSourcePort</item>
 		<item>UMask</item>
 		<item>UnicastFlood</item>
 		<item>Unit</item>
@@ -626,12 +683,14 @@
 		<item>UpDelaySec</item>
 		<item>USBFunctionDescriptors</item>
 		<item>USBFunctionStrings</item>
+		<item>UseAutonomousPrefix</item>
 		<item>UseBPDU</item>
 		<item>UseDNS</item>
 		<item>UseDomains</item>
 		<item>UseHostname</item>
 		<item>UseMTU</item>
 		<item>UseNTP</item>
+		<item>UseOnLinkPrefix</item>
 		<item>User</item>
 		<item>UserClass</item>
 		<item>UseRoutes</item>
@@ -655,6 +714,7 @@
 		<item>WantedBy</item>
 		<item>Wants</item>
 		<item>WatchdogSec</item>
+		<item>WatchdogSignal</item>
 		<item>Weight</item>
 		<item>What</item>
 		<item>Where</item>
