@@ -12,8 +12,9 @@
 		<item>BridgeVLAN</item>
 		<item>CAN</item>
 		<item>Device</item>
-		<item>DHCP</item>
 		<item>DHCPServer</item>
+		<item>DHCPv4</item>
+		<item>DHCPv6</item>
 		<item>Exec</item>
 		<item>Files</item>
 		<item>FooOverUDP</item>
@@ -24,9 +25,14 @@
 		<item>IPv6Prefix</item>
 		<item>IPv6PrefixDelegation</item>
 		<item>IPVLAN</item>
+		<item>IPVTAP</item>
 		<item>L2TP</item>
 		<item>L2TPSession</item>
 		<item>Link</item>
+		<item>MACsec</item>
+		<item>MACsecReceiveAssociation</item>
+		<item>MACsecReceiveChannel</item>
+		<item>MACsecTransmitAssociation</item>
 		<item>MACVLAN</item>
 		<item>MACVTAP</item>
 		<item>Match</item>
@@ -49,15 +55,18 @@
 		<item>Tunnel</item>
 		<item>Unit</item>
 		<item>VLAN</item>
+		<item>VRF</item>
 		<item>VXCAN</item>
 		<item>VXLAN</item>
 		<item>WireGuard</item>
 		<item>WireGuardPeer</item>
+		<item>Xfrm</item>
 	</list>
 
 	<list name="keywords">
 		<item>Accept</item>
 		<item>AccuracySec</item>
+		<item>Activate</item>
 		<item>ActiveSlave</item>
 		<item>AdActorSystem</item>
 		<item>AdActorSystemPriority</item>
@@ -107,6 +116,8 @@
 		<item>AssertSecurity</item>
 		<item>AssertUser</item>
 		<item>AssertVirtualization</item>
+		<item>AssignToLoopback</item>
+		<item>AssociatedWith</item>
 		<item>AutoJoin</item>
 		<item>AutoNegotiation</item>
 		<item>Backlog</item>
@@ -121,6 +132,7 @@
 		<item>BindToDevice</item>
 		<item>BitRate</item>
 		<item>BitsPerSecond</item>
+		<item>BlackList</item>
 		<item>BlockIOAccounting</item>
 		<item>BlockIODeviceWeight</item>
 		<item>BlockIOReadBandwidth</item>
@@ -180,7 +192,6 @@
 		<item>CPUSchedulingResetOnFork</item>
 		<item>CPUShares</item>
 		<item>CPUWeight</item>
-		<item>CriticalConnection</item>
 		<item>DefaultBlockIOAccounting</item>
 		<item>DefaultCPUAccounting</item>
 		<item>DefaultDependencies</item>
@@ -192,13 +203,18 @@
 		<item>DefaultLimitCPU</item>
 		<item>DefaultLimitFSIZE</item>
 		<item>DefaultMemoryAccounting</item>
+		<item>DefaultMemoryLow</item>
+		<item>DefaultMemoryMin</item>
+		<item>DefaultOOMPolicy</item>
 		<item>DefaultPVID</item>
+		<item>DefaultRouteOnDevice</item>
 		<item>DefaultStandardError</item>
 		<item>DefaultStandardOutput</item>
 		<item>DefaultStartLimitBurst</item>
 		<item>DefaultStartLimitIntervalSec</item>
 		<item>DefaultTasksAccounting</item>
 		<item>DefaultTasksMax</item>
+		<item>DefaultTimeoutAbortSec</item>
 		<item>DefaultTimeoutStartSec</item>
 		<item>DefaultTimeoutStopSec</item>
 		<item>DeferAcceptSec</item>
@@ -241,11 +257,13 @@
 		<item>Encapsulation</item>
 		<item>EncapsulationLimit</item>
 		<item>EncapsulationType</item>
+		<item>Encrypt</item>
 		<item>Endpoint</item>
 		<item>Environment</item>
 		<item>EnvironmentFile</item>
 		<item>Ephemeral</item>
 		<item>ERSPANIndex</item>
+		<item>ExecCondition</item>
 		<item>ExecReload</item>
 		<item>ExecStart</item>
 		<item>ExecStartPost</item>
@@ -256,7 +274,9 @@
 		<item>FailOverMACPolicy</item>
 		<item>FailureAction</item>
 		<item>FailureActionExitStatus</item>
+		<item>Family</item>
 		<item>FastLeave</item>
+		<item>FastOpenNoCookie</item>
 		<item>FDBAgeingSec</item>
 		<item>FileDescriptorName</item>
 		<item>FileDescriptorStoreMax</item>
@@ -273,9 +293,9 @@
 		<item>FOUSourcePort</item>
 		<item>FreeBind</item>
 		<item>From</item>
-		<item>FwMark</item>
 		<item>Gateway</item>
 		<item>GatewayOnLink</item>
+		<item>GenericProtocolExtension</item>
 		<item>GenericReceiveOffload</item>
 		<item>GenericSegmentationOffload</item>
 		<item>GratuitousARP</item>
@@ -302,6 +322,7 @@
 		<item>InitialCongestionWindow</item>
 		<item>InputKey</item>
 		<item>Interface</item>
+		<item>InterfaceId</item>
 		<item>InvertRule</item>
 		<item>IOAccounting</item>
 		<item>IODeviceLatencyTargetSec</item>
@@ -316,7 +337,10 @@
 		<item>IPAccounting</item>
 		<item>IPAddressAllow</item>
 		<item>IPAddressDeny</item>
+		<item>IPDoNotFragment</item>
+		<item>IPEgressFilterPath</item>
 		<item>IPForward</item>
+		<item>IPIngressFilterPath</item>
 		<item>IPMasquerade</item>
 		<item>IPProtocol</item>
 		<item>IPTOS</item>
@@ -346,9 +370,12 @@
 		<item>KeepAliveIntervalSec</item>
 		<item>KeepAliveProbes</item>
 		<item>KeepAliveTimeSec</item>
+		<item>KeepConfiguration</item>
 		<item>KernelCommandLine</item>
 		<item>KernelVersion</item>
 		<item>Key</item>
+		<item>KeyFile</item>
+		<item>KeyId</item>
 		<item>KeyringMode</item>
 		<item>KillMode</item>
 		<item>KillSignal</item>
@@ -379,6 +406,7 @@
 		<item>LimitSIGPENDING</item>
 		<item>LimitSTACK</item>
 		<item>LinkJournal</item>
+		<item>LinkLayerAddress</item>
 		<item>LinkLocalAddressing</item>
 		<item>ListenDatagram</item>
 		<item>ListenFIFO</item>
@@ -404,12 +432,14 @@
 		<item>MACAddressPolicy</item>
 		<item>MachineID</item>
 		<item>MacLearning</item>
+		<item>MACsec</item>
 		<item>MACVLAN</item>
 		<item>MakeDirectory</item>
 		<item>Managed</item>
 		<item>ManageTemporaryAddress</item>
 		<item>Mark</item>
 		<item>MaxAgeSec</item>
+		<item>MaxAttempts</item>
 		<item>MaxConnections</item>
 		<item>MaxConnectionsPerSource</item>
 		<item>MaximumFDBEntries</item>
@@ -435,7 +465,9 @@
 		<item>Multicast</item>
 		<item>MulticastDNS</item>
 		<item>MulticastFlood</item>
+		<item>MulticastIGMPVersion</item>
 		<item>MulticastQuerier</item>
+		<item>MulticastRouter</item>
 		<item>MulticastSnooping</item>
 		<item>MulticastToUnicast</item>
 		<item>MultiQueue</item>
@@ -451,11 +483,12 @@
 		<item>NotifyAccess</item>
 		<item>NotifyReady</item>
 		<item>NTP</item>
+		<item>NUMAMask</item>
+		<item>NUMAPolicy</item>
 		<item>OnActiveSec</item>
 		<item>OnBootSec</item>
 		<item>OnCalendar</item>
 		<item>OnClockChange</item>
-		<item>OneQueue</item>
 		<item>OnFailure</item>
 		<item>OnFailureJobMode</item>
 		<item>OnLink</item>
@@ -463,6 +496,7 @@
 		<item>OnTimezoneChange</item>
 		<item>OnUnitActiveSec</item>
 		<item>OnUnitInactiveSec</item>
+		<item>OOMPolicy</item>
 		<item>OOMScoreAdjust</item>
 		<item>Options</item>
 		<item>OriginalName</item>
@@ -473,6 +507,7 @@
 		<item>Overlay</item>
 		<item>OverlayReadOnly</item>
 		<item>PacketInfo</item>
+		<item>PacketNumber</item>
 		<item>PacketsPerSlave</item>
 		<item>PAMName</item>
 		<item>Parameters</item>
@@ -486,6 +521,7 @@
 		<item>PathExistsGlob</item>
 		<item>PathModified</item>
 		<item>Peer</item>
+		<item>PeerPort</item>
 		<item>PeerSessionId</item>
 		<item>PeerTunnelId</item>
 		<item>Persistent</item>
@@ -519,6 +555,7 @@
 		<item>PrivateUsersChown</item>
 		<item>ProcessTwo</item>
 		<item>PropagatesReloadTo</item>
+		<item>Property</item>
 		<item>ProtectControlGroups</item>
 		<item>ProtectHome</item>
 		<item>ProtectHostname</item>
@@ -526,6 +563,8 @@
 		<item>ProtectKernelTunables</item>
 		<item>ProtectSystem</item>
 		<item>Protocol</item>
+		<item>ProxyARP</item>
+		<item>ProxyARPWiFi</item>
 		<item>PublicKey</item>
 		<item>PVID</item>
 		<item>QuickAck</item>
@@ -575,6 +614,7 @@
 		<item>RouterLifetimeSec</item>
 		<item>RouterPreference</item>
 		<item>RouteShortCircuit</item>
+		<item>RoutesToDNS</item>
 		<item>RouteTable</item>
 		<item>RuntimeDirectory</item>
 		<item>RuntimeDirectoryMode</item>
@@ -588,6 +628,7 @@
 		<item>SELinuxContextFromNet</item>
 		<item>SendBuffer</item>
 		<item>SendHostname</item>
+		<item>SendRelease</item>
 		<item>SendSIGHUP</item>
 		<item>SendSIGKILL</item>
 		<item>SerializeTunneledPackets</item>
@@ -643,6 +684,8 @@
 		<item>TCPCongestion</item>
 		<item>TCPSegmentationOffload</item>
 		<item>TemporaryFileSystem</item>
+		<item>TimeoutAbortSec</item>
+		<item>TimeoutCleanSec</item>
 		<item>TimeoutIdleSec</item>
 		<item>TimeoutSec</item>
 		<item>TimeoutStartSec</item>
@@ -660,6 +703,7 @@
 		<item>TriggersBy</item>
 		<item>TripleSampling</item>
 		<item>TTL</item>
+		<item>TTLPropagate</item>
 		<item>TTYPath</item>
 		<item>TTYReset</item>
 		<item>TTYVHangup</item>
@@ -687,6 +731,7 @@
 		<item>UseBPDU</item>
 		<item>UseDNS</item>
 		<item>UseDomains</item>
+		<item>UseForEncoding</item>
 		<item>UseHostname</item>
 		<item>UseMTU</item>
 		<item>UseNTP</item>
@@ -706,6 +751,7 @@
 		<item>VLANFiltering</item>
 		<item>VLANId</item>
 		<item>VNetHeader</item>
+		<item>VNI</item>
 		<item>Volatile</item>
 		<item>VRF</item>
 		<item>VXLAN</item>
@@ -720,6 +766,7 @@
 		<item>Where</item>
 		<item>WorkingDirectory</item>
 		<item>Writable</item>
+		<item>Xfrm</item>
 		<item>Zone</item>
 	</list>
 
