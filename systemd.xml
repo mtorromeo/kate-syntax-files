@@ -24,6 +24,8 @@
 		<item>IPv6AddressLabel</item>
 		<item>IPv6Prefix</item>
 		<item>IPv6PrefixDelegation</item>
+		<item>IPv6PrefixRoutes</item>
+		<item>IPv6RoutePrefix</item>
 		<item>IPVLAN</item>
 		<item>IPVTAP</item>
 		<item>L2TP</item>
@@ -40,10 +42,12 @@
 		<item>Neighbor</item>
 		<item>NetDev</item>
 		<item>Network</item>
+		<item>NextHop</item>
 		<item>Path</item>
 		<item>Peer</item>
 		<item>Route</item>
 		<item>RoutingPolicyRule</item>
+		<item>Scope</item>
 		<item>Service</item>
 		<item>Slice</item>
 		<item>Socket</item>
@@ -51,6 +55,7 @@
 		<item>Tap</item>
 		<item>Target</item>
 		<item>Timer</item>
+		<item>TrafficControlQueueingDiscipline</item>
 		<item>Tun</item>
 		<item>Tunnel</item>
 		<item>Unit</item>
@@ -70,6 +75,7 @@
 		<item>ActiveSlave</item>
 		<item>AdActorSystem</item>
 		<item>AdActorSystemPriority</item>
+		<item>AddPrefixRoute</item>
 		<item>Address</item>
 		<item>AddressAutoconfiguration</item>
 		<item>AdSelect</item>
@@ -79,7 +85,9 @@
 		<item>AgeingTimeSec</item>
 		<item>Alias</item>
 		<item>AllMulticast</item>
+		<item>AllowedCPUs</item>
 		<item>AllowedIPs</item>
+		<item>AllowedMemoryNodes</item>
 		<item>AllowIsolate</item>
 		<item>AllowLocalRemote</item>
 		<item>AllowPortToBeRoot</item>
@@ -143,6 +151,7 @@
 		<item>BoundBy</item>
 		<item>Bridge</item>
 		<item>Broadcast</item>
+		<item>BSSID</item>
 		<item>BusName</item>
 		<item>CacheDirectory</item>
 		<item>CacheDirectoryMode</item>
@@ -247,12 +256,15 @@
 		<item>DuplicateAddressDetection</item>
 		<item>DynamicTransmitLoadBalancing</item>
 		<item>DynamicUser</item>
+		<item>EffectiveCPUs</item>
+		<item>EffectiveMemoryNodes</item>
 		<item>EgressUntagged</item>
 		<item>EmitDNS</item>
 		<item>EmitDomains</item>
 		<item>EmitLLDP</item>
 		<item>EmitNTP</item>
 		<item>EmitRouter</item>
+		<item>EmitSIP</item>
 		<item>EmitTimezone</item>
 		<item>Encapsulation</item>
 		<item>EncapsulationLimit</item>
@@ -343,6 +355,7 @@
 		<item>IPIngressFilterPath</item>
 		<item>IPMasquerade</item>
 		<item>IPProtocol</item>
+		<item>IPServiceType</item>
 		<item>IPTOS</item>
 		<item>IPTTL</item>
 		<item>IPv4LLRoute</item>
@@ -389,6 +402,7 @@
 		<item>LazyUnmount</item>
 		<item>Learning</item>
 		<item>LearnPacketIntervalSec</item>
+		<item>LifetimeSec</item>
 		<item>LimitAS</item>
 		<item>LimitCORE</item>
 		<item>LimitCPU</item>
@@ -475,6 +489,11 @@
 		<item>Name</item>
 		<item>NamePolicy</item>
 		<item>NeighborSuppression</item>
+		<item>NetworkEmulatorDelayJitterSec</item>
+		<item>NetworkEmulatorDelaySec</item>
+		<item>NetworkEmulatorDuplicateRate</item>
+		<item>NetworkEmulatorLossRate</item>
+		<item>NetworkEmulatorPacketLimit</item>
 		<item>NetworkNamespacePath</item>
 		<item>Nice</item>
 		<item>NoDelay</item>
@@ -511,6 +530,7 @@
 		<item>PacketsPerSlave</item>
 		<item>PAMName</item>
 		<item>Parameters</item>
+		<item>Parent</item>
 		<item>PartOf</item>
 		<item>PassCredentials</item>
 		<item>PassEnvironment</item>
@@ -538,7 +558,7 @@
 		<item>PreferredLifetimeSec</item>
 		<item>PreferredSource</item>
 		<item>Prefix</item>
-		<item>PrefixRoute</item>
+		<item>PrefixDelegationHint</item>
 		<item>PresharedKey</item>
 		<item>PresharedKeyFile</item>
 		<item>PrimaryReselectPolicy</item>
@@ -559,6 +579,7 @@
 		<item>ProtectControlGroups</item>
 		<item>ProtectHome</item>
 		<item>ProtectHostname</item>
+		<item>ProtectKernelLogs</item>
 		<item>ProtectKernelModules</item>
 		<item>ProtectKernelTunables</item>
 		<item>ProtectSystem</item>
@@ -590,6 +611,7 @@
 		<item>RemoveOnStop</item>
 		<item>ReorderHeader</item>
 		<item>RequestBroadcast</item>
+		<item>RequestOptions</item>
 		<item>RequiredBy</item>
 		<item>RequiredForOnline</item>
 		<item>Requires</item>
@@ -600,6 +622,7 @@
 		<item>ResolvConf</item>
 		<item>Restart</item>
 		<item>RestartForceExitStatus</item>
+		<item>RestartKillSignal</item>
 		<item>RestartPreventExitStatus</item>
 		<item>RestartSec</item>
 		<item>RestrictAddressFamilies</item>
@@ -610,6 +633,7 @@
 		<item>RootDirectory</item>
 		<item>RootDirectoryStartOnly</item>
 		<item>RootImage</item>
+		<item>Route</item>
 		<item>RouteMetric</item>
 		<item>RouterLifetimeSec</item>
 		<item>RouterPreference</item>
@@ -620,6 +644,7 @@
 		<item>RuntimeDirectoryMode</item>
 		<item>RuntimeDirectoryPreserve</item>
 		<item>RuntimeMaxSec</item>
+		<item>RxBufferSize</item>
 		<item>RxChannels</item>
 		<item>SamplePoint</item>
 		<item>Scope</item>
@@ -628,12 +653,14 @@
 		<item>SELinuxContextFromNet</item>
 		<item>SendBuffer</item>
 		<item>SendHostname</item>
+		<item>SendOption</item>
 		<item>SendRelease</item>
 		<item>SendSIGHUP</item>
 		<item>SendSIGKILL</item>
 		<item>SerializeTunneledPackets</item>
 		<item>Service</item>
 		<item>SessionId</item>
+		<item>SIP</item>
 		<item>Slice</item>
 		<item>SloppyOptions</item>
 		<item>SmackLabel</item>
@@ -648,6 +675,7 @@
 		<item>Source</item>
 		<item>SourcePath</item>
 		<item>SourcePort</item>
+		<item>SSID</item>
 		<item>StandardError</item>
 		<item>StandardInput</item>
 		<item>StandardInputData</item>
@@ -700,7 +728,6 @@
 		<item>TriggerLimitBurst</item>
 		<item>TriggerLimitIntervalSec</item>
 		<item>Triggers</item>
-		<item>TriggersBy</item>
 		<item>TripleSampling</item>
 		<item>TTL</item>
 		<item>TTLPropagate</item>
@@ -710,6 +737,7 @@
 		<item>TTYVTDisallocate</item>
 		<item>Tunnel</item>
 		<item>TunnelId</item>
+		<item>TxBufferSize</item>
 		<item>TxChannels</item>
 		<item>TxtData</item>
 		<item>TxtText</item>
@@ -739,6 +767,7 @@
 		<item>User</item>
 		<item>UserClass</item>
 		<item>UseRoutes</item>
+		<item>UseSIP</item>
 		<item>UseTimezone</item>
 		<item>UtmpIdentifier</item>
 		<item>UtmpMode</item>
@@ -764,6 +793,7 @@
 		<item>Weight</item>
 		<item>What</item>
 		<item>Where</item>
+		<item>WLANInterfaceType</item>
 		<item>WorkingDirectory</item>
 		<item>Writable</item>
 		<item>Xfrm</item>
