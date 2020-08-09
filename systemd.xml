@@ -6,19 +6,32 @@
 	<list name="sections">
 		<item>Address</item>
 		<item>Automount</item>
+		<item>BFIFO</item>
 		<item>Bond</item>
 		<item>Bridge</item>
 		<item>BridgeFDB</item>
 		<item>BridgeVLAN</item>
+		<item>CAKE</item>
 		<item>CAN</item>
+		<item>ControlledDelay</item>
+		<item>DeficitRoundRobinScheduler</item>
+		<item>DeficitRoundRobinSchedulerClass</item>
 		<item>Device</item>
 		<item>DHCPServer</item>
 		<item>DHCPv4</item>
 		<item>DHCPv6</item>
+		<item>DHCPv6PrefixDelegation</item>
+		<item>EnhancedTransmissionSelection</item>
 		<item>Exec</item>
+		<item>FairQueueing</item>
+		<item>FairQueueingControlledDelay</item>
 		<item>Files</item>
 		<item>FooOverUDP</item>
+		<item>GenericRandomEarlyDetection</item>
 		<item>GENEVE</item>
+		<item>HeavyHitterFilter</item>
+		<item>HierarchyTokenBucket</item>
+		<item>HierarchyTokenBucketClass</item>
 		<item>Install</item>
 		<item>IPv6AcceptRA</item>
 		<item>IPv6AddressLabel</item>
@@ -31,6 +44,7 @@
 		<item>L2TP</item>
 		<item>L2TPSession</item>
 		<item>Link</item>
+		<item>LLDP</item>
 		<item>MACsec</item>
 		<item>MACsecReceiveAssociation</item>
 		<item>MACsecReceiveChannel</item>
@@ -42,20 +56,31 @@
 		<item>Neighbor</item>
 		<item>NetDev</item>
 		<item>Network</item>
+		<item>NetworkEmulator</item>
 		<item>NextHop</item>
 		<item>Path</item>
 		<item>Peer</item>
+		<item>PFIFO</item>
+		<item>PFIFOFast</item>
+		<item>PFIFOHeadDrop</item>
+		<item>PIE</item>
+		<item>QDisc</item>
+		<item>QuickFairQueueing</item>
+		<item>QuickFairQueueingClass</item>
 		<item>Route</item>
 		<item>RoutingPolicyRule</item>
 		<item>Scope</item>
 		<item>Service</item>
 		<item>Slice</item>
 		<item>Socket</item>
+		<item>StochasticFairBlue</item>
+		<item>StochasticFairnessQueueing</item>
 		<item>Swap</item>
 		<item>Tap</item>
 		<item>Target</item>
 		<item>Timer</item>
-		<item>TrafficControlQueueingDiscipline</item>
+		<item>TokenBucketFilter</item>
+		<item>TrivialLinkEqualizer</item>
 		<item>Tun</item>
 		<item>Tunnel</item>
 		<item>Unit</item>
@@ -89,10 +114,13 @@
 		<item>AllowedIPs</item>
 		<item>AllowedMemoryNodes</item>
 		<item>AllowIsolate</item>
+		<item>AllowList</item>
 		<item>AllowLocalRemote</item>
 		<item>AllowPortToBeRoot</item>
 		<item>AllSlavesActive</item>
 		<item>Also</item>
+		<item>AlternativeName</item>
+		<item>AlternativeNamesPolicy</item>
 		<item>AmbientCapabilities</item>
 		<item>Anonymize</item>
 		<item>AppArmorProfile</item>
@@ -124,11 +152,15 @@
 		<item>AssertSecurity</item>
 		<item>AssertUser</item>
 		<item>AssertVirtualization</item>
+		<item>Assign</item>
 		<item>AssignToLoopback</item>
 		<item>AssociatedWith</item>
 		<item>AutoJoin</item>
 		<item>AutoNegotiation</item>
+		<item>AutoNegotiationFlowControl</item>
 		<item>Backlog</item>
+		<item>Bands</item>
+		<item>Bandwidth</item>
 		<item>Before</item>
 		<item>Bind</item>
 		<item>BindCarrier</item>
@@ -140,7 +172,6 @@
 		<item>BindToDevice</item>
 		<item>BitRate</item>
 		<item>BitsPerSecond</item>
-		<item>BlackList</item>
 		<item>BlockIOAccounting</item>
 		<item>BlockIODeviceWeight</item>
 		<item>BlockIOReadBandwidth</item>
@@ -152,11 +183,18 @@
 		<item>Bridge</item>
 		<item>Broadcast</item>
 		<item>BSSID</item>
+		<item>Buckets</item>
+		<item>BufferBytes</item>
+		<item>BurstBytes</item>
 		<item>BusName</item>
 		<item>CacheDirectory</item>
 		<item>CacheDirectoryMode</item>
 		<item>Capability</item>
 		<item>CapabilityBoundingSet</item>
+		<item>CeilBufferBytes</item>
+		<item>CeilRate</item>
+		<item>CEThresholdSec</item>
+		<item>ClassId</item>
 		<item>ClientIdentifier</item>
 		<item>CollectMode</item>
 		<item>CombinedChannels</item>
@@ -166,6 +204,7 @@
 		<item>ConditionControlGroupController</item>
 		<item>ConditionCPUs</item>
 		<item>ConditionDirectoryNotEmpty</item>
+		<item>ConditionEnvironment</item>
 		<item>ConditionFileIsExecutable</item>
 		<item>ConditionFileNotEmpty</item>
 		<item>ConditionFirstBoot</item>
@@ -178,6 +217,7 @@
 		<item>ConditionPathExists</item>
 		<item>ConditionPathExistsGlob</item>
 		<item>ConditionPathIsDirectory</item>
+		<item>ConditionPathIsEncrypted</item>
 		<item>ConditionPathIsMountPoint</item>
 		<item>ConditionPathIsReadWrite</item>
 		<item>ConditionPathIsSymbolicLink</item>
@@ -191,6 +231,7 @@
 		<item>Conflicts</item>
 		<item>ConsistsOf</item>
 		<item>CopyDSCP</item>
+		<item>CoredumpFilter</item>
 		<item>Cost</item>
 		<item>CPUAccounting</item>
 		<item>CPUAffinity</item>
@@ -201,7 +242,10 @@
 		<item>CPUSchedulingResetOnFork</item>
 		<item>CPUShares</item>
 		<item>CPUWeight</item>
+		<item>DataBitRate</item>
+		<item>DataSamplePoint</item>
 		<item>DefaultBlockIOAccounting</item>
+		<item>DefaultClass</item>
 		<item>DefaultCPUAccounting</item>
 		<item>DefaultDependencies</item>
 		<item>DefaultEnvironment</item>
@@ -226,8 +270,12 @@
 		<item>DefaultTimeoutAbortSec</item>
 		<item>DefaultTimeoutStartSec</item>
 		<item>DefaultTimeoutStopSec</item>
+		<item>DefaultVirtualQueue</item>
 		<item>DeferAcceptSec</item>
+		<item>DelayJitterSec</item>
+		<item>DelaySec</item>
 		<item>Delegate</item>
+		<item>DenyList</item>
 		<item>Description</item>
 		<item>Destination</item>
 		<item>DestinationPort</item>
@@ -235,6 +283,7 @@
 		<item>DevicePolicy</item>
 		<item>DHCP</item>
 		<item>DHCPServer</item>
+		<item>DHCPv6Client</item>
 		<item>DirectoryMode</item>
 		<item>DirectoryNotEmpty</item>
 		<item>DisableControllers</item>
@@ -254,17 +303,22 @@
 		<item>DUIDType</item>
 		<item>Duplex</item>
 		<item>DuplicateAddressDetection</item>
+		<item>DuplicateRate</item>
 		<item>DynamicTransmitLoadBalancing</item>
 		<item>DynamicUser</item>
+		<item>ECN</item>
 		<item>EffectiveCPUs</item>
 		<item>EffectiveMemoryNodes</item>
 		<item>EgressUntagged</item>
 		<item>EmitDNS</item>
 		<item>EmitDomains</item>
 		<item>EmitLLDP</item>
+		<item>EmitLPR</item>
 		<item>EmitNTP</item>
+		<item>EmitPOP3</item>
 		<item>EmitRouter</item>
 		<item>EmitSIP</item>
+		<item>EmitSMTP</item>
 		<item>EmitTimezone</item>
 		<item>Encapsulation</item>
 		<item>EncapsulationLimit</item>
@@ -286,16 +340,21 @@
 		<item>FailOverMACPolicy</item>
 		<item>FailureAction</item>
 		<item>FailureActionExitStatus</item>
+		<item>FallbackLeaseLifetimeSec</item>
 		<item>Family</item>
 		<item>FastLeave</item>
 		<item>FastOpenNoCookie</item>
 		<item>FDBAgeingSec</item>
+		<item>FDMode</item>
+		<item>FDNonISO</item>
 		<item>FileDescriptorName</item>
 		<item>FileDescriptorStoreMax</item>
 		<item>FinalKillSignal</item>
 		<item>FirewallMark</item>
 		<item>Flags</item>
 		<item>FlowLabel</item>
+		<item>FlowLimit</item>
+		<item>Flows</item>
 		<item>Following</item>
 		<item>FooOverUDP</item>
 		<item>ForceDHCPv6PDOtherInformation</item>
@@ -309,6 +368,7 @@
 		<item>GatewayOnLink</item>
 		<item>GenericProtocolExtension</item>
 		<item>GenericReceiveOffload</item>
+		<item>GenericRIO</item>
 		<item>GenericSegmentationOffload</item>
 		<item>GratuitousARP</item>
 		<item>Group</item>
@@ -317,6 +377,7 @@
 		<item>GuessMainPID</item>
 		<item>GVRP</item>
 		<item>HairPin</item>
+		<item>Handle</item>
 		<item>HelloTimeSec</item>
 		<item>HomeAddress</item>
 		<item>Host</item>
@@ -332,9 +393,11 @@
 		<item>Independent</item>
 		<item>InitialAdvertisedReceiveWindow</item>
 		<item>InitialCongestionWindow</item>
+		<item>InitialQuantumBytes</item>
 		<item>InputKey</item>
 		<item>Interface</item>
 		<item>InterfaceId</item>
+		<item>IntervalSec</item>
 		<item>InvertRule</item>
 		<item>IOAccounting</item>
 		<item>IODeviceLatencyTargetSec</item>
@@ -358,12 +421,14 @@
 		<item>IPServiceType</item>
 		<item>IPTOS</item>
 		<item>IPTTL</item>
+		<item>IPv4AcceptLocal</item>
 		<item>IPv4LLRoute</item>
 		<item>IPv4ProxyARP</item>
 		<item>IPv6AcceptRA</item>
 		<item>IPv6DuplicateAddressDetection</item>
 		<item>IPv6FlowLabel</item>
 		<item>IPv6HopLimit</item>
+		<item>IPv6LinkLocalAddressGenerationMode</item>
 		<item>IPv6MTUBytes</item>
 		<item>IPv6Preference</item>
 		<item>IPv6PrefixDelegation</item>
@@ -398,12 +463,14 @@
 		<item>Label</item>
 		<item>LACPTransmitRate</item>
 		<item>LargeReceiveOffload</item>
+		<item>LatencySec</item>
 		<item>Layer2SpecificHeader</item>
 		<item>LazyUnmount</item>
 		<item>Learning</item>
 		<item>LearnPacketIntervalSec</item>
 		<item>LifetimeSec</item>
 		<item>LimitAS</item>
+		<item>LimitBytes</item>
 		<item>LimitCORE</item>
 		<item>LimitCPU</item>
 		<item>LimitDATA</item>
@@ -422,10 +489,13 @@
 		<item>LinkJournal</item>
 		<item>LinkLayerAddress</item>
 		<item>LinkLocalAddressing</item>
+		<item>LinkLocalAdressing</item>
+		<item>LinkState</item>
 		<item>ListenDatagram</item>
 		<item>ListenFIFO</item>
 		<item>ListenMessageQueue</item>
 		<item>ListenNetlink</item>
+		<item>ListenOnly</item>
 		<item>ListenPort</item>
 		<item>ListenSequentialPacket</item>
 		<item>ListenSpecial</item>
@@ -437,16 +507,20 @@
 		<item>LockPersonality</item>
 		<item>LogExtraFields</item>
 		<item>LogLevelMax</item>
+		<item>LogNamespace</item>
 		<item>LogRateLimitBurst</item>
 		<item>LogRateLimitIntervalSec</item>
 		<item>LogsDirectory</item>
 		<item>LogsDirectoryMode</item>
 		<item>LooseBinding</item>
+		<item>LossRate</item>
+		<item>LPR</item>
 		<item>MACAddress</item>
 		<item>MACAddressPolicy</item>
 		<item>MachineID</item>
 		<item>MacLearning</item>
 		<item>MACsec</item>
+		<item>MACSpoofCheck</item>
 		<item>MACVLAN</item>
 		<item>MakeDirectory</item>
 		<item>Managed</item>
@@ -457,12 +531,15 @@
 		<item>MaxConnections</item>
 		<item>MaxConnectionsPerSource</item>
 		<item>MaximumFDBEntries</item>
+		<item>MaximumRate</item>
 		<item>MaxLeaseTimeSec</item>
 		<item>MaxLevelStore</item>
+		<item>MaxPacketBytes</item>
 		<item>MemoryAccounting</item>
 		<item>MemoryDenyWriteExecute</item>
 		<item>MemoryHigh</item>
 		<item>MemoryLimit</item>
+		<item>MemoryLimitBytes</item>
 		<item>MemoryLow</item>
 		<item>MemoryMax</item>
 		<item>MemoryMin</item>
@@ -475,7 +552,9 @@
 		<item>Mode</item>
 		<item>MountAPIVFS</item>
 		<item>MountFlags</item>
+		<item>MPUBytes</item>
 		<item>MTUBytes</item>
+		<item>MUDURL</item>
 		<item>Multicast</item>
 		<item>MulticastDNS</item>
 		<item>MulticastFlood</item>
@@ -484,16 +563,12 @@
 		<item>MulticastRouter</item>
 		<item>MulticastSnooping</item>
 		<item>MulticastToUnicast</item>
+		<item>MultiPathRoute</item>
 		<item>MultiQueue</item>
 		<item>MVRP</item>
 		<item>Name</item>
 		<item>NamePolicy</item>
 		<item>NeighborSuppression</item>
-		<item>NetworkEmulatorDelayJitterSec</item>
-		<item>NetworkEmulatorDelaySec</item>
-		<item>NetworkEmulatorDuplicateRate</item>
-		<item>NetworkEmulatorLossRate</item>
-		<item>NetworkEmulatorPacketLimit</item>
 		<item>NetworkNamespacePath</item>
 		<item>Nice</item>
 		<item>NoDelay</item>
@@ -519,13 +594,17 @@
 		<item>OOMScoreAdjust</item>
 		<item>Options</item>
 		<item>OriginalName</item>
+		<item>OrphanMask</item>
 		<item>OtherChannels</item>
 		<item>OtherInformation</item>
 		<item>OutgoingInterface</item>
 		<item>OutputKey</item>
+		<item>OverheadBytes</item>
 		<item>Overlay</item>
 		<item>OverlayReadOnly</item>
+		<item>Pacing</item>
 		<item>PacketInfo</item>
+		<item>PacketLimit</item>
 		<item>PacketNumber</item>
 		<item>PacketsPerSlave</item>
 		<item>PAMName</item>
@@ -534,24 +613,29 @@
 		<item>PartOf</item>
 		<item>PassCredentials</item>
 		<item>PassEnvironment</item>
+		<item>PassPacketInfo</item>
 		<item>PassSecurity</item>
 		<item>Path</item>
 		<item>PathChanged</item>
 		<item>PathExists</item>
 		<item>PathExistsGlob</item>
 		<item>PathModified</item>
+		<item>PeakRate</item>
 		<item>Peer</item>
 		<item>PeerPort</item>
 		<item>PeerSessionId</item>
 		<item>PeerTunnelId</item>
+		<item>PermanentMACAddress</item>
 		<item>Persistent</item>
 		<item>PersistentKeepalive</item>
 		<item>Personality</item>
+		<item>PerturbPeriodSec</item>
 		<item>PIDFile</item>
 		<item>PipeSize</item>
 		<item>PivotRoot</item>
 		<item>PoolOffset</item>
 		<item>PoolSize</item>
+		<item>POP3</item>
 		<item>Port</item>
 		<item>PortRange</item>
 		<item>PreferredLifetime</item>
@@ -564,6 +648,7 @@
 		<item>PrimaryReselectPolicy</item>
 		<item>PrimarySlave</item>
 		<item>Priority</item>
+		<item>PriorityMap</item>
 		<item>Private</item>
 		<item>PrivateDevices</item>
 		<item>PrivateKey</item>
@@ -576,6 +661,7 @@
 		<item>ProcessTwo</item>
 		<item>PropagatesReloadTo</item>
 		<item>Property</item>
+		<item>ProtectClock</item>
 		<item>ProtectControlGroups</item>
 		<item>ProtectHome</item>
 		<item>ProtectHostname</item>
@@ -588,16 +674,23 @@
 		<item>ProxyARPWiFi</item>
 		<item>PublicKey</item>
 		<item>PVID</item>
+		<item>QualityOfService</item>
+		<item>QuantumBytes</item>
+		<item>QueryReceiveSideScaling</item>
 		<item>QuickAck</item>
 		<item>RandomizedDelaySec</item>
 		<item>RapidCommit</item>
+		<item>Rate</item>
 		<item>RateLimitBurst</item>
 		<item>RateLimitIntervalSec</item>
+		<item>RateToQuantum</item>
 		<item>ReadOnly</item>
 		<item>ReadOnlyPaths</item>
+		<item>ReadWriteOnly</item>
 		<item>ReadWritePaths</item>
 		<item>RebootArgument</item>
 		<item>ReceiveBuffer</item>
+		<item>ReceiveChecksumOffload</item>
 		<item>ReduceARPProxy</item>
 		<item>RefuseManualStart</item>
 		<item>RefuseManualStop</item>
@@ -632,9 +725,13 @@
 		<item>ReusePort</item>
 		<item>RootDirectory</item>
 		<item>RootDirectoryStartOnly</item>
+		<item>RootHash</item>
+		<item>RootHashSignature</item>
 		<item>RootImage</item>
+		<item>RootVerity</item>
 		<item>Route</item>
 		<item>RouteMetric</item>
+		<item>RouteMTUBytes</item>
 		<item>RouterLifetimeSec</item>
 		<item>RouterPreference</item>
 		<item>RouteShortCircuit</item>
@@ -646,17 +743,22 @@
 		<item>RuntimeMaxSec</item>
 		<item>RxBufferSize</item>
 		<item>RxChannels</item>
+		<item>RxFlowControl</item>
+		<item>RxJumboBufferSize</item>
+		<item>RxMiniBufferSize</item>
 		<item>SamplePoint</item>
 		<item>Scope</item>
 		<item>SecureBits</item>
 		<item>SELinuxContext</item>
 		<item>SELinuxContextFromNet</item>
 		<item>SendBuffer</item>
+		<item>SendDecline</item>
 		<item>SendHostname</item>
 		<item>SendOption</item>
 		<item>SendRelease</item>
 		<item>SendSIGHUP</item>
 		<item>SendSIGKILL</item>
+		<item>SendVendorOption</item>
 		<item>SerializeTunneledPackets</item>
 		<item>Service</item>
 		<item>SessionId</item>
@@ -667,12 +769,14 @@
 		<item>SmackLabelIPIn</item>
 		<item>SmackLabelIPOut</item>
 		<item>SmackProcessLabel</item>
+		<item>SMTP</item>
 		<item>SocketGroup</item>
 		<item>SocketMode</item>
 		<item>SocketProtocol</item>
 		<item>Sockets</item>
 		<item>SocketUser</item>
 		<item>Source</item>
+		<item>SourceMACAddress</item>
 		<item>SourcePath</item>
 		<item>SourcePort</item>
 		<item>SSID</item>
@@ -692,10 +796,13 @@
 		<item>StateDirectoryMode</item>
 		<item>StopWhenUnneeded</item>
 		<item>STP</item>
+		<item>StrictBands</item>
+		<item>SubnetId</item>
 		<item>SuccessAction</item>
 		<item>SuccessActionExitStatus</item>
 		<item>SuccessExitStatus</item>
 		<item>SupplementaryGroups</item>
+		<item>SuppressPrefixLength</item>
 		<item>Symlinks</item>
 		<item>SyslogFacility</item>
 		<item>SyslogIdentifier</item>
@@ -706,22 +813,28 @@
 		<item>SystemCallFilter</item>
 		<item>SystemdService</item>
 		<item>Table</item>
+		<item>TargetSec</item>
 		<item>TasksAccounting</item>
 		<item>TasksMax</item>
 		<item>TCP6SegmentationOffload</item>
 		<item>TCPCongestion</item>
 		<item>TCPSegmentationOffload</item>
 		<item>TemporaryFileSystem</item>
+		<item>Termination</item>
 		<item>TimeoutAbortSec</item>
 		<item>TimeoutCleanSec</item>
 		<item>TimeoutIdleSec</item>
 		<item>TimeoutSec</item>
+		<item>TimeoutStartFailureMode</item>
 		<item>TimeoutStartSec</item>
+		<item>TimeoutStopFailureMode</item>
 		<item>TimeoutStopSec</item>
 		<item>TimerSlackNSec</item>
 		<item>Timezone</item>
 		<item>To</item>
+		<item>Token</item>
 		<item>TOS</item>
+		<item>TransmitChecksumOffload</item>
 		<item>TransmitHashPolicy</item>
 		<item>Transparent</item>
 		<item>TriggeredBy</item>
@@ -729,6 +842,7 @@
 		<item>TriggerLimitIntervalSec</item>
 		<item>Triggers</item>
 		<item>TripleSampling</item>
+		<item>Trust</item>
 		<item>TTL</item>
 		<item>TTLPropagate</item>
 		<item>TTYPath</item>
@@ -739,6 +853,7 @@
 		<item>TunnelId</item>
 		<item>TxBufferSize</item>
 		<item>TxChannels</item>
+		<item>TxFlowControl</item>
 		<item>TxtData</item>
 		<item>TxtText</item>
 		<item>Type</item>
@@ -746,6 +861,7 @@
 		<item>UDP6ZeroChecksumRx</item>
 		<item>UDP6ZeroChecksumTx</item>
 		<item>UDPChecksum</item>
+		<item>UDPDestinationPort</item>
 		<item>UDPSourcePort</item>
 		<item>UMask</item>
 		<item>UnicastFlood</item>
@@ -760,6 +876,7 @@
 		<item>UseDNS</item>
 		<item>UseDomains</item>
 		<item>UseForEncoding</item>
+		<item>UseGateway</item>
 		<item>UseHostname</item>
 		<item>UseMTU</item>
 		<item>UseNTP</item>
@@ -772,13 +889,18 @@
 		<item>UtmpIdentifier</item>
 		<item>UtmpMode</item>
 		<item>ValidLifetimeSec</item>
+		<item>VendorClass</item>
 		<item>VendorClassIdentifier</item>
 		<item>VirtualEthernet</item>
 		<item>VirtualEthernetExtra</item>
+		<item>VirtualFunction</item>
 		<item>Virtualization</item>
+		<item>VirtualQueue</item>
+		<item>VirtualQueues</item>
 		<item>VLAN</item>
 		<item>VLANFiltering</item>
 		<item>VLANId</item>
+		<item>VLANProtocol</item>
 		<item>VNetHeader</item>
 		<item>VNI</item>
 		<item>Volatile</item>
@@ -793,6 +915,7 @@
 		<item>Weight</item>
 		<item>What</item>
 		<item>Where</item>
+		<item>WithoutRA</item>
 		<item>WLANInterfaceType</item>
 		<item>WorkingDirectory</item>
 		<item>Writable</item>
