@@ -42,7 +42,10 @@ IPFW
 
 Installation
 ------------
-Copy the xml files in ~/.kde4/share/apps/katepart/syntax for KDE4 or ~/.local/share/katepart5/syntax for KF5.
+Copy the xml files into:
+
+- Either KDE4: `~/.kde4/share/apps/katepart/syntax`
+- Or KF5: `~/.local/share/katepart5/syntax`
 
 Resources
 ---------
